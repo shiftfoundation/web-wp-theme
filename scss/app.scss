@@ -1,0 +1,27 @@
+$debug			: false;
+
+$bgrdPage		: #EEE;
+$bgrdHeader		: #CCC;
+$bgrdFooter		: #CCC;
+$bgrdMain		: #DDD;
+$bgrdSidebar	: #EFF;
+$bgrdContent	: #FFE;
+
+$boxSize		: 140px;
+
+@import "reset";
+
+@import "mixins";
+
+@import "typography";
+
+// Import layout and acompaning logic
+@import "layout";
+
+@import "navigation";
+
+// Import the logo styles
+@import "logo";
+
+@import "boxes";
+

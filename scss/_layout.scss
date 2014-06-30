@@ -1,0 +1,68 @@
+html, body { height: 100%; overflow-y: hidden; overflow-x: auto; }
+body {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;   
+}
+
+* { padding: 0; margin: 0;  }
+
+.page {
+	@if $debug { background: $bgrdPage; }
+	padding: 0 $boxSize; 
+	position: relative;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);   
+	-webkit-transform: translate(-50%, -50%);   
+
+
+	overflow: hidden;
+
+	& > .header {
+		@if $debug { background: $bgrdHeader; }
+		float: left; 
+
+		h1#logo { }
+
+	}
+
+	& > ul.nav {
+		float: left;
+		margin: 0 1em; 
+	}
+
+	& > .main {
+		@if $debug { background: $bgrdMain; }
+		width: 60%; 
+		float: left; 
+		overflow: hidden; 
+
+		& > .column {
+		}
+
+		& > .sidebar {
+			@if $debug { background: $bgrdSidebar; }
+
+		}
+
+		& > .content {
+			@if $debug { background: $bgrdContent; }
+		}
+		
+	}
+
+	& > .footer {
+		@if $debug { background: $bgrdFooter; }
+		display: none; 
+	}
+	
+	/* --- Debug area --- */
+
+	@if $debug {
+
+		.column, .footer {
+			height: 10em; 
+		}
+
+	}
+}
