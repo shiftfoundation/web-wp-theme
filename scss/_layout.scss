@@ -3,37 +3,31 @@ body {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;   
+	padding: $boxSize; 
 }
 
 * { padding: 0; margin: 0;  }
 
-.page {
+.site {
 	@if $debug { background: $bgrdPage; }
-	padding: 0 $boxSize; 
+	width: 215px; height: 800px;
 	position: relative;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);   
-	-webkit-transform: translate(-50%, -50%);   
-
-
+	margin: 0 auto;
 	overflow: hidden;
 
-	& > .header {
+	& > .site-header {
 		@if $debug { background: $bgrdHeader; }
 		float: left; 
-
-		h1#logo { }
-
 	}
 
-	& > ul.nav {
+	& > .main-navigation {
 		float: left;
 		margin: 0 1em; 
 	}
 
-	& > .main {
+	& > .site-content {
 		@if $debug { background: $bgrdMain; }
-		width: 60%; 
+		width: 1em; 
 		float: left; 
 		overflow: hidden; 
 
@@ -51,7 +45,7 @@ body {
 		
 	}
 
-	& > .footer {
+	& > .site-footer {
 		@if $debug { background: $bgrdFooter; }
 		display: none; 
 	}

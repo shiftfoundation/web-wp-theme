@@ -1,5 +1,9 @@
 *, *:before, *:after { 
-
 	box-sizing: border-box;
-  margin: 0; padding: 0;
+	margin: 0; padding: 0;
 }
+
+/*WP Parts*/
+
+.menu-toggle,
+.skip-link.screen-reader-text { display: none; }

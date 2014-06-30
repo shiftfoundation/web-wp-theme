@@ -68,6 +68,8 @@ function shiftwp_setup() {
 	) ) );
 
 	include get_template_directory() . '/post-types/projects.php';
+	include get_template_directory() . '/post-types/press-release.php';
+	include get_template_directory() . '/post-types/member.php';
 	include get_template_directory() . '/taxonomies/themes.php';
 }
 endif; // shiftwp_setup
@@ -95,11 +97,12 @@ add_action( 'widgets_init', 'shiftwp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function shiftwp_scripts() {
-	wp_enqueue_style( 'shiftwp-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'shiftwp-style', get_template_directory_uri() . '/css/app.css' );
 
-	wp_enqueue_script( 'shiftwp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'shiftwp-app', get_template_directory_uri() . '/js/app.js', array('jquery'), '20120206', true );
+	wp_enqueue_script( 'shiftwp-jquery-transition', get_template_directory_uri() . '/js/lib/jquery.transit.js', array('jquery'), '20120206', true );
 
-	wp_enqueue_script( 'shiftwp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	//wp_enqueue_script( 'shiftwp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

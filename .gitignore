@@ -3,3 +3,5 @@ bower_components/*/src
 bower_components/modernizr/media
 bower_components/modernizr/test
 node_modules
+.DS_Store
+._.DS_Store

@@ -4,14 +4,15 @@
 	overflow: hidden; 
 	font-size: 5em;
 	margin: 0 auto; 
-	color: #000; 
 	font-family: "Helvetica Neue";
 	font-weight: bold; 
 
 	-webkit-backface-visibility: hidden;
 	-webkit-transition: translate3d(0,0,0);
 
-	b {
+	&, a { color: #000; text-decoration: none; }
+
+	.logo-text {
 		display: block; 
 		position: relative; 
 		left: -5em;

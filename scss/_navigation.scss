@@ -1,4 +1,4 @@
-.nav {
+.main-navigation {
 	width: $boxSize; height: (5*$boxSize)+(4*16); 
 	overflow: hidden;
 	position: relative; 
@@ -20,6 +20,7 @@
 			color: #000;
 			padding: 66% 1em 0 1em;
 			background: #fedc00; 
+			@include transition( all, 0.3s, ease-in );
 		}
 			
 		&.selected {

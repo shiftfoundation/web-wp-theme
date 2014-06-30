@@ -1,29 +1,30 @@
 <?php
 
 function projects_init() {
-	register_post_type( 'projects', array(
+	register_post_type( 'project', array(
 		'hierarchical'      => false,
 		'public'            => true,
 		'show_in_nav_menus' => true,
 		'show_ui'           => true,
+		'menu_position'		=> 5,
 		'supports'          => array( 'title', 'editor' ),
 		'has_archive'       => true,
 		'query_var'         => true,
 		'rewrite'           => true,
 		'labels'            => array(
-			'name'                => __( 'Projects', 'Projects' ),
-			'singular_name'       => __( 'Project', 'Projects' ),
-			'add_new'             => __( 'Add new Project', 'Projects' ),
-			'all_items'           => __( 'Projects', 'Projects' ),
-			'add_new_item'        => __( 'Add new Project', 'Projects' ),
-			'edit_item'           => __( 'Edit Project', 'Projects' ),
-			'new_item'            => __( 'New Project', 'Projects' ),
-			'view_item'           => __( 'View Project', 'Projects' ),
-			'search_items'        => __( 'Search Project', 'Projects' ),
-			'not_found'           => __( 'No Projects found', 'Projects' ),
-			'not_found_in_trash'  => __( 'No Projects found in trash', 'Projects' ),
-			'parent_item_colon'   => __( 'Parent Project', 'Projects' ),
-			'menu_name'           => __( 'Projects', 'Projects' ),
+			'name'                => __( 'Projects', 'shiftwp' ),
+			'singular_name'       => __( 'Project', 'shiftwp' ),
+			'add_new'             => __( 'Add new Project', 'shiftwp' ),
+			'all_items'           => __( 'Projects', 'shiftwp' ),
+			'add_new_item'        => __( 'Add new Project', 'shiftwp' ),
+			'edit_item'           => __( 'Edit Project', 'shiftwp' ),
+			'new_item'            => __( 'New Project', 'shiftwp' ),
+			'view_item'           => __( 'View Project', 'shiftwp' ),
+			'search_items'        => __( 'Search Project', 'shiftwp' ),
+			'not_found'           => __( 'No Projects found', 'shiftwp' ),
+			'not_found_in_trash'  => __( 'No Projects found in trash', 'shiftwp' ),
+			'parent_item_colon'   => __( 'Parent Project', 'shiftwp' ),
+			'menu_name'           => __( 'Projects', 'shiftwp' ),
 		),
 	) );
 
