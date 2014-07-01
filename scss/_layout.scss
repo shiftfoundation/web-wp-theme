@@ -1,19 +1,18 @@
 html, body { height: 100%; overflow-y: hidden; overflow-x: auto; }
+
 body {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;   
-	padding: $boxSize; 
 	background: #F8F8F8;
 }
 
-* { padding: 0; margin: 0;  }
-
 .site {
 	@if $debug { background: $bgrdPage; }
-	width: 1120px;
+	width: 390px;
+	/*width: 1120px;*/
 	/*width: 215px;*/
-	height: 720px;
+	height: 764px;
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
@@ -31,7 +30,8 @@ body {
 	& > .site-content {
 		@if $debug { background: $bgrdMain; }
 		/*width: 1em; */
-		width: 900px; 
+		width: $boxSize; 
+		height: 764px;
 		float: left; 
 		overflow: hidden; 
 

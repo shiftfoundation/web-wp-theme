@@ -8,40 +8,45 @@
 		}
 	}
 
+	article {
+		overflow: hidden;
+	}
+
 	.box { 
 		background: #FFF; 
 		margin: 0 1em 1em 0; 
 		padding: 1em;
 		float: left; 
 		opacity: 0;
+		left: 70px;
 		position: relative; 
-		left: $boxSize/2;
 		overflow: hidden;
 		overflow-y: auto;
 
 		&.entry-content {
-			position: relative;
 			margin-top: -($boxSize+16px);
 		}
 
-		&.entry-description {
+		&.entry-description, &.entry-footer {
 			clear: both;
 		}
 
 		&.w1 { width: $boxSize; }
 		&.h1 { height: $boxSize; }
 
-		&.w2 { width: $boxSize*2; }
-		&.h2 { height: $boxSize*2; }
+		&.w2 { width: $boxSize*2+16px; }
+		&.h2 { height: $boxSize*2+16px; }
 	
-		&.w3 { width: $boxSize*3+16px; }
-		&.h3 { height: $boxSize*3; }
+		&.w3 { width: $boxSize*3+2*16px; }
+		&.h3 { height: $boxSize*3+2*16px; }
 
-		&.w4 { width: $boxSize*4; }
-		&.h4 { height: $boxSize*4; }
+		&.w4 { width: $boxSize*4+3*16px; }
+		&.h4 { height: $boxSize*4+3*16px; }
 
-		&.w5 { width: $boxSize*5; }
-		&.h5 { height: $boxSize*5+16px; }
+		&.w5 { width: $boxSize*5+4*16px; }
+		&.h5 { height: $boxSize*5+4*16px; }
+	
+		&.w6 { width: $boxSize*6+5*16px; }
 		
 	}
 

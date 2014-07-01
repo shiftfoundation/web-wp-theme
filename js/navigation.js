@@ -1,34 +1,38 @@
-/**
- * navigation.js
- *
- * Handles toggling the navigation menu for small screens.
- */
-( function() {
-	var container, button, menu;
+navigation = {}
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container )
-		return;
+navigation.init = function($){
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button )
-		return;
+	var $navLinks = $('#site-navigation a');
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+	$navLinks.click(function(){
+		navigation.router($, $(this).attr('href'));
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
+		$(this).parent().addClass('selected').siblings().removeClass('selected');
+
+		return false;
+	});
+
+}
+
+navigation.router = function($, link){
+
+	var isProject = link.search(/project/i);
+
+	if ( isProject ) {
+
+		console.log( 'Loading project' );
+		console.log( $('#main .boxes .box:eq(0):visible').size() );
+
+		$('#main .boxes .hentry').remove();
+
+		$('#main .boxes').load( link + " .hentry", function(){
+			layout.load($, 'project');
+		});
+
+	} else {
+
+		console.log( 'Not a project' );
+
 	}
 
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) )
-		menu.className += ' nav-menu';
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) )
-			container.className = container.className.replace( ' toggled', '' );
-		else
-			container.className += ' toggled';
-	};
-} )();
+}

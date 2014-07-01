@@ -8,9 +8,6 @@
 		list-style: outside none;
 		width: $boxSize; height: $boxSize; 
 		margin-bottom: 1em; 
-		/*opacity: 0;*/
-		position: absolute; 
-		left: 0; top: 0;
 
 		a {
 			display: block;
@@ -23,21 +20,16 @@
 			@include transition( all, 0.3s, ease-in );
 		}
 			
-		&.selected {
-			a {
-				text-align: right;
-				background: #000; 
-				color: #FFF;
-			}
-
-			& ~ li {
-				a { background: #EEE; }
-			}
+		&.selected, &:hover {
+			a { background: #000; color: #FFF; }
 		}
+
+		&.selected a { text-align: right; }
+		
 	}
 }
 
-.single-project .box ul.subnav {
+.box ul.subnav {
 	padding: 0 0 0.5em 0; margin: -1em; background: #F8F8F8;
 
 	li { display: block; list-style: none outside; }
@@ -46,5 +38,6 @@
 		display: block; text-decoration: none; color: #000; background: #EEE; 
 		padding: 0.6em 1em; margin-bottom: 0.5em;
 	}
+	li:hover > a,
 	li.selected a { background: orange; color: #FFF; }
 }
