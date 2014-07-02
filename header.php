@@ -46,6 +46,18 @@
 		<?php
 			if( is_single() ) {
 				the_post_thumbnail();
+			}else if( is_author() ) {
+				global $wp_query;
+				$curauth = $wp_query->get_queried_object();
+				
+				$personAvatar = get_user_meta( $curauth->ID, 'avatar', true);
+				echo wp_get_attachment_image( $personAvatar, 'full' ); 
+
+				echo '<span class="info"><h1 class="name">' . $curauth->first_name . ' ' . $curauth->last_name . '</h1><span class="title">' . $curauth->job_title . '</span></span>';
+
+				echo '<a class="nav-btn all" href="/people">All People</a>';
+				echo '<a class="nav-btn next" href="/people">Next Profile</a>';
+
 			}else {
 				echo get_the_post_thumbnail( 8063 );
 			}
@@ -54,4 +66,4 @@
 	</div>
 
 
-	<div id="content" class="site-content <?php if( is_archive() || $post->post_name == 'team' ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">
+	<div id="content" class="site-content <?php if( is_archive() || $post->post_name == 'people' ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">

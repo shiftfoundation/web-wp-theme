@@ -9,4 +9,18 @@ $susy: (
 	/*debug: (image: show)*/
 );
 
+.col {
+	float: left;
+	overflow: hidden;
+
+	&.c2 {
+		@include span(2 of 12);
+	}
+
+	&.c5 {
+		@include span(5 of 12);
+	}
+	
+}
+
 @include border-box-sizing;

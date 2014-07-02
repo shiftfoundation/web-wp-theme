@@ -28,7 +28,7 @@ get_header(); ?>
 							<?php
 							$avatar = get_user_meta($user->id, 'avatar', true);
 
-							echo wp_get_attachment_image( $avatar, 'full' ); 
+							echo wp_get_attachment_image( $avatar, 'thumbnail' ); 
 							?>
 
 							<span class="info">
@@ -39,7 +39,7 @@ get_header(); ?>
 								<p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->id, 'e-mail', true) ); ?></p>
 								<p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->id, 'phone', true) ); ?></p>
 
-								<a href="#" class="button">View Profile</a>
+								<a href="/people/<?php echo $user->user_nicename; ?>" class="button">View Profile</a>
 							</span>
 							
 						</li>

@@ -4,6 +4,19 @@ a {
 }
 
 .banner {
-	height: 280px;
+	height: 470px;
 	overflow: hidden;
+	background: #666;
+	position: relative;
+
+	img { display: block; margin: 0 auto; }
+
+	span { display: block; }
+
+	.wrapper { position: absolute; top: 0; height: 100%; }
+	.info { 
+		background: #FFF; color: #000; width: 20%; position: absolute; right: 10%; top: 40%; padding: 1.5em; text-align: right;
+
+	}
+	
 }
