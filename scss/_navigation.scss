@@ -8,7 +8,7 @@
 		list-style: outside none;
 		width: $boxSize; height: $boxSize; 
 		margin-bottom: 1em; 
-		opacity: 0;
+		/*opacity: 0;*/
 		position: absolute; 
 		left: 0; top: 0;
 
@@ -35,4 +35,16 @@
 			}
 		}
 	}
+}
+
+.single-project .box ul.subnav {
+	padding: 0 0 0.5em 0; margin: -1em; background: #F8F8F8;
+
+	li { display: block; list-style: none outside; }
+	li a span { display: block; } 
+	li a { 
+		display: block; text-decoration: none; color: #000; background: #EEE; 
+		padding: 0.6em 1em; margin-bottom: 0.5em;
+	}
+	li.selected a { background: orange; color: #FFF; }
 }

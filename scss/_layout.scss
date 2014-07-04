@@ -4,13 +4,16 @@ body {
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;   
 	padding: $boxSize; 
+	background: #F8F8F8;
 }
 
 * { padding: 0; margin: 0;  }
 
 .site {
 	@if $debug { background: $bgrdPage; }
-	width: 215px; height: 800px;
+	width: 1120px;
+	/*width: 215px;*/
+	height: 720px;
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
@@ -27,7 +30,8 @@ body {
 
 	& > .site-content {
 		@if $debug { background: $bgrdMain; }
-		width: 1em; 
+		/*width: 1em; */
+		width: 900px; 
 		float: left; 
 		overflow: hidden; 
 
