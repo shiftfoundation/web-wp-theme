@@ -11,12 +11,47 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="widgets">
+			<div class="wrapper">
+
+				<div class="widget col c4">
+					<h4>Contact</h4>
+					<div class="cnt">
+						71 St John Street<br>
+						London<br>
+						EC1M 4NJ, UK<br>
+						United Kingdom
+					</div>
+				</div>
+				<div class="widget col c4">
+					<h4>About</h4>
+					<div class="cnt">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">People</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget col c3">
+					<h4>Connect</h4>
+					<div class="cnt">
+						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a>
+						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'shiftwp' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'shiftwp' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'shiftwp' ), 'Shiftwp', '<a href="http://underscores.me/" rel="designer">Me</a>' ); ?>
+			<div class="wrapper">
+				<p>Copyright &copy; Shift 2011-2014 - All Rights Reserved</p>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

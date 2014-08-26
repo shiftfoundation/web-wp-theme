@@ -1,27 +1,47 @@
-$debug			: false;
+$debug		: false;
 
-$bgrdPage		: #EEE;
-$bgrdHeader		: #CCC;
-$bgrdFooter		: #CCC;
-$bgrdMain		: #DDD;
+$activeColor	: #fddf00;
+$bgrdPage	: #EEE;
+$bgrdHeader	: $activeColor;
+$bgrdFooter	: $bgrdHeader;
+$bgrdMain	: #DDD;
 $bgrdSidebar	: #EFF;
 $bgrdContent	: #FFE;
 
-$boxSize		: 140px;
+$boxSize	: 140px;
 
-@import "reset";
+@import "compass";
+@import "susy";
+
+// Configuring Susy Defaults
+$susy: (
+	math: static,
+	columns: 12, 
+	column-width: 60px,
+	gutters: 1 / 4,
+	global-box-sizing: border-box,
+	/*debug: (image: show)*/
+);
+
+@include border-box-sizing;
+
+/*
+ * Custom code starts here
+ * */
 
 @import "mixins";
 
+@import "reset";
 @import "typography";
 
-// Import layout and acompaning logic
 @import "layout";
 
 @import "navigation";
 
-// Import the logo styles
-@import "logo";
+@import "hentry";
+@import "buttons";
 
-@import "boxes";
-
+a {
+	color: #000;
+	text-decoration: none;
+}

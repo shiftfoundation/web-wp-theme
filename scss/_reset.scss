@@ -1,9 +1,23 @@
-*, *:before, *:after { 
-	box-sizing: border-box;
-	margin: 0; padding: 0;
+/*
+ * Reset
+ * */
+
+/*
+html {
+    box-sizing: border-box;
 }
 
-/*WP Parts*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+*/
 
-.menu-toggle,
-.skip-link.screen-reader-text { display: none; }
+* {
+    padding: 0; margin: 0;
+}
+
+/* - WP Parts - */
+.post-edit-link,
+.screen-reader-text {
+    display: none;
+}

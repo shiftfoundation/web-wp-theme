@@ -1,26 +1,30 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-
-		sass: {
-			options: {
-				includePaths: ['bower_components/foundation/scss']
+		compass: {
+			dev: {
+				options: {              
+					sassDir: ['scss'],
+					cssDir: ['css'],
+					environment: 'development',
+					require: 'susy'
+				}
 			},
-			dist: {
+			sourceMap: {
 				options: {
-					outputStyle: 'compressed'
+					sourceComments: 'map',
+					sourceMap: 'app.css.map'
 				},
 				files: {
 					'css/app.css': 'scss/app.scss'
-				}        
-			}
+				}
+			},
 		},
-
 		watch: {
 			grunt: { files: ['Gruntfile.js'] },
 			scripts: {
 				files: ['scss/**/*.scss'],
-				tasks: ['sass'],
+				tasks: ['compass:dev'],
 			},
 			livereload: {
 				files: ['*.html', '*.php', 'js/**/*.{js,json}', 'css/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
@@ -31,9 +35,9 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('build', ['sass']);
-	grunt.registerTask('default', ['build','watch']);
-
-	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-compass');
+
+	grunt.registerTask('build', ['compass:dev']);
+	grunt.registerTask('default', ['build','watch']);
 }

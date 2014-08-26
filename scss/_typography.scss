@@ -1,9 +1,68 @@
-body { font: 16px/1.5 "PT Sans", sans-serif; }
+/* A fonts by Jos Buivenga (exljbris) -> www.exljbris.com */
+
+@font-face {
+    font-family: 'MuseoSlab500';
+    src: url('../fonts/museo_slab_500-webfont.eot');
+    src: url('../fonts/museo_slab_500-webfont.eot?#iefix') format('eot'),
+         url('../fonts/museo_slab_500-webfont.woff') format('woff'),
+         url('../fonts/museo_slab_500-webfont.ttf') format('truetype'),
+         url('../fonts/museo_slab_500-webfont.svg#webfontcnNfzgjP') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSlab900';
+    src: url('../fonts/museo_slab_900-webfont.eot');
+    src: url('../fonts/museo_slab_900-webfont.eot?#iefix') format('eot'),
+         url('../fonts/museo_slab_900-webfont.woff') format('woff'),
+         url('../fonts/museo_slab_900-webfont.ttf') format('truetype'),
+         url('../fonts/museo_slab_900-webfont.svg#webfontfMtLLePq') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSans500';
+    src: url('../fonts/museosans_500-webfont.eot');
+    src: url('../fonts/museosans_500-webfont.eot?#iefix') format('eot'),
+         url('../fonts/museosans_500-webfont.woff') format('woff'),
+         url('../fonts/museosans_500-webfont.ttf') format('truetype'),
+         url('../fonts/museosans_500-webfont.svg#webfont2HKRNgD6') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSans700';
+    src: url('../fonts/museosans_700-webfont.eot');
+    src: url('../fonts/museosans_700-webfont.eot?#iefix') format('eot'),
+         url('../fonts/museosans_700-webfont.woff') format('woff'),
+         url('../fonts/museosans_700-webfont.ttf') format('truetype'),
+         url('../fonts/museosans_700-webfont.svg#webfontlr3Mruap') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSans900';
+    src: url('../fonts/museosans_900-webfont.eot');
+    src: url('../fonts/museosans_900-webfont.eot?#iefix') format('eot'),
+         url('../fonts/museosans_900-webfont.woff') format('woff'),
+         url('../fonts/museosans_900-webfont.ttf') format('truetype'),
+         url('../fonts/museosans_900-webfont.svg#webfontWIF0hDCJ') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /*
-Theme Name: Twenty Ten
-Description: Used to style the TinyMCE editor.
-*/
+ * Typography
+ * */
+
+body { font: 14px/1.5 "MuseoSans500", sans-serif; }
+.menu li a,
+h1, h2, h3, h4, h5, h6 { font-family: "MuseoSans700", sans-serif; }
 
 .rte.wp-editor.projectinfo,
 .rte.wp-editor.withsidebar { width: 630px;   }
@@ -11,9 +70,7 @@ Description: Used to style the TinyMCE editor.
 
 .wp-editor { width: 880px; }
 
-.rte, .box, .wp-editor {
-	color: #666; 
-	padding: 30px 40px;
+.entry-content, .wp-editor {
 
 	* { padding: 0; margin: 0; }
 
@@ -49,7 +106,7 @@ Description: Used to style the TinyMCE editor.
 		margin-left:-.2em;
 	}
 
-	h1, h2, h3, h4, h5, h6 { font: normal 1em/1.4em "MuseoSlab500", "PT Sans", "Arial", sans-serif; }
+	h1, h2, h3, h4, h5, h6 {  }
 
 	h1 { font-size: 2.4em; margin-bottom: 10px; }
 	h2 { font-size: 2.0em; margin-bottom: 10px; }
@@ -106,10 +163,9 @@ Description: Used to style the TinyMCE editor.
 	img.image { display: block; width: 40%; border: 10px solid #FFF; margin: 10px 0; }
 	img.image.right { float: right; border-right: none; margin-left: 20px; }
 	img.image.left { float: left; border-left: none; margin-right: 20px; }
-	
+
 	.cleaning {
 		clear: both; 
 	}
 
 }
-

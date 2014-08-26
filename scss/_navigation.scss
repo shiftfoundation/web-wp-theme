@@ -1,43 +1,78 @@
+/*
+ * Navigation
+ * */
+
+.menu-toggle {
+	position: relative;
+	z-index: 1001;
+	font-size: 2.2em;
+	line-height: 1;
+	padding: 0.2em 0.4em;
+	border: none;
+	background: #231f20;
+	color: #FFF;
+	outline: none;
+
+	&:hover {
+		cursor: pointer;
+		color: $activeColor;
+	}
+	
+	.fa-times,
+	span { display: none; }
+
+	.active & {
+		background: $activeColor;
+		color: #000;
+
+		.fa-times { display: block; }
+		.fa-bars { display: none; }
+	}
+}
+
 .main-navigation {
-	width: $boxSize; height: (5*$boxSize)+(4*16); 
-	overflow: hidden;
-	position: relative; 
+	overflow: hidden; position: relative; 
+	width: 100%;
+	opacity: 0;
+	position: absolute; top: -100%; left: 0; 
+	z-index: 1000;
+	background: rgba(0,0,0,0.8);
+	@include transition(all 0.3s ease-in);
+	pointer-events: none;
+
+	.active & {
+		opacity: 1; top: 0;
+		pointer-events: auto;
+	}
+}
+
+.menu {
+	@extend .wrapper;
+	padding-left: span(2 of 12);
+	padding-top: 7em;
+	padding-bottom: 4em;
 
 	li {
-		display: block;
-		list-style: outside none;
-		width: $boxSize; height: $boxSize; 
-		margin-bottom: 1em; 
+		display: block; 
+		@include span(4 of 12);
 
-		a {
-			display: block;
-			width: 100%; height: 100%;
-			font-size: 1.4em;
-			text-decoration: none;
-			color: #000;
-			padding: 66% 1em 0 1em;
-			background: #fedc00; 
-			@include transition( all, 0.3s, ease-in );
-		}
-			
-		&.selected, &:hover {
-			a { background: #000; color: #FFF; }
-		}
+		a { font-size: 3em; font-weight: bold; color: #FFF; }
 
-		&.selected a { text-align: right; }
-		
+		&.current-menu-item a,
+		a:hover {
+			color: $activeColor;
+		}
 	}
 }
 
-.box ul.subnav {
-	padding: 0 0 0.5em 0; margin: -1em; background: #F8F8F8;
 
-	li { display: block; list-style: none outside; }
-	li a span { display: block; } 
-	li a { 
-		display: block; text-decoration: none; color: #000; background: #EEE; 
-		padding: 0.6em 1em; margin-bottom: 0.5em;
+.active.site-header {
+	.site-title {
+		position: relative;
+		z-index: 1001;
+
+		border-color: #fff;
+		a { color: #fff; }
 	}
-	li:hover > a,
-	li.selected a { background: orange; color: #FFF; }
 }
+

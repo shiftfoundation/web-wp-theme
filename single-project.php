@@ -22,6 +22,16 @@ get_header(); ?>
 						<div class="entry-meta">
 							<?php shiftwp_posted_on(); ?>
 						</div>
+							
+						Connected User: 
+						<?php 
+						$users = get_users( array(
+						  'connected_type' => 'projects_to_users',
+						  'connected_items' => $post
+						 ) );
+
+						echo $users[0]->user_nicename;
+						?>
 					</header>
 
 					<div class="entry-description box w2 h4">

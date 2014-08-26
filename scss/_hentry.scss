@@ -1,0 +1,58 @@
+.page .entry-header,
+header.page-title {
+	padding: 2em 0;
+
+	h1 { font-size: 2.5em; }
+
+	.blog & {
+		padding-left: span(1 of 12);
+	}
+}
+
+.byline {
+	font-weight: bold;
+}
+
+.posted-on {
+	&, a { color: #CCC; }
+}
+
+.blog {
+
+	.tagcloud {
+		clear: both;
+		padding-top: 0.5em;
+	}
+
+	.wp-post-image {
+		display: block;
+		width: 100%; height: auto;
+		margin-bottom: 2em;
+		border: 1px solid #CCC;
+	}
+
+	.entry-content h2,
+	.widget-title,
+	.entry-title {
+		font-size: 1.8em; font-weight: normal;
+		padding: 0 0.5em; float: left; clear: both;
+		background: $activeColor;
+		&, a { color: #000; }
+
+		& ~ * { clear: both; }
+	}
+
+	.hentry {
+
+		.entry-footer,
+		.entry-header,
+		.entry-content {
+			overflow: hidden;
+			padding-bottom: 1em;
+		}
+
+		.comments-link {
+			float: right;
+		}
+	}
+}

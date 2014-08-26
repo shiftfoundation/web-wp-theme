@@ -10,7 +10,9 @@ function projects_init() {
 		'supports'          => array( 'title', 'editor' ),
 		'has_archive'       => true,
 		'query_var'         => true,
-		'rewrite'           => true,
+		'rewrite'           => array(
+			'slug'				  => 'projects',
+		),
 		'labels'            => array(
 			'name'                => __( 'Projects', 'shiftwp' ),
 			'singular_name'       => __( 'Project', 'shiftwp' ),
@@ -56,3 +58,27 @@ function projects_updated_messages( $messages ) {
 	return $messages;
 }
 add_filter( 'post_updated_messages', 'projects_updated_messages' );
+
+/**
+ * Rename the Posts menu to Blog
+ */
+function projects_to_users() {
+    p2p_register_connection_type( array(
+        'name' => 'projects_to_users',
+        'from' => 'project',
+        'to' => 'user'
+    ) );
+}
+add_action( 'p2p_init', 'projects_to_users' );
+
+/**
+ * Rename the Posts menu to Blog
+ */
+function pages_to_users() {
+    p2p_register_connection_type( array(
+        'name' => 'pages_to_users',
+        'from' => 'page',
+        'to' => 'user'
+    ) );
+}
+add_action( 'p2p_init', 'pages_to_users' );

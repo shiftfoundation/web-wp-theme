@@ -23,17 +23,21 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'shiftwp' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 id="logo" class="site-title">
-				<a class="logo-text" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				<span></span><span></span><span></span><span></span><span></span><span></span>
-			</h1>
+		<div class="wrapper">
+
+			<div class="site-branding">
+				<h1 id="logo" class="site-title">
+					<a class="logo-text" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</h1>
+			</div>
+
+			<button class="menu-toggle"><i class="fa fa-bars"></i><i class="fa fa-times"></i><span><?php _e( 'Primary Menu', 'shiftwp' ); ?></span></button>
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</nav><!-- #site-navigation -->
+
 		</div>
 	</header><!-- #masthead -->
 
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<button class="menu-toggle"><?php _e( 'Primary Menu', 'shiftwp' ); ?></button>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- #site-navigation -->
-
-	<div id="content" class="site-content">
+	<div id="content" class="site-content wrapper">
