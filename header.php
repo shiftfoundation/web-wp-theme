@@ -23,7 +23,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'shiftwp' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wrapper">
+		<div class="wrapper-wide">
 
 			<div class="site-branding">
 				<h1 id="logo" class="site-title">
@@ -36,8 +36,22 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #site-navigation -->
+			<p><?php bloginfo( 'description' ); ?></p>
 
 		</div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content wrapper">
+	<div class="banner">
+
+		<?php
+			if( is_single() ) {
+				the_post_thumbnail();
+			}else {
+				echo get_the_post_thumbnail( 8063 );
+			}
+		 ?>
+
+	</div>
+
+
+	<div id="content" class="site-content <?php if( is_archive() || $post->post_name == 'team' ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">

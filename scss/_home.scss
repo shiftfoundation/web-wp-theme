@@ -1,0 +1,19 @@
+.home {
+	.entry-header { display: none; }
+
+	.site-header p {
+		display: block;
+		font-size: 1.4em; line-height: 1;
+		font-weight: bold;
+		float: left;
+		padding: 1.45em 0 0 1.3em;
+	}
+
+	.hentry {
+		padding: 4em 0 0 0;
+	}
+
+	.entry-content {
+		font-size: 1.2em; color: #666;
+	}
+}

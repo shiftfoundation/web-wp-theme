@@ -3,10 +3,6 @@ header.page-title {
 	padding: 2em 0;
 
 	h1 { font-size: 2.5em; }
-
-	.blog & {
-		padding-left: span(1 of 12);
-	}
 }
 
 .byline {
@@ -55,4 +51,9 @@ header.page-title {
 			float: right;
 		}
 	}
+}
+
+.hentry.project,
+.hentry.page {
+	padding: 0 span(1 of 12 wide);
 }

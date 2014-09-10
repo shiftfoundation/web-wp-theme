@@ -19,7 +19,7 @@ get_header(); ?>
 
 					<?php the_content(); ?>
 
-					<ul class="users">
+					<ul class="listing users">
 						<?php
 						$blogusers = get_users();
 

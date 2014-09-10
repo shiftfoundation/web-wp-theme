@@ -23,6 +23,17 @@
 }
 
 @font-face {
+    font-family: 'MuseoSans300';
+    src: url('../fonts/museosans_300-webfont.eot');
+    src: url('../fonts/museosans_300-webfont.eot?#iefix') format('eot'),
+         url('../fonts/museosans_300-webfont.woff') format('woff'),
+         url('../fonts/museosans_300-webfont.ttf') format('truetype'),
+         url('../fonts/museosans_300-webfont.svg#webfont2HKRNgD6') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'MuseoSans500';
     src: url('../fonts/museosans_500-webfont.eot');
     src: url('../fonts/museosans_500-webfont.eot?#iefix') format('eot'),
@@ -60,7 +71,7 @@
  * Typography
  * */
 
-body { font: 14px/1.5 "MuseoSans500", sans-serif; }
+body { font: 16px/1.5 "MuseoSans300", sans-serif; }
 .menu li a,
 h1, h2, h3, h4, h5, h6 { font-family: "MuseoSans700", sans-serif; }
 
@@ -108,19 +119,19 @@ h1, h2, h3, h4, h5, h6 { font-family: "MuseoSans700", sans-serif; }
 
 	h1, h2, h3, h4, h5, h6 {  }
 
-	h1 { font-size: 2.4em; margin-bottom: 10px; }
-	h2 { font-size: 2.0em; margin-bottom: 10px; }
-	h3 { font-size: 1.6em; margin-bottom: 10px; }
-	h4 { font-size: 1.4em; margin-bottom: 10px; }
-	h5 { font-size: 1.2em; margin-bottom: 10px; }
-	h6 { font-size: 1.1em; margin-bottom: 10px; }
+	h1 { font-size: 2.4em; }
+	h2 { font-size: 2.0em; }
+	h3 { font-size: 1.6em; }
+	h4 { font-size: 1.4em; }
+	h5 { font-size: 1.2em; }
+	h6 { font-size: 1.1em; }
 
 	a { color: orange;  }
 	a:hover { text-decoration: underline; }
 
-	p { padding: 0 0 20px 0; }
-	p + ul { padding: 0 0 20px 30px; }
-	p + ol { padding: 0 0 20px 30px; }
+	p { padding: 0 0 1.5em 0; }
+	p + ul { padding: 0 0 1.5em 1.5em; }
+	p + ol { padding: 0 0 1.5em 1.5em; }
 
 	blockquote {
 		quotes:"\201C""\201D"; 

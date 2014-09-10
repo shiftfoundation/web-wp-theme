@@ -11,6 +11,7 @@
 	background: $bgrdHeader;
 	position: relative;
 
+
 	.site-branding {
 		float: right;
 
@@ -21,6 +22,21 @@
 
 			a { color: #000; text-decoration: none; padding-left: 0.4em; }
 		}
+
+		p { display: none; }
+	}
+}
+
+.wrapper-wide {
+	max-width: span(14 of 14);
+	margin: 0 auto;
+
+	&:after {
+		@include clearfix;
+	}
+
+	.page-title {
+		padding-left: span(2 wide of 12);
 	}
 }
 
@@ -36,12 +52,16 @@
 }
 
 .blog {
-	#primary {
-		@include span(7 wide of 12);
-		padding-left: span(1 of 12);
+
+	.site-content {
+		padding-left: span(1 wide of 12);
 	}
 
-	#secondary { @include span(4 wide of 12 last); }
+	#primary {
+		@include span(7 of 12);
+	}
+
+	#secondary { @include span(4 of 12 last); }
 }
 
 
@@ -73,7 +93,7 @@
 
 }
 
-.users {
+.listing {
 	overflow: hidden;
 
 	li { 

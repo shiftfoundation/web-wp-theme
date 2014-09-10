@@ -71,6 +71,7 @@ if ( ! function_exists( 'shiftwp_setup' ) ) :
 		include get_template_directory() . '/post-types/press-release.php';
 		include get_template_directory() . '/post-types/member.php';
 		include get_template_directory() . '/taxonomies/themes.php';
+		include get_template_directory() . '/taxonomies/issues.php';
 	}
 endif; // shiftwp_setup
 add_action( 'after_setup_theme', 'shiftwp_setup' );

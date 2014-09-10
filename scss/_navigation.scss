@@ -1,6 +1,9 @@
 /*
  * Navigation
  * */
+.site-header p {
+	display: none;
+}
 
 .menu-toggle {
 	position: relative;
@@ -12,6 +15,7 @@
 	background: #231f20;
 	color: #FFF;
 	outline: none;
+	float: left;
 
 	&:hover {
 		cursor: pointer;
