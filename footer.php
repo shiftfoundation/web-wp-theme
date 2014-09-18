@@ -47,7 +47,7 @@
 		</div>
 		<div class="site-info">
 			<div class="wrapper">
-				<p>Copyright &copy; Shift 2011-2014 - All Rights Reserved</p>
+				<p>Copyright &copy; Shift 2014 - All Rights Reserved</p>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
