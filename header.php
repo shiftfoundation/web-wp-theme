@@ -59,11 +59,10 @@
 
 	}
 
-
 	if( $bannerImage[0] ) {	?>
 	<div class="banner" style="background-image: url(<?php echo $bannerImage[0]; ?>);">
 
-		<?php if( get_post_type( $post ) == 'project' ) { ?>
+		<?php if( get_post_type( $post ) == 'product' ) { ?>
 
 			<?php echo '<span class="info"><h1 class="name">' . get_the_title() . '</h1><span class="title">' . get_post_meta( get_the_ID(), 'what_does_it_do', true ) . '</span></span>'; ?>
 		

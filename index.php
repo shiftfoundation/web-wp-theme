@@ -14,7 +14,7 @@
 get_header(); ?>
 
 	<header class="page-title">
-	  <h1>Blog</h1>
+	  <h1>Comment</h1>
 	</header>
 
 	<div id="primary" class="content-area">
