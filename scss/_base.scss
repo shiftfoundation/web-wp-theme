@@ -8,15 +8,69 @@ a {
 	overflow: hidden;
 	background: #666;
 	position: relative;
+	background-position: center top;
+	background-size: cover;
 
 	img { display: block; margin: 0 auto; }
 
 	span { display: block; }
 
-	.wrapper { position: absolute; top: 0; height: 100%; }
-	.info { 
-		background: #FFF; color: #000; width: 20%; position: absolute; right: 10%; top: 40%; padding: 1.5em; text-align: right;
+	.wrapper {
+		position: absolute; top: 0; height: 100%;
+	}
 
+	.info { 
+		background: #FFF; color: #000; width: 30%; position: absolute; right: 10%; top: 30%; padding: 1.5em; text-align: right;
 	}
 	
+	.post-type-archive-project &,
+	.page-template-page-team-php & { display: none; }
+
+	.nav-btn {
+		display: block;
+		position: absolute;	bottom: 0;
+		padding: 1em 1.3em;
+		background: #231f20;
+		color: #FFF;
+		z-index: 20;
+
+		&:hover {
+			background: $activeColor;
+			color: #000;
+		}
+
+		i { padding-right: 0.5em; }
+
+		&.all { 
+			left: 0;
+		}
+
+		&.next {
+			right: 0;
+		}
+	}
+
+	.subnav {
+		position: absolute;	bottom: 0; left: 0;
+		z-index: 10;
+		width: 100%; text-align: center; white-space: nowrap; font-size: 0;
+		
+		li { display: inline-block; list-style: none outside; }
+
+		a {
+			font-size: 16px;
+			display: block;
+			padding: 1em 1.3em;
+			background: #ababab;
+			font-weight: bold;
+			color: #FFF;
+
+		}
+
+		li.selected a,
+		a:hover {
+			background: $activeColor;
+			color: #000;
+		}
+	}
 }

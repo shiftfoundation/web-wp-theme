@@ -103,6 +103,7 @@ body {
 .menu li a,
 h1, h2, h3, h4, h5, h6 {
   font-family: "MuseoSans700", sans-serif;
+  line-height: 1.2;
 }
 
 /* line 78, ../scss/_typography.scss */
@@ -158,6 +159,10 @@ h1, h2, h3, h4, h5, h6 {
 /* line 116, ../scss/_typography.scss */
 .entry-content .quo, .wp-editor .quo {
   margin-left: -.2em;
+}
+/* line 120, ../scss/_typography.scss */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .wp-editor h1, .wp-editor h2, .wp-editor h3, .wp-editor h4, .wp-editor h5, .wp-editor h6 {
+  margin-bottom: 0.5em;
 }
 /* line 122, ../scss/_typography.scss */
 .entry-content h1, .wp-editor h1 {
@@ -513,12 +518,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   left: 0;
   top: -100%;
   background: #fddf00;
-  padding: 1.5em;
+  padding: 50% 1.5em 1.5em 1.5em;
   -moz-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
@@ -530,22 +535,38 @@ h1, h2, h3, h4, h5, h6 {
   float: right;
   margin-top: 1em;
 }
-/* line 126, ../scss/_layout.scss */
-.listing li .info .name {
+/* line 128, ../scss/_layout.scss */
+.listing li .name {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  max-width: 80%;
   background: #FFF;
-  padding: 1.5em 2em;
-  margin-bottom: 2em;
+  padding: 1.2em 1.5em;
   text-align: right;
 }
-/* line 132, ../scss/_layout.scss */
-.listing li .info .name strong {
+/* line 136, ../scss/_layout.scss */
+.listing li .name strong {
   display: block;
   font-size: 1.5em;
 }
-/* line 139, ../scss/_layout.scss */
+/* line 142, ../scss/_layout.scss */
 .listing li:hover .info {
   opacity: 1;
   top: 0;
+}
+
+/* line 149, ../scss/_layout.scss */
+.post-type-archive-project .listing li {
+  width: 50%;
+  height: 33%;
+  max-height: 400px;
+}
+/* line 152, ../scss/_layout.scss */
+.post-type-archive-project .listing li .name strong {
+  font-family: MuseoSans900;
+  line-height: 1;
+  font-weight: normal;
 }
 
 /* line 1, ../scss/_base.scss */
@@ -560,32 +581,96 @@ a {
   overflow: hidden;
   background: #666;
   position: relative;
+  background-position: center top;
+  background-size: cover;
 }
-/* line 12, ../scss/_base.scss */
+/* line 14, ../scss/_base.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 14, ../scss/_base.scss */
+/* line 16, ../scss/_base.scss */
 .banner span {
   display: block;
 }
-/* line 16, ../scss/_base.scss */
+/* line 18, ../scss/_base.scss */
 .banner .wrapper, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 17, ../scss/_base.scss */
+/* line 22, ../scss/_base.scss */
 .banner .info {
   background: #FFF;
   color: #000;
-  width: 20%;
+  width: 30%;
   position: absolute;
   right: 10%;
-  top: 40%;
+  top: 30%;
   padding: 1.5em;
   text-align: right;
+}
+/* line 26, ../scss/_base.scss */
+.post-type-archive-project .banner, .page-template-page-team-php .banner {
+  display: none;
+}
+/* line 29, ../scss/_base.scss */
+.banner .nav-btn {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  padding: 1em 1.3em;
+  background: #231f20;
+  color: #FFF;
+  z-index: 20;
+}
+/* line 37, ../scss/_base.scss */
+.banner .nav-btn:hover {
+  background: #fddf00;
+  color: #000;
+}
+/* line 42, ../scss/_base.scss */
+.banner .nav-btn i {
+  padding-right: 0.5em;
+}
+/* line 44, ../scss/_base.scss */
+.banner .nav-btn.all {
+  left: 0;
+}
+/* line 48, ../scss/_base.scss */
+.banner .nav-btn.next {
+  right: 0;
+}
+/* line 53, ../scss/_base.scss */
+.banner .subnav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0;
+}
+/* line 58, ../scss/_base.scss */
+.banner .subnav li {
+  display: inline-block;
+  list-style: none outside;
+}
+/* line 60, ../scss/_base.scss */
+.banner .subnav a {
+  font-size: 16px;
+  display: block;
+  padding: 1em 1.3em;
+  background: #ababab;
+  font-weight: bold;
+  color: #FFF;
+}
+/* line 70, ../scss/_base.scss */
+.banner .subnav li.selected a,
+.banner .subnav a:hover {
+  background: #fddf00;
+  color: #000;
 }
 
 /*
@@ -765,15 +850,34 @@ header.page-title h1 {
 }
 
 /* line 57, ../scss/_hentry.scss */
-.hentry.author section > header {
-  padding: 1em 0;
+.hentry section > header {
+  padding: 3em 0;
+}
+/* line 60, ../scss/_hentry.scss */
+.hentry section > header h1 {
+  margin: 0;
 }
 
-/* line 63, ../scss/_hentry.scss */
+/* line 64, ../scss/_hentry.scss */
+.hentry.project {
+  padding-top: 3em;
+}
+
+/* line 69, ../scss/_hentry.scss */
 .entry-content:after {
   display: block;
   content: '';
   clear: both;
+}
+
+/* line 74, ../scss/_hentry.scss */
+.tabs-container {
+  display: none;
+}
+
+/* line 75, ../scss/_hentry.scss */
+.tabs-container:target {
+  display: block;
 }
 
 /* line 1, ../scss/_buttons.scss */

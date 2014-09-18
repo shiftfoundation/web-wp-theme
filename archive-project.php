@@ -20,14 +20,12 @@ get_header(); ?>
 					<li id="project-<?php echo $user->id; ?>">	
 						<a href="<?php the_permalink(); ?>">
 
-							<?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail('thumbnail'); ?>
 
-							<span class="info">
-								<p class="name">
-									<strong><?php the_title(); ?></strong>
-								</p>
-
-							</span>
+							<p class="name">
+								<strong><?php the_title(); ?></strong>
+								<?php echo get_post_meta( get_the_ID(), 'what_does_it_do', true ); ?>
+							</p>
 
 						</a>
 					</li>

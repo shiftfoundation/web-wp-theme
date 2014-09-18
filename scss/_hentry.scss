@@ -1,66 +1,75 @@
 .page .entry-header,
 header.page-title {
-	padding: 2em 0;
+    padding: 2em 0;
 
-	h1 { font-size: 2.5em; }
+    h1 { font-size: 2.5em; }
 }
 
 .byline {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .posted-on {
-	&, a { color: #CCC; }
+    &, a { color: #CCC; }
 }
 
 .blog {
 
-	.tagcloud {
-		clear: both;
-		padding-top: 0.5em;
-	}
+    .tagcloud {
+        clear: both;
+        padding-top: 0.5em;
+    }
 
-	.wp-post-image {
-		display: block;
-		width: 100%; height: auto;
-		margin-bottom: 2em;
-		border: 1px solid #CCC;
-	}
+    .wp-post-image {
+        display: block;
+        width: 100%; height: auto;
+        margin-bottom: 2em;
+        border: 1px solid #CCC;
+    }
 
-	.entry-content h2,
-	.widget-title,
-	.entry-title {
-		font-size: 1.8em; font-weight: normal;
-		padding: 0 0.5em; float: left; clear: both;
-		background: $activeColor;
-		&, a { color: #000; }
+    .entry-content h2,
+    .widget-title,
+    .entry-title {
+        font-size: 1.8em; font-weight: normal;
+        padding: 0 0.5em; float: left; clear: both;
+        background: $activeColor;
+        &, a { color: #000; }
 
-		& ~ * { clear: both; }
-	}
+        & ~ * { clear: both; }
+    }
 
-	.hentry {
+    .hentry {
 
-		.entry-footer,
-		.entry-header,
-		.entry-content {
-			overflow: hidden;
-			padding-bottom: 1em;
-		}
+        .entry-footer,
+        .entry-header,
+        .entry-content {
+            overflow: hidden;
+            padding-bottom: 1em;
+        }
 
-		.comments-link {
-			float: right;
-		}
-	}
+        .comments-link {
+            float: right;
+        }
+    }
 }
 
-.hentry.author {
-	section > header {
-		padding: 1em 0;
-	}
+.hentry {
+    section > header {
+        padding: 3em 0;
+
+        h1 { margin: 0; }
+    }
+}
+
+.hentry.project {
+    padding-top: 3em;
 }
 
 .entry-content {
-	&:after {
-		display: block; content: ''; clear: both;
-	}
+    &:after {
+        display: block; content: ''; clear: both;
+    }
 }
+
+.tabs-container { display: none; }
+.tabs-container:target { display: block; }

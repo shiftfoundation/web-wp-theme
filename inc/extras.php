@@ -122,16 +122,3 @@ function revcon_change_post_object() {
 }
 add_action( 'init', 'revcon_change_post_object' );
 
-/**
- * Rename the Posts menu to Blog
- */
-function users_to_projects() {
-    p2p_register_connection_type( array(
-        'name' => 'users_to_projects',
-        'from' => 'user',
-        'to' => 'projects'
-    ) );
-}
-add_action( 'p2p_init', 'users_to_projects' );
-
-

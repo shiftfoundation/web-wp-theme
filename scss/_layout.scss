@@ -114,25 +114,28 @@
 
 		.info {
 			display: block; width: 100%; height: 100%;
-			opacity: 0;
+			opacity: 1;
 			position: absolute; left: 0; top: -100%;
 			background: #fddf00;
-			padding: 1.5em;
+			padding: 50% 1.5em 1.5em 1.5em;
 			@include transition(all 0.3s ease-in);
 			overflow: hidden;
 
 			.button { float: right; margin-top: 1em; }
 
-			.name {
-				background: #FFF;
-				padding: 1.5em 2em;
-				margin-bottom: 2em;
-				text-align: right;
+		}
 
-				strong {
-					display: block;
-					font-size: 1.5em;
-				}
+		.name {
+			position: absolute;
+			top: 1.5em; right: 1.5em;
+			max-width: 80%;
+			background: #FFF;
+			padding: 1.2em 1.5em;
+			text-align: right;
+
+			strong {
+				display: block;
+				font-size: 1.5em;
 			}
 		}
 
@@ -141,4 +144,10 @@
 			top: 0;
 		}
 	}
+}
+
+.post-type-archive-project .listing li {
+	width: 50%; height: 33%; max-height: 400px;
+
+	.name strong { font-family: MuseoSans900; line-height: 1; font-weight: normal; }
 }

@@ -7,7 +7,7 @@ function projects_init() {
 		'show_in_nav_menus' => true,
 		'show_ui'           => true,
 		'menu_position'		=> 5,
-		'supports'          => array( 'title', 'editor' ),
+		'supports'          => array( 'title', 'editor', 'thumbnail' ),
 		'has_archive'       => true,
 		'query_var'         => true,
 		'rewrite'           => array(
@@ -62,23 +62,23 @@ add_filter( 'post_updated_messages', 'projects_updated_messages' );
 /**
  * Rename the Posts menu to Blog
  */
-function projects_to_users() {
+function project_to_users() {
     p2p_register_connection_type( array(
-        'name' => 'projects_to_users',
+        'name' => 'project_to_users',
         'from' => 'project',
         'to' => 'user'
     ) );
 }
-add_action( 'p2p_init', 'projects_to_users' );
+add_action( 'p2p_init', 'project_to_users' );
 
 /**
  * Rename the Posts menu to Blog
  */
-function pages_to_users() {
+function page_to_users() {
     p2p_register_connection_type( array(
-        'name' => 'pages_to_users',
+        'name' => 'page_to_users',
         'from' => 'page',
         'to' => 'user'
     ) );
 }
-add_action( 'p2p_init', 'pages_to_users' );
+add_action( 'p2p_init', 'page_to_users' );

@@ -41,27 +41,63 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<div class="banner">
+	<?php
+	if( is_single() ) {
 
-		<?php
-			if( is_single() ) {
-				the_post_thumbnail();
-			}else if( is_author() ) {
-				global $wp_query;
-				$curauth = $wp_query->get_queried_object();
-				
-				$personAvatar = get_user_meta( $curauth->ID, 'avatar', true);
-				echo wp_get_attachment_image( $personAvatar, 'full' ); 
+		$bannerImage = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
 
-				echo '<span class="info"><h1 class="name">' . $curauth->first_name . ' ' . $curauth->last_name . '</h1><span class="title">' . $curauth->job_title . '</span></span>';
+	}else if( is_author() ) {
 
-				echo '<a class="nav-btn all" href="/people">All People</a>';
-				echo '<a class="nav-btn next" href="/people">Next Profile</a>';
+		global $wp_query;
+		$curauth = $wp_query->get_queried_object();
+		$personAvatar = get_user_meta( $curauth->ID, 'avatar', true);
+		$bannerImage = wp_get_attachment_image_src( $personAvatar, 'full' );
+		
+	}else {
 
-			}else {
-				echo get_the_post_thumbnail( 8063 );
-			}
-		 ?>
+		$bannerImage = wp_get_attachment_image_src( '8063', 'full' );
+
+	}
+	?>
+
+	<div class="banner" style="background-image: url(<?php echo $bannerImage[0]; ?>);">
+
+		<?php if( get_post_type( $post ) == 'project' ) { ?>
+
+			<?php echo '<span class="info"><h1 class="name">' . get_the_title() . '</h1><span class="title">' . get_post_meta( get_the_ID(), 'what_does_it_do', true ) . '</span></span>'; ?>
+		
+			<a class="nav-btn all" href="/projects"><i class="fa fa-th"></i> All Projects</a>
+			<?php /* ?><a class="nav-btn next" href="#"><i class="fa fa-angle-right"></i> Next Project</a><?php */ ?>
+
+			<ul class="subnav">
+				<li class="selected"><a href="#overview">Overview</a></li>
+				<li><a href="#research">Research</a></li>
+				<li><a href="#comment">Comment</a></li>
+				<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?><li><a href="#coverage">Coverage</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'partners', true ) ) { ?><li><a href="#partners">Partners</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) { ?><li><a href="#jobs">Jobs</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'awards', true ) ) { ?><li><a href="#awards">Awards</a></li><?php } ?>
+			</ul>
+
+		<?php }	?>
+
+		<?php if( is_author() ) { ?>
+			
+			<?php echo '<span class="info"><h1 class="name">' . $curauth->first_name . ' ' . $curauth->last_name . '</h1><span class="title">' . $curauth->job_title . '</span></span>'; ?>
+
+			<a class="nav-btn all" href="/people"><i class="fa fa-th"></i> All People</a>
+			<a class="nav-btn next" href="/people"><i class="fa fa-angle-right"></i> Next Profile</a>
+
+			<ul class="subnav">
+				<li class="selected"><a href="#">Profile</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Videos</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Tweets</a></li>
+				<li><a href="#">Reports</a></li>
+			</ul>
+
+		<?php }	?>
 
 	</div>
 
