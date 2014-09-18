@@ -13,7 +13,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 
-			<article id="post-<?php the_ID(); ?>" class="hentry project">
+			<article id="post-<?php the_ID(); ?>" class="hentry product">
 
 				<section class="entry-content">
 

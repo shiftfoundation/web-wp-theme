@@ -51,7 +51,7 @@
 }
 
 .hentry.author,
-.hentry.project,
+.hentry.product,
 .hentry.page {
 	padding: 0 span(1 of 12 wide);
 }
@@ -146,7 +146,7 @@
 	}
 }
 
-.post-type-archive-project .listing li {
+.post-type-archive-product .listing li {
 	width: 50%; height: 33%; max-height: 400px;
 
 	.name strong { font-family: MuseoSans900; line-height: 1; font-weight: normal; }

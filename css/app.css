@@ -432,7 +432,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 53, ../scss/_layout.scss */
 .hentry.author,
-.hentry.project,
+.hentry.product,
 .hentry.page {
   padding: 0 75px;
 }
@@ -557,13 +557,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 149, ../scss/_layout.scss */
-.post-type-archive-project .listing li {
+.post-type-archive-product .listing li {
   width: 50%;
   height: 33%;
   max-height: 400px;
 }
 /* line 152, ../scss/_layout.scss */
-.post-type-archive-project .listing li .name strong {
+.post-type-archive-product .listing li .name strong {
   font-family: MuseoSans900;
   line-height: 1;
   font-weight: normal;

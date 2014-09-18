@@ -15,7 +15,7 @@ get_header(); ?>
 					<h1>Projects</h1>
 				</header>
 
-				<ul class="listing projects">
+				<ul class="listing products">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<li id="project-<?php echo $user->id; ?>">	
 						<a href="<?php the_permalink(); ?>">
