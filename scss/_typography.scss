@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "MuseoSans700", sans-serif; line-height: 1
 	img.bannertop		{ }
 	img.bannerbottom	{ }
 
-	img.image { display: block; width: 40%; border: 10px solid #FFF; margin: 10px 0; }
+	img.image { display: block; width: 40%; height: auto; border: 10px solid #FFF; margin: 10px 0; }
 	img.image.right { float: right; border-right: none; margin-left: 20px; }
 	img.image.left { float: left; border-left: none; margin-right: 20px; }
 
