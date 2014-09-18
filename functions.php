@@ -65,19 +65,12 @@ if ( ! function_exists( 'shiftwp_setup' ) ) :
 		 * Enable support for Post Formats.
 		 * See http://codex.wordpress.org/Post_Formats
 		 */
-		//add_theme_support( 'post-formats', array(
-			//'aside', 'image', 'video', 'quote', 'link'
-		//) );
-
-		// Setup the WordPress core custom background feature.
-		//add_theme_support( 'custom-background', apply_filters( 'shiftwp_custom_background_args', array(
-			//'default-color' => 'ffffff',
-			//'default-image' => '',
-		//) ) );
+		add_theme_support( 'post-formats', array(
+			'aside', 'image', 'video', 'quote', 'link'
+		) );
 
 		include get_template_directory() . '/post-types/projects.php';
-		include get_template_directory() . '/post-types/press-release.php';
-		include get_template_directory() . '/post-types/member.php';
+
 		include get_template_directory() . '/taxonomies/themes.php';
 		include get_template_directory() . '/taxonomies/issues.php';
 	}
