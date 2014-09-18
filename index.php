@@ -13,12 +13,13 @@
 
 get_header(); ?>
 
+	<header class="page-title">
+	  <h1>Blog</h1>
+	</header>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<header class="page-title">
-		  <h1>Blog</h1>
-		</header>
 
 		<?php if ( have_posts() ) : ?>
 

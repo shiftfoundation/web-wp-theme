@@ -5,10 +5,6 @@ header.page-title {
     h1 { font-size: 2.5em; }
 }
 
-.byline {
-    font-weight: bold;
-}
-
 .posted-on {
     &, a { color: #CCC; }
 }
@@ -30,17 +26,28 @@ header.page-title {
     .entry-content h2,
     .widget-title,
     .entry-title {
-        font-size: 1.8em; font-weight: normal;
-        padding: 0 0.5em; float: left; clear: both;
+        font-size: 1.375em;
+		font-weight: normal;
+        padding: 0.2em 0.3em; float: left; clear: both;
         background: $activeColor;
         &, a { color: #000; }
 
         & ~ * { clear: both; }
     }
 
+	.entry-footer {
+		font-size: 0.75em;
+		border-bottom: 1px solid #ababab;
+		padding-bottom: 3em;
+		margin-bottom: 5em;
+		overflow: hidden;
+
+		.byline { padding-right: 0.5em; }
+		.posted-on { padding-left: 0.5em; }
+	}
+
     .hentry {
 
-        .entry-footer,
         .entry-header,
         .entry-content {
             overflow: hidden;

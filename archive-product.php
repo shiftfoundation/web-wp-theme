@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<article class="page">
 				<header class="page-title">
-					<h1>Projects</h1>
+					<h1>Products</h1>
 				</header>
 
 				<ul class="listing products">
