@@ -141,3 +141,12 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+
+/* Disable WordPress Admin Bar for all users. */
+show_admin_bar(false);
+
+/* Redirect dashboard to posts */
+function dashboard_Redirect(){
+	wp_redirect(admin_url('edit.php'));
+}
+add_action('load-index.php', 'dashboard_Redirect');

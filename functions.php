@@ -69,7 +69,7 @@ if ( ! function_exists( 'shiftwp_setup' ) ) :
 			'aside', 'image', 'video', 'quote', 'link'
 		) );
 
-		include get_template_directory() . '/post-types/projects.php';
+		include get_template_directory() . '/post-types/products.php';
 
 		include get_template_directory() . '/taxonomies/themes.php';
 		include get_template_directory() . '/taxonomies/issues.php';
