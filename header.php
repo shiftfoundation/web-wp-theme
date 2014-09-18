@@ -42,7 +42,7 @@
 	</header><!-- #masthead -->
 
 	<?php
-	if( is_single() ) {
+	if( is_single() || is_front_page() ) {
 
 		$bannerImage = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
 
@@ -58,8 +58,9 @@
 		$bannerImage = wp_get_attachment_image_src( '8063', 'full' );
 
 	}
-	?>
 
+
+	if( $bannerImage[0] ) {	?>
 	<div class="banner" style="background-image: url(<?php echo $bannerImage[0]; ?>);">
 
 		<?php if( get_post_type( $post ) == 'project' ) { ?>
@@ -100,6 +101,7 @@
 		<?php }	?>
 
 	</div>
+	<?php }	?>
 
 
 	<div id="content" class="site-content <?php if( is_archive() || $post->post_name == 'people' ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">

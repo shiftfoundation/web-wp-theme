@@ -5,6 +5,14 @@
  * @package Shiftwp
  */
 
+
+// For debugging - show template file
+//add_action('wp_head', 'show_template');
+//function show_template() {
+    //global $template;
+    //print_r($template);
+//}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -119,6 +127,21 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+if ( ! function_exists( 'shiftwp_pagination' ) ) :
+	function shiftwp_pagination() {
+		global $wp_query;
+
+		$big = 999999999; // need an unlikely integer
+		
+		echo paginate_links( array(
+			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format' => '?paged=%#%',
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages
+		) );
+	}
+endif;
 
 /**
  * Implement the Custom Header feature.

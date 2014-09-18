@@ -16,6 +16,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<header class="page-title">
+		  <h1>Blog</h1>
+		</header>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -31,7 +35,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php shiftwp_paging_nav(); ?>
+			<?php shiftwp_pagination(); ?>
 
 		<?php else : ?>
 
@@ -42,4 +46,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

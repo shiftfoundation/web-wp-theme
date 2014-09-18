@@ -611,10 +611,6 @@ a {
   text-align: right;
 }
 /* line 26, ../scss/_base.scss */
-.post-type-archive-project .banner, .page-template-page-team-php .banner {
-  display: none;
-}
-/* line 29, ../scss/_base.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -624,24 +620,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 37, ../scss/_base.scss */
+/* line 34, ../scss/_base.scss */
 .banner .nav-btn:hover {
   background: #fddf00;
   color: #000;
 }
-/* line 42, ../scss/_base.scss */
+/* line 39, ../scss/_base.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 44, ../scss/_base.scss */
+/* line 41, ../scss/_base.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 48, ../scss/_base.scss */
+/* line 45, ../scss/_base.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 53, ../scss/_base.scss */
+/* line 50, ../scss/_base.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -652,12 +648,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 58, ../scss/_base.scss */
+/* line 55, ../scss/_base.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 60, ../scss/_base.scss */
+/* line 57, ../scss/_base.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -666,7 +662,7 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 70, ../scss/_base.scss */
+/* line 67, ../scss/_base.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fddf00;
