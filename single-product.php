@@ -28,6 +28,37 @@ get_header(); ?>
 						<header class="entry-header">
 							<h1>Research</h1>
 						</header>
+
+						<?php
+						// Find connected pages
+						$connected = new WP_Query( array(
+						  'connected_type' => 'research_to_product',
+						  'connected_items' => get_queried_object(),
+						  'nopaging' => true,
+						) );
+
+						// Display connected pages
+						if ( $connected->have_posts() ) :
+						?>
+						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+
+							<div class="cleaning"></div>
+							<a target="_blank" class="research-image" href="<?php echo get_post_meta( get_the_ID(), 'file_url', true ); ?>"><?php the_post_thumbnail(array('class' => 'research')); ?></a>
+							<div class="col c5">
+								<h3><a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'file_url', true ); ?>"><?php the_title(); ?></a></h3>
+								<p><?php the_date(); ?></p>
+								<?php the_content(); ?>
+							</div>
+
+						<?php endwhile; ?>
+
+						<?php 
+						// Prevent weirdness
+						wp_reset_postdata();
+
+						endif;
+						?>
+
 					</div>
 
 					<div id="comment" class="tabs-container">

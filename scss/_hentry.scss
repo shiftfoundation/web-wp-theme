@@ -5,7 +5,15 @@
         width: 100%; height: auto;
         margin-bottom: 2em;
         border: 1px solid #CCC;
+
+		&.attachment-research {
+			width: auto;
+		}
     }
+
+	.research-image {
+		display: block; float: left; margin-right: 1em;
+	}
 
 	.byline { @extend %MSS7; }
 
