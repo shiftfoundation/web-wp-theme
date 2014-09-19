@@ -124,7 +124,7 @@ add_action( 'init', 'revcon_change_post_object' );
 
 function remove_menus(){
   
-  remove_menu_page( 'index.php' );                  //Dashboard
+  remove_menu_page( 'index.php' );						//Dashboard
 
   if ( !current_user_can( 'manage_options' ) ) {
 	  //remove_menu_page( 'edit.php' );                   //Posts

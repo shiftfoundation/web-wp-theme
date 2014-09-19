@@ -47,7 +47,6 @@ header.page-title {
 	}
 
     .hentry {
-
         .entry-header,
         .entry-content {
             overflow: hidden;
@@ -68,7 +67,7 @@ header.page-title {
     }
 }
 
-.hentry.project {
+.hentry.product {
     padding-top: 3em;
 }
 
@@ -80,3 +79,7 @@ header.page-title {
 
 .tabs-container { display: none; }
 .tabs-container:target { display: block; }
+
+/*TODO: FIX*/
+
+.tabs-container p { clear: both; }

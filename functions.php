@@ -70,8 +70,9 @@ if ( ! function_exists( 'shiftwp_setup' ) ) :
 		) );
 
 		include get_template_directory() . '/post-types/products.php';
+		include get_template_directory() . '/post-types/research.php';
 
-		include get_template_directory() . '/taxonomies/themes.php';
+		//include get_template_directory() . '/taxonomies/themes.php';
 		include get_template_directory() . '/taxonomies/issues.php';
 	}
 endif; // shiftwp_setup
@@ -135,6 +136,13 @@ if ( ! function_exists( 'shiftwp_pagination' ) ) :
 		) );
 	}
 endif;
+
+
+function shiftwp_editor_styles() {
+    add_editor_style( 'css/typography.css' );
+}
+add_action( 'after_setup_theme', 'shiftwp_editor_styles' );
+
 
 /**
  * Implement the Custom Header feature.

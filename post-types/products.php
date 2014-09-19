@@ -60,7 +60,31 @@ function products_updated_messages( $messages ) {
 add_filter( 'post_updated_messages', 'products_updated_messages' );
 
 /**
- * Rename the Posts menu to Blog
+ * Page to User
+ */
+function page_to_users() {
+    p2p_register_connection_type( array(
+        'name' => 'page_to_users',
+        'from' => 'page',
+        'to' => 'user'
+    ) );
+}
+add_action( 'p2p_init', 'page_to_users' );
+
+/**
+ * Post to Product
+ */
+function post_to_product() {
+    p2p_register_connection_type( array(
+        'name' => 'post_to_product',
+        'from' => 'post',
+        'to' => 'product'
+    ) );
+}
+add_action( 'p2p_init', 'post_to_product' );
+
+/**
+ * Product to User
  */
 function product_to_users() {
     p2p_register_connection_type( array(
@@ -72,13 +96,13 @@ function product_to_users() {
 add_action( 'p2p_init', 'product_to_users' );
 
 /**
- * Rename the Posts menu to Blog
+ * Research to Product
  */
-function page_to_users() {
+function research_to_product() {
     p2p_register_connection_type( array(
-        'name' => 'page_to_users',
-        'from' => 'page',
-        'to' => 'user'
+        'name' => 'research_to_product',
+        'from' => 'research',
+        'to' => 'product'
     ) );
 }
-add_action( 'p2p_init', 'page_to_users' );
+add_action( 'p2p_init', 'research_to_product' );

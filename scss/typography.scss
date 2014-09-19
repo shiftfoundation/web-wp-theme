@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "MuseoSans700", sans-serif; line-height: 1
 		margin-left:-.2em;
 	}
 
-	h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5em; }
+	h1, h2, h3, h4, h5, h6 { margin-bottom: 0.5em; clear: both; }
 
 	h1 { font-size: 2.4em; }
 	h2 { font-size: 2.0em; }
@@ -125,8 +125,8 @@ h1, h2, h3, h4, h5, h6 { font-family: "MuseoSans700", sans-serif; line-height: 1
 	h5 { font-size: 1.2em; }
 	h6 { font-size: 1.1em; }
 
-	a { color: orange;  }
-	a:hover { text-decoration: underline; }
+	a { color: #000; text-decoration: underline;  }
+	a:hover { background: #fddf00; }
 
 	p { padding: 0 0 1.5em 0; }
 	p + ul { padding: 0 0 1.5em 1.5em; }
@@ -170,9 +170,17 @@ h1, h2, h3, h4, h5, h6 { font-family: "MuseoSans700", sans-serif; line-height: 1
 	img.bannertop		{ }
 	img.bannerbottom	{ }
 
-	img.image { display: block; width: 40%; height: auto; border: 10px solid #FFF; margin: 10px 0; }
-	img.image.right { float: right; border-right: none; margin-left: 20px; }
-	img.image.left { float: left; border-left: none; margin-right: 20px; }
+	img.image { display: block; width: 40%; height: auto; border: 0.5em solid #FFF; margin: 0.5em 0; }
+
+	a.float { clear: both; margin-bottom: 1em; }
+
+	a.float.right,
+	img.aligright,
+	img.image.right { float: right; border-right: none; margin-left: 1em; }
+
+	a.float.left,
+	img.alignleft,
+	img.image.left { float: left; border-left: none; margin-right: 1em; }
 
 	.cleaning {
 		clear: both; 
