@@ -65,6 +65,29 @@ get_header(); ?>
 						<header class="entry-header">
 							<h1>Comment</h1>
 						</header>
+
+						<?php
+						// Find connected pages
+						$connected = new WP_Query( array(
+						  'connected_type' => 'post_to_product',
+						  'connected_items' => get_queried_object(),
+						  'nopaging' => true,
+						) );
+
+						// Display connected pages
+						if ( $connected->have_posts() ) :
+						?>
+						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+							<?php get_template_part( 'content', get_post_format() ); ?>
+						<?php endwhile; ?>
+
+						<?php 
+						// Prevent weirdness
+						wp_reset_postdata();
+
+						endif;
+						?>
+
 					</div>
 
 					<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?>

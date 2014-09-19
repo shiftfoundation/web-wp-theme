@@ -428,18 +428,23 @@ a {
 .single .hentry {
   padding: 0 75px;
 }
+/* line 57, ../scss/_layout.scss */
+.page .hentry .hentry,
+.single .hentry .hentry {
+  padding: 0;
+}
 
-/* line 60, ../scss/_layout.scss */
+/* line 62, ../scss/_layout.scss */
 .blog .site-content {
   padding-left: 75px;
 }
-/* line 64, ../scss/_layout.scss */
+/* line 66, ../scss/_layout.scss */
 .blog #primary {
   width: 510px;
   float: left;
   margin-right: 15px;
 }
-/* line 68, ../scss/_layout.scss */
+/* line 70, ../scss/_layout.scss */
 .blog #secondary {
   width: 285px;
   float: right;
@@ -447,87 +452,87 @@ a {
 }
 
 /* Grid */
-/* line 73, ../scss/_layout.scss */
+/* line 75, ../scss/_layout.scss */
 .col.c1 {
   width: 75px;
   float: left;
   margin-right: 15px;
 }
-/* line 74, ../scss/_layout.scss */
+/* line 76, ../scss/_layout.scss */
 .col.c2 {
   width: 150px;
   float: left;
   margin-right: 15px;
 }
-/* line 75, ../scss/_layout.scss */
+/* line 77, ../scss/_layout.scss */
 .col.c3 {
   width: 225px;
   float: left;
   margin-right: 15px;
 }
-/* line 76, ../scss/_layout.scss */
+/* line 78, ../scss/_layout.scss */
 .col.c4 {
   width: 300px;
   float: left;
   margin-right: 15px;
 }
-/* line 77, ../scss/_layout.scss */
+/* line 79, ../scss/_layout.scss */
 .col.c5 {
   width: 375px;
   float: left;
   margin-right: 15px;
 }
-/* line 78, ../scss/_layout.scss */
+/* line 80, ../scss/_layout.scss */
 .col.c6 {
   width: 450px;
   float: left;
   margin-right: 15px;
 }
 
-/* line 81, ../scss/_layout.scss */
+/* line 83, ../scss/_layout.scss */
 .content-area {
   padding-bottom: 3em;
 }
 
-/* line 87, ../scss/_layout.scss */
+/* line 89, ../scss/_layout.scss */
 .site-footer .site-info, .site-footer .widgets {
   padding: 2.5em;
 }
-/* line 91, ../scss/_layout.scss */
+/* line 93, ../scss/_layout.scss */
 .site-footer .widgets {
   background: #fcde00;
 }
-/* line 94, ../scss/_layout.scss */
+/* line 96, ../scss/_layout.scss */
 .site-footer .widgets h4 {
   margin: 0 0 1em 0;
 }
-/* line 96, ../scss/_layout.scss */
+/* line 98, ../scss/_layout.scss */
 .site-footer .widgets li {
   list-style: none outside;
 }
-/* line 98, ../scss/_layout.scss */
+/* line 100, ../scss/_layout.scss */
 .site-footer .widgets a:hover {
   text-decoration: underline;
 }
-/* line 99, ../scss/_layout.scss */
+/* line 101, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-2x {
   background: #000;
   border-radius: 50%;
 }
-/* line 100, ../scss/_layout.scss */
+/* line 102, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-1x {
   color: #fcde00;
 }
-/* line 103, ../scss/_layout.scss */
+/* line 105, ../scss/_layout.scss */
 .site-footer .site-info {
   text-align: center;
 }
 
-/* line 109, ../scss/_layout.scss */
+/* line 111, ../scss/_layout.scss */
 .listing {
   overflow: hidden;
 }
-/* line 112, ../scss/_layout.scss */
+/* line 114, ../scss/_layout.scss */
 .listing li {
   display: block;
   list-style: none outside;
@@ -537,13 +542,13 @@ a {
   float: left;
   position: relative;
 }
-/* line 121, ../scss/_layout.scss */
+/* line 123, ../scss/_layout.scss */
 .listing li img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 123, ../scss/_layout.scss */
+/* line 125, ../scss/_layout.scss */
 .listing li .info {
   display: block;
   width: 100%;
@@ -560,12 +565,12 @@ a {
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
-/* line 132, ../scss/_layout.scss */
+/* line 134, ../scss/_layout.scss */
 .listing li .info .button {
   float: right;
   margin-top: 1em;
 }
-/* line 136, ../scss/_layout.scss */
+/* line 138, ../scss/_layout.scss */
 .listing li .name {
   position: absolute;
   top: 1.5em;
@@ -575,31 +580,31 @@ a {
   padding: 1.2em 1.5em;
   text-align: right;
 }
-/* line 144, ../scss/_layout.scss */
+/* line 146, ../scss/_layout.scss */
 .listing li .name strong {
   display: block;
   font-size: 1.5em;
 }
-/* line 150, ../scss/_layout.scss */
+/* line 152, ../scss/_layout.scss */
 .listing li:hover .info {
   opacity: 1;
   top: 0;
 }
 
-/* line 157, ../scss/_layout.scss */
+/* line 159, ../scss/_layout.scss */
 .post-type-archive-product .listing li {
   width: 50%;
   height: 33%;
   max-height: 400px;
 }
-/* line 160, ../scss/_layout.scss */
+/* line 162, ../scss/_layout.scss */
 .post-type-archive-product .listing li .name strong {
   font-family: MuseoSans900;
   line-height: 1;
   font-weight: normal;
 }
 
-/* line 164, ../scss/_layout.scss */
+/* line 166, ../scss/_layout.scss */
 .banner {
   height: 470px;
   overflow: hidden;
@@ -608,22 +613,26 @@ a {
   background-position: center;
   background-size: cover;
 }
-/* line 172, ../scss/_layout.scss */
+/* line 174, ../scss/_layout.scss */
+.banner h1 {
+  padding: 0;
+}
+/* line 176, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 174, ../scss/_layout.scss */
+/* line 178, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 176, ../scss/_layout.scss */
+/* line 180, ../scss/_layout.scss */
 .banner .wrapper, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 178, ../scss/_layout.scss */
+/* line 182, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -634,7 +643,7 @@ a {
   padding: 1.5em;
   text-align: right;
 }
-/* line 180, ../scss/_layout.scss */
+/* line 184, ../scss/_layout.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -644,24 +653,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 188, ../scss/_layout.scss */
+/* line 192, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 190, ../scss/_layout.scss */
+/* line 194, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 192, ../scss/_layout.scss */
+/* line 196, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 193, ../scss/_layout.scss */
+/* line 197, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 196, ../scss/_layout.scss */
+/* line 200, ../scss/_layout.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -672,12 +681,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 201, ../scss/_layout.scss */
+/* line 205, ../scss/_layout.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 203, ../scss/_layout.scss */
+/* line 207, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -686,7 +695,7 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 213, ../scss/_layout.scss */
+/* line 217, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;

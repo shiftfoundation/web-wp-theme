@@ -53,6 +53,8 @@ a {
 .page .hentry,
 .single .hentry {
 	padding: 0 span(1 of 12 wide);
+
+	& .hentry { padding: 0; }
 }
 
 .blog {
@@ -168,6 +170,8 @@ a {
 	position: relative;
 	background-position: center;
 	background-size: cover;
+
+	h1 { padding: 0; }
 
 	img { display: block; margin: 0 auto; }
 
