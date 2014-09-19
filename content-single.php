@@ -53,6 +53,5 @@
 		?>
 
 		<?php edit_post_link( __( 'Edit', 'shiftwp' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
-
-</article><!-- #post-## -->
+	</footer>
+</article>

@@ -54,15 +54,15 @@
 
 .menu {
 	@extend .wrapper;
-	padding-left: span(2 of 12);
+	padding-left: span(1 of 12);
 	padding-top: 7em;
 	padding-bottom: 4em;
 
 	li {
 		display: block; 
-		@include span(4 of 12);
+		@include span(5 of 12);
 
-		a { font-size: 3em; font-weight: bold; color: #FFF; }
+		a { font-size: 3em; color: #FFF; @extend %MSS9; padding: 0.1em; }
 
 		&.current-menu-item a,
 		a:hover {

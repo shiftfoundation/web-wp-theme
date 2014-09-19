@@ -7,13 +7,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header box w2 h1">
+	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header>
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div>
+	<?php /*
 	<footer class="entry-footer box w2 h4">
-
 		<?php edit_post_link( __( 'Edit', 'shiftwp' ), '<span class="edit-link">', '</span>' ); ?>
-		<?php /*
 		<p>
 		Connected User: 
 		$users = get_users( array(
@@ -23,9 +25,6 @@
 
 		echo $users[0]->user_nicename;
 		</p>	
-		*/ ?>
 	</footer>
-	<div class="entry-content box w4 h5">
-		<?php the_content(); ?>
-	</div>
+	*/ ?>
 </article>
