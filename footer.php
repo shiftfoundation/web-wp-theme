@@ -27,10 +27,10 @@
 					<h4>About</h4>
 					<div class="cnt">
 						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Projects</a></li>
-							<li><a href="#">People</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a href="/products">Products</a></li>
+							<li><a href="/people">People</a></li>
+							<li><a href="/vacancies">Vacancies</a></li>
 						</ul>
 					</div>
 				</div>
@@ -38,7 +38,6 @@
 					<h4>Connect</h4>
 					<div class="cnt">
 						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>
-						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a>
 						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
 					</div>
 				</div>
