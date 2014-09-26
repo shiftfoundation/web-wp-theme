@@ -90,11 +90,9 @@
 
 			<ul class="subnav">
 				<li class="selected"><a href="#profile">Profile</a></li>
+				<li><a href="#comment">Comment</a></li>
+				<li><a href="#research">Research</a></li>
 				<li><a href="#products">Products</a></li>
-				<li><a href="#videos">Videos</a></li>
-				<li><a href="#blog">Blog</a></li>
-				<li><a href="#tweets">Tweets</a></li>
-				<li><a href="#research">Reasearch</a></li>
 			</ul>
 
 		<?php }	?>

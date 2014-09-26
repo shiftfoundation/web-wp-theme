@@ -29,66 +29,13 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div id="products" class="tabs-container">
+					<div id="comment" class="tabs-container">
 						<header class="entry-header">
-							<h1>Products</h1>
+							<h1>Comment</h1>
 						</header>
-
-						<?php
-						// Find connected pages
-						$connected = new WP_Query( array(
-						  'connected_type' => 'product_to_users',
-						  'connected_items' => get_queried_object(),
-						  'nopaging' => true,
-						) );
-
-						// Display connected pages
-						if ( $connected->have_posts() ) :
-?>
-						<ul class="listing products">
-						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
-
-							<li id="project-<?php echo $user->id; ?>">	
-								<a href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail('thumbnail'); ?>
-									<p class="name">
-										<strong><?php the_title(); ?></strong>
-										<?php echo get_post_meta( get_the_ID(), 'what_does_it_do', true ); ?>
-									</p>
-								</a>
-							</li>
-
-						<?php endwhile; ?>
-						</ul>
-						<?php 
-						// Prevent weirdness
-						wp_reset_postdata();
-
-						endif;
-						?>
-
 					</div>
 
-					<div id="videos" class="tabs-container">
-						<header class="entry-header">
-							<h1>Videos</h1>
-						</header>
-
-					</div>
-
-					<div id="blog" class="tabs-container">
-						<header class="entry-header">
-							<h1>Blog</h1>
-						</header>
-
-					</div>
-
-					<div id="tweets" class="tabs-container">
-						<header class="entry-header">
-							<h1>Tweets</h1>
-						</header>
-
-					</div>
+					
 
 					<div id="research" class="tabs-container">
 						<header class="entry-header">
@@ -118,6 +65,46 @@ get_header(); ?>
 
 						<?php endwhile; ?>
 
+						<?php 
+						// Prevent weirdness
+						wp_reset_postdata();
+
+						endif;
+						?>
+
+					</div>
+
+					<div id="products" class="tabs-container">
+						<header class="entry-header">
+							<h1>Products</h1>
+						</header>
+
+
+						<?php
+						// Find connected pages
+						$connected = new WP_Query( array(
+						  'connected_type' => 'product_to_users',
+						  'connected_items' => get_queried_object(),
+						  'nopaging' => true,
+						) );
+
+						// Display connected pages
+						if ( $connected->have_posts() ) : ?>
+						<ul class="listing products">
+						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+
+							<li id="project-<?php echo $user->id; ?>">	
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail('thumbnail'); ?>
+									<p class="name">
+										<strong><?php the_title(); ?></strong>
+										<?php echo get_post_meta( get_the_ID(), 'what_does_it_do', true ); ?>
+									</p>
+								</a>
+							</li>
+
+						<?php endwhile; ?>
+						</ul>
 						<?php 
 						// Prevent weirdness
 						wp_reset_postdata();
