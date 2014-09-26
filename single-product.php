@@ -44,7 +44,7 @@ get_header(); ?>
 
 							<div class="cleaning"></div>
 							<a target="_blank" class="research-image" href="<?php echo get_post_meta( get_the_ID(), 'file_url', true ); ?>"><?php the_post_thumbnail(array('class' => 'research')); ?></a>
-							<div class="col c5">
+							<div class="col c6">
 								<h3><a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'file_url', true ); ?>"><?php the_title(); ?></a></h3>
 								<p><?php the_date(); ?></p>
 								<?php the_content(); ?>
