@@ -19,7 +19,7 @@ get_header(); ?>
 
 					<div id="overview" class="tabs-container">
 						<header class="entry-header">
-							<h1><?php the_title(); ?> - <?php echo get_post_meta( get_the_ID(), 'what_does_it_do', true ); ?></h1>
+							<h1><?php echo get_post_meta( get_the_ID(), 'tagline', true ); ?></h1>
 						</header>
 						<?php the_content(); ?>
 					</div>

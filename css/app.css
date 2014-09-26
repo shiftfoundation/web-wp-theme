@@ -927,5 +927,6 @@ a {
 }
 /* line 20, ../scss/_home.scss */
 .home .banner {
-  height: 274px;
+  height: 270px;
+  background-size: inherit;
 }
