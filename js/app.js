@@ -3,7 +3,7 @@ jQuery(function($){
     $('#masthead').toggleClass('active');
   });
 
-  $('.subnav a').click(function(){
+  $('.subnav a[href^="#"]').click(function(){
 
     $(this).parent().addClass('selected').siblings().removeClass('selected');
     
