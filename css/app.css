@@ -827,7 +827,8 @@ a {
 }
 /* line 9, ../scss/_hentry.scss */
 .hentry .wp-post-image.attachment-research {
-  width: auto;
+  width: 162px;
+  height: auto;
 }
 /* line 14, ../scss/_hentry.scss */
 .hentry .research-image {
