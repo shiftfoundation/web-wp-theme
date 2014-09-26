@@ -66,7 +66,7 @@
 
 			<?php echo '<span class="info"><h1 class="name">' . get_the_title() . '</h1><span class="title">' . get_post_meta( get_the_ID(), 'what_does_it_do', true ) . '</span></span>'; ?>
 		
-			<a class="nav-btn all" href="/projects"><i class="fa fa-th"></i> All Projects</a>
+			<a class="nav-btn all" href="/products"><i class="fa fa-th"></i> All Products</a>
 			<?php /* ?><a class="nav-btn next" href="#"><i class="fa fa-angle-right"></i> Next Project</a><?php */ ?>
 
 			<ul class="subnav">
