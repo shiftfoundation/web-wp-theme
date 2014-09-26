@@ -829,12 +829,15 @@ a {
 .hentry .wp-post-image.attachment-research {
   width: 162px;
   height: auto;
+  margin-bottom: 0;
 }
 /* line 14, ../scss/_hentry.scss */
 .hentry .research-image {
   display: block;
   float: left;
   margin-right: 1em;
+  margin-bottom: 2em;
+  padding-bottom: 0.5em;
 }
 /* line 21, ../scss/_hentry.scss */
 .hentry .entry-header,
