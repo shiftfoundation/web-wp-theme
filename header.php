@@ -89,12 +89,12 @@
 			<a class="nav-btn next" href="/people"><i class="fa fa-angle-right"></i> Next Profile</a>
 
 			<ul class="subnav">
-				<li class="selected"><a href="#">Profile</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Videos</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Tweets</a></li>
-				<li><a href="#">Reports</a></li>
+				<li class="selected"><a href="#profile">Profile</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#videos">Videos</a></li>
+				<li><a href="#blog">Blog</a></li>
+				<li><a href="#tweets">Tweets</a></li>
+				<li><a href="#research">Reasearch</a></li>
 			</ul>
 
 		<?php }	?>

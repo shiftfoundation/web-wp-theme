@@ -110,7 +110,7 @@ h2, h3, .hentry .byline {
 }
 
 /* line 78, ../scss/typography.scss */
-h1, .site-header .site-branding p, .menu li a {
+h1, .site-header .site-branding p, .listing.products li .name strong, .menu li a {
   font-family: "MuseoSans900", sans-serif;
 }
 
@@ -531,6 +531,8 @@ a {
 /* line 111, ../scss/_layout.scss */
 .listing {
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 /* line 114, ../scss/_layout.scss */
 .listing li {
@@ -541,14 +543,16 @@ a {
   overflow: hidden;
   float: left;
   position: relative;
+  padding: 0;
 }
-/* line 123, ../scss/_layout.scss */
+/* line 124, ../scss/_layout.scss */
+.listing li a,
 .listing li img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 125, ../scss/_layout.scss */
+/* line 128, ../scss/_layout.scss */
 .listing li .info {
   display: block;
   width: 100%;
@@ -565,12 +569,12 @@ a {
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
-/* line 134, ../scss/_layout.scss */
+/* line 137, ../scss/_layout.scss */
 .listing li .info .button {
   float: right;
   margin-top: 1em;
 }
-/* line 138, ../scss/_layout.scss */
+/* line 141, ../scss/_layout.scss */
 .listing li .name {
   position: absolute;
   top: 1.5em;
@@ -580,31 +584,35 @@ a {
   padding: 1.2em 1.5em;
   text-align: right;
 }
-/* line 146, ../scss/_layout.scss */
+/* line 149, ../scss/_layout.scss */
 .listing li .name strong {
   display: block;
   font-size: 1.5em;
 }
-/* line 152, ../scss/_layout.scss */
+/* line 155, ../scss/_layout.scss */
 .listing li:hover .info {
   opacity: 1;
   top: 0;
 }
 
-/* line 159, ../scss/_layout.scss */
-.post-type-archive-product .listing li {
+/* line 162, ../scss/_layout.scss */
+.listing.products li {
   width: 50%;
   height: 33%;
   max-height: 400px;
+  display: block !important;
 }
-/* line 162, ../scss/_layout.scss */
-.post-type-archive-product .listing li .name strong {
-  font-family: MuseoSans900;
+/* line 165, ../scss/_layout.scss */
+.listing.products li .name strong {
   line-height: 1;
   font-weight: normal;
 }
+/* line 167, ../scss/_layout.scss */
+.listing.products li .wp-post-image {
+  border: none !important;
+}
 
-/* line 166, ../scss/_layout.scss */
+/* line 171, ../scss/_layout.scss */
 .banner {
   height: 470px;
   overflow: hidden;
@@ -613,26 +621,26 @@ a {
   background-position: center;
   background-size: cover;
 }
-/* line 174, ../scss/_layout.scss */
+/* line 179, ../scss/_layout.scss */
 .banner h1 {
   padding: 0;
 }
-/* line 176, ../scss/_layout.scss */
+/* line 181, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 178, ../scss/_layout.scss */
+/* line 183, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 180, ../scss/_layout.scss */
+/* line 185, ../scss/_layout.scss */
 .banner .wrapper, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 182, ../scss/_layout.scss */
+/* line 187, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -643,7 +651,7 @@ a {
   padding: 1.5em;
   text-align: right;
 }
-/* line 184, ../scss/_layout.scss */
+/* line 189, ../scss/_layout.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -653,24 +661,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 192, ../scss/_layout.scss */
+/* line 197, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 194, ../scss/_layout.scss */
+/* line 199, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 196, ../scss/_layout.scss */
+/* line 201, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 197, ../scss/_layout.scss */
+/* line 202, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 200, ../scss/_layout.scss */
+/* line 205, ../scss/_layout.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -681,12 +689,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 205, ../scss/_layout.scss */
+/* line 210, ../scss/_layout.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 207, ../scss/_layout.scss */
+/* line 212, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -695,7 +703,7 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 217, ../scss/_layout.scss */
+/* line 222, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;
