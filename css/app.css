@@ -892,6 +892,11 @@ a {
   clear: both;
 }
 
+/* line 56, ../scss/_hentry.scss */
+#comments {
+  display: none;
+}
+
 /* line 1, ../scss/_buttons.scss */
 .button {
   display: inline-block;
