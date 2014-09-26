@@ -77,7 +77,7 @@
 				<?php if( get_post_meta( get_the_ID(), 'partners', true ) ) { ?><li><a href="#partners">Partners</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) { ?><li><a href="#jobs">Jobs</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'awards', true ) ) { ?><li><a href="#awards">Awards</a></li><?php } ?>
-				<?php if( get_post_meta( get_the_ID(), 'website', true ) ) { ?><li><a href="<?php get_post_meta( get_the_ID(), 'website', true ); ?>">Website</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'link', true ) ) { ?><li><a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'link', true ); ?>">Website</a></li><?php } ?>
 			</ul>
 
 		<?php }	?>
