@@ -123,18 +123,22 @@ h6 {
 }
 
 /* line 129, ../scss/typography.scss */
+.entry-content h3 + h4, .wp-editor h3 + h4 {
+  padding-top: 0.5em;
+}
+/* line 131, ../scss/typography.scss */
 .entry-content sup, .wp-editor sup {
   vertical-align: 60%;
   font-size: 0.75em;
   line-height: 1;
 }
-/* line 135, ../scss/typography.scss */
+/* line 137, ../scss/typography.scss */
 .entry-content sub, .wp-editor sub {
   vertical-align: -10%;
   font-size: 0.75em;
   line-height: 1;
 }
-/* line 141, ../scss/typography.scss */
+/* line 143, ../scss/typography.scss */
 .entry-content .amp, .wp-editor .amp {
   font-family: "Baskerville", "Goudy Old Style", "Palatino", "Book Antiqua", "Warnock Pro", serif;
   font-weight: normal;
@@ -142,101 +146,101 @@ h6 {
   font-size: 1.1em;
   line-height: 1em;
 }
-/* line 149, ../scss/typography.scss */
+/* line 151, ../scss/typography.scss */
 .entry-content .caps, .wp-editor .caps {
   font-size: 0.9em;
 }
-/* line 151, ../scss/typography.scss */
+/* line 153, ../scss/typography.scss */
 .entry-content .dquo, .wp-editor .dquo {
   margin-left: -0.4em;
 }
-/* line 153, ../scss/typography.scss */
+/* line 155, ../scss/typography.scss */
 .entry-content .quo, .wp-editor .quo {
   margin-left: -0.2em;
 }
-/* line 155, ../scss/typography.scss */
+/* line 157, ../scss/typography.scss */
 .entry-content .cleaning, .wp-editor .cleaning {
   clear: both;
 }
-/* line 157, ../scss/typography.scss */
+/* line 159, ../scss/typography.scss */
 .entry-content .separator, .wp-editor .separator {
   display: block;
 }
-/* line 159, ../scss/typography.scss */
+/* line 161, ../scss/typography.scss */
 .entry-content a, .wp-editor a {
   color: #000;
   text-decoration: underline;
 }
-/* line 160, ../scss/typography.scss */
+/* line 162, ../scss/typography.scss */
 .entry-content a:hover, .wp-editor a:hover {
   background: #fddf00;
 }
-/* line 162, ../scss/typography.scss */
+/* line 164, ../scss/typography.scss */
 .entry-content p, .wp-editor p {
   padding: 0 0 1.4em 0;
   margin: 0;
 }
-/* line 164, ../scss/typography.scss */
+/* line 166, ../scss/typography.scss */
 .entry-content ul, .wp-editor ul {
   padding: 1em 0 1em 1.5em;
   margin: 0;
 }
-/* line 165, ../scss/typography.scss */
+/* line 167, ../scss/typography.scss */
 .entry-content p + ul, .wp-editor p + ul {
   padding: 0 0 1.5em 1.5em;
 }
-/* line 166, ../scss/typography.scss */
+/* line 168, ../scss/typography.scss */
 .entry-content ul ul, .wp-editor ul ul {
   padding: 0.5em 0 0.5em 1.5em;
 }
-/* line 167, ../scss/typography.scss */
+/* line 169, ../scss/typography.scss */
 .entry-content ul + ul, .wp-editor ul + ul {
   padding: 0 0 1em 1em;
 }
-/* line 168, ../scss/typography.scss */
+/* line 170, ../scss/typography.scss */
 .entry-content ul li, .wp-editor ul li {
   list-style: disc outside;
   display: list-item;
 }
-/* line 169, ../scss/typography.scss */
+/* line 171, ../scss/typography.scss */
 .entry-content ul li li, .wp-editor ul li li {
   list-style: circle;
 }
-/* line 171, ../scss/typography.scss */
+/* line 173, ../scss/typography.scss */
 .entry-content ol, .wp-editor ol {
   padding: 1em 0 1em 1.5em;
   margin: 0;
 }
-/* line 172, ../scss/typography.scss */
+/* line 174, ../scss/typography.scss */
 .entry-content p + ol, .wp-editor p + ol {
   padding: 0 0 1.5em 1.5em;
 }
-/* line 173, ../scss/typography.scss */
+/* line 175, ../scss/typography.scss */
 .entry-content ol ol, .wp-editor ol ol {
   padding: 1em 0 1em 1.5em;
 }
-/* line 174, ../scss/typography.scss */
+/* line 176, ../scss/typography.scss */
 .entry-content ol + ol, .wp-editor ol + ol {
   padding: 0 0 1em 1.5em;
 }
-/* line 175, ../scss/typography.scss */
+/* line 177, ../scss/typography.scss */
 .entry-content ol li, .wp-editor ol li {
   list-style: decimal outside;
   display: list-item;
 }
-/* line 177, ../scss/typography.scss */
+/* line 179, ../scss/typography.scss */
 .entry-content img[align=right],
 .entry-content table[align=right], .wp-editor img[align=right],
 .wp-editor table[align=right] {
   margin-left: 1em;
 }
-/* line 180, ../scss/typography.scss */
+/* line 182, ../scss/typography.scss */
 .entry-content img[align=left],
 .entry-content table[align=left], .wp-editor img[align=left],
 .wp-editor table[align=left] {
   margin-right: 1em;
 }
-/* line 183, ../scss/typography.scss */
+/* line 185, ../scss/typography.scss */
 .entry-content img.bannertop,
 .entry-content img.bannerbottom, .wp-editor img.bannertop,
 .wp-editor img.bannerbottom {
@@ -244,19 +248,19 @@ h6 {
   width: 100%;
   height: auto;
 }
-/* line 188, ../scss/typography.scss */
+/* line 190, ../scss/typography.scss */
 .entry-content img.image, .wp-editor img.image {
   display: block;
   width: 40%;
   height: auto;
   margin: 0 0 0.5em 0;
 }
-/* line 190, ../scss/typography.scss */
+/* line 192, ../scss/typography.scss */
 .entry-content a.float, .wp-editor a.float {
   clear: both;
   margin-bottom: 1em;
 }
-/* line 192, ../scss/typography.scss */
+/* line 194, ../scss/typography.scss */
 .entry-content a.float.right,
 .entry-content img.aligright,
 .entry-content img.image.right, .wp-editor a.float.right,
@@ -265,7 +269,7 @@ h6 {
   float: right;
   margin-left: 1em;
 }
-/* line 196, ../scss/typography.scss */
+/* line 198, ../scss/typography.scss */
 .entry-content a.float.left,
 .entry-content img.alignleft,
 .entry-content img.image.left, .wp-editor a.float.left,
@@ -274,7 +278,7 @@ h6 {
   float: left;
   margin-right: 1em;
 }
-/* line 200, ../scss/typography.scss */
+/* line 202, ../scss/typography.scss */
 .entry-content blockquote, .wp-editor blockquote {
   margin: 1em;
   quotes: "\201C" "\201D";
@@ -283,11 +287,11 @@ h6 {
   /*p:first-child:before { content:open-quote; padding-right: 5px;  }*/
   /*p:first-child:after { content:close-quote; padding-left: 5px; }*/
 }
-/* line 205, ../scss/typography.scss */
+/* line 207, ../scss/typography.scss */
 .entry-content blockquote p, .wp-editor blockquote p {
   text-decoration: underline;
 }
-/* line 206, ../scss/typography.scss */
+/* line 208, ../scss/typography.scss */
 .entry-content blockquote p:last-child, .wp-editor blockquote p:last-child {
   text-decoration: none;
 }

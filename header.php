@@ -174,4 +174,4 @@
 	<?php }	?>
 
 
-	<div id="content" class="site-content <?php if( is_archive() || $post->post_name == 'people' ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">
+	<div id="content" class="site-content <?php if( is_archive() || is_front_page() || $post->post_name == 'people' ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">

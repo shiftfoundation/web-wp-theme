@@ -105,12 +105,12 @@ h4, h5, h6, .entry-content blockquote p:last-child, .wp-editor blockquote p:last
 }
 
 /* line 77, ../scss/typography.scss */
-h2, h3, .entry-content blockquote p, .wp-editor blockquote p, .hentry .byline {
+h2, h3, .entry-content blockquote p, .wp-editor blockquote p, .getincontact .copy, .getincontact .person, .hentry .byline {
   font-family: "MuseoSans700", sans-serif;
 }
 
 /* line 78, ../scss/typography.scss */
-h1, .site-header .site-branding p, .listing.products li .name strong, .menu li a {
+h1, .site-header .site-branding p, .listing li .name strong, .listing.products li .name strong, .menu li a, .home .site-header p {
   font-family: "MuseoSans900", sans-serif;
 }
 
@@ -173,18 +173,22 @@ h6 {
 }
 
 /* line 129, ../scss/typography.scss */
+.entry-content h3 + h4, .wp-editor h3 + h4 {
+  padding-top: 0.5em;
+}
+/* line 131, ../scss/typography.scss */
 .entry-content sup, .wp-editor sup {
   vertical-align: 60%;
   font-size: 0.75em;
   line-height: 1;
 }
-/* line 135, ../scss/typography.scss */
+/* line 137, ../scss/typography.scss */
 .entry-content sub, .wp-editor sub {
   vertical-align: -10%;
   font-size: 0.75em;
   line-height: 1;
 }
-/* line 141, ../scss/typography.scss */
+/* line 143, ../scss/typography.scss */
 .entry-content .amp, .wp-editor .amp {
   font-family: "Baskerville", "Goudy Old Style", "Palatino", "Book Antiqua", "Warnock Pro", serif;
   font-weight: normal;
@@ -192,101 +196,101 @@ h6 {
   font-size: 1.1em;
   line-height: 1em;
 }
-/* line 149, ../scss/typography.scss */
+/* line 151, ../scss/typography.scss */
 .entry-content .caps, .wp-editor .caps {
   font-size: 0.9em;
 }
-/* line 151, ../scss/typography.scss */
+/* line 153, ../scss/typography.scss */
 .entry-content .dquo, .wp-editor .dquo {
   margin-left: -0.4em;
 }
-/* line 153, ../scss/typography.scss */
+/* line 155, ../scss/typography.scss */
 .entry-content .quo, .wp-editor .quo {
   margin-left: -0.2em;
 }
-/* line 155, ../scss/typography.scss */
+/* line 157, ../scss/typography.scss */
 .entry-content .cleaning, .wp-editor .cleaning {
   clear: both;
 }
-/* line 157, ../scss/typography.scss */
+/* line 159, ../scss/typography.scss */
 .entry-content .separator, .wp-editor .separator {
   display: block;
 }
-/* line 159, ../scss/typography.scss */
+/* line 161, ../scss/typography.scss */
 .entry-content a, .wp-editor a {
   color: #000;
   text-decoration: underline;
 }
-/* line 160, ../scss/typography.scss */
+/* line 162, ../scss/typography.scss */
 .entry-content a:hover, .wp-editor a:hover {
   background: #fddf00;
 }
-/* line 162, ../scss/typography.scss */
+/* line 164, ../scss/typography.scss */
 .entry-content p, .wp-editor p {
   padding: 0 0 1.4em 0;
   margin: 0;
 }
-/* line 164, ../scss/typography.scss */
+/* line 166, ../scss/typography.scss */
 .entry-content ul, .wp-editor ul {
   padding: 1em 0 1em 1.5em;
   margin: 0;
 }
-/* line 165, ../scss/typography.scss */
+/* line 167, ../scss/typography.scss */
 .entry-content p + ul, .wp-editor p + ul {
   padding: 0 0 1.5em 1.5em;
 }
-/* line 166, ../scss/typography.scss */
+/* line 168, ../scss/typography.scss */
 .entry-content ul ul, .wp-editor ul ul {
   padding: 0.5em 0 0.5em 1.5em;
 }
-/* line 167, ../scss/typography.scss */
+/* line 169, ../scss/typography.scss */
 .entry-content ul + ul, .wp-editor ul + ul {
   padding: 0 0 1em 1em;
 }
-/* line 168, ../scss/typography.scss */
+/* line 170, ../scss/typography.scss */
 .entry-content ul li, .wp-editor ul li {
   list-style: disc outside;
   display: list-item;
 }
-/* line 169, ../scss/typography.scss */
+/* line 171, ../scss/typography.scss */
 .entry-content ul li li, .wp-editor ul li li {
   list-style: circle;
 }
-/* line 171, ../scss/typography.scss */
+/* line 173, ../scss/typography.scss */
 .entry-content ol, .wp-editor ol {
   padding: 1em 0 1em 1.5em;
   margin: 0;
 }
-/* line 172, ../scss/typography.scss */
+/* line 174, ../scss/typography.scss */
 .entry-content p + ol, .wp-editor p + ol {
   padding: 0 0 1.5em 1.5em;
 }
-/* line 173, ../scss/typography.scss */
+/* line 175, ../scss/typography.scss */
 .entry-content ol ol, .wp-editor ol ol {
   padding: 1em 0 1em 1.5em;
 }
-/* line 174, ../scss/typography.scss */
+/* line 176, ../scss/typography.scss */
 .entry-content ol + ol, .wp-editor ol + ol {
   padding: 0 0 1em 1.5em;
 }
-/* line 175, ../scss/typography.scss */
+/* line 177, ../scss/typography.scss */
 .entry-content ol li, .wp-editor ol li {
   list-style: decimal outside;
   display: list-item;
 }
-/* line 177, ../scss/typography.scss */
+/* line 179, ../scss/typography.scss */
 .entry-content img[align=right],
 .entry-content table[align=right], .wp-editor img[align=right],
 .wp-editor table[align=right] {
   margin-left: 1em;
 }
-/* line 180, ../scss/typography.scss */
+/* line 182, ../scss/typography.scss */
 .entry-content img[align=left],
 .entry-content table[align=left], .wp-editor img[align=left],
 .wp-editor table[align=left] {
   margin-right: 1em;
 }
-/* line 183, ../scss/typography.scss */
+/* line 185, ../scss/typography.scss */
 .entry-content img.bannertop,
 .entry-content img.bannerbottom, .wp-editor img.bannertop,
 .wp-editor img.bannerbottom {
@@ -294,19 +298,19 @@ h6 {
   width: 100%;
   height: auto;
 }
-/* line 188, ../scss/typography.scss */
+/* line 190, ../scss/typography.scss */
 .entry-content img.image, .wp-editor img.image {
   display: block;
   width: 40%;
   height: auto;
   margin: 0 0 0.5em 0;
 }
-/* line 190, ../scss/typography.scss */
+/* line 192, ../scss/typography.scss */
 .entry-content a.float, .wp-editor a.float {
   clear: both;
   margin-bottom: 1em;
 }
-/* line 192, ../scss/typography.scss */
+/* line 194, ../scss/typography.scss */
 .entry-content a.float.right,
 .entry-content img.aligright,
 .entry-content img.image.right, .wp-editor a.float.right,
@@ -315,7 +319,7 @@ h6 {
   float: right;
   margin-left: 1em;
 }
-/* line 196, ../scss/typography.scss */
+/* line 198, ../scss/typography.scss */
 .entry-content a.float.left,
 .entry-content img.alignleft,
 .entry-content img.image.left, .wp-editor a.float.left,
@@ -324,7 +328,7 @@ h6 {
   float: left;
   margin-right: 1em;
 }
-/* line 200, ../scss/typography.scss */
+/* line 202, ../scss/typography.scss */
 .entry-content blockquote, .wp-editor blockquote {
   margin: 1em;
   quotes: "\201C" "\201D";
@@ -333,11 +337,11 @@ h6 {
   /*p:first-child:before { content:open-quote; padding-right: 5px;  }*/
   /*p:first-child:after { content:close-quote; padding-left: 5px; }*/
 }
-/* line 205, ../scss/typography.scss */
+/* line 207, ../scss/typography.scss */
 .entry-content blockquote p, .wp-editor blockquote p {
   text-decoration: underline;
 }
-/* line 206, ../scss/typography.scss */
+/* line 208, ../scss/typography.scss */
 .entry-content blockquote p:last-child, .wp-editor blockquote p:last-child {
   text-decoration: none;
 }
@@ -571,6 +575,7 @@ a {
 /* line 141, ../scss/_layout.scss */
 .listing li .name {
   position: absolute;
+  z-index: 20;
   top: 1.5em;
   right: 1.5em;
   max-width: 80%;
@@ -578,35 +583,102 @@ a {
   padding: 1.2em 1.5em;
   text-align: right;
 }
-/* line 149, ../scss/_layout.scss */
+/* line 150, ../scss/_layout.scss */
 .listing li .name strong {
   display: block;
   font-size: 1.5em;
 }
-/* line 155, ../scss/_layout.scss */
+/* line 157, ../scss/_layout.scss */
 .listing li:hover .info {
   opacity: 1;
   top: 0;
 }
 
-/* line 162, ../scss/_layout.scss */
+/* line 164, ../scss/_layout.scss */
+.getincontact {
+  overflow: hidden;
+  color: #000;
+  line-height: 52px;
+  border: solid 4px #fcde00;
+  margin: 1em 75px;
+}
+/* line 171, ../scss/_layout.scss */
+.getincontact .copy {
+  width: 40%;
+}
+/* line 172, ../scss/_layout.scss */
+.getincontact .person {
+  width: 60%;
+}
+/* line 174, ../scss/_layout.scss */
+.getincontact .copy, .getincontact .person {
+  float: left;
+  padding: 1em 2em;
+}
+/* line 179, ../scss/_layout.scss */
+.getincontact .copy {
+  text-align: center;
+  background: #fcde00;
+  position: relative;
+}
+/* line 184, ../scss/_layout.scss */
+.getincontact .copy:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 42px solid transparent;
+  border-left: 25px solid #fcde00;
+  border-bottom: 42px solid transparent;
+  position: absolute;
+  right: -24px;
+  top: 0;
+}
+/* line 196, ../scss/_layout.scss */
+.getincontact .person {
+  position: relative;
+  padding-left: 110px;
+}
+/* line 199, ../scss/_layout.scss */
+.getincontact .person .avatar {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  left: 2.7em;
+}
+/* line 203, ../scss/_layout.scss */
+.getincontact .person .avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 206, ../scss/_layout.scss */
+.getincontact .person a:hover {
+  background: #fcde00;
+  text-decoration: underline;
+}
+
+/* line 210, ../scss/_layout.scss */
 .listing.products li {
   width: 50%;
   height: 33%;
   max-height: 400px;
   display: block !important;
 }
-/* line 165, ../scss/_layout.scss */
+/* line 213, ../scss/_layout.scss */
 .listing.products li .name strong {
   line-height: 1;
   font-weight: normal;
 }
-/* line 167, ../scss/_layout.scss */
+/* line 215, ../scss/_layout.scss */
 .listing.products li .wp-post-image {
   border: none !important;
 }
 
-/* line 171, ../scss/_layout.scss */
+/* line 219, ../scss/_layout.scss */
 .banner {
   height: 470px;
   overflow: hidden;
@@ -615,26 +687,26 @@ a {
   background-position: center;
   background-size: cover;
 }
-/* line 179, ../scss/_layout.scss */
+/* line 227, ../scss/_layout.scss */
 .banner h1 {
   padding: 0;
 }
-/* line 181, ../scss/_layout.scss */
+/* line 229, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 183, ../scss/_layout.scss */
+/* line 231, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 185, ../scss/_layout.scss */
+/* line 233, ../scss/_layout.scss */
 .banner .wrapper, .banner .hrd_cnt, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 187, ../scss/_layout.scss */
+/* line 235, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -645,7 +717,7 @@ a {
   padding: 1.5em;
   text-align: right;
 }
-/* line 189, ../scss/_layout.scss */
+/* line 237, ../scss/_layout.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -655,24 +727,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 197, ../scss/_layout.scss */
+/* line 245, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 199, ../scss/_layout.scss */
+/* line 247, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 201, ../scss/_layout.scss */
+/* line 249, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 202, ../scss/_layout.scss */
+/* line 250, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 205, ../scss/_layout.scss */
+/* line 253, ../scss/_layout.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -683,12 +755,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 210, ../scss/_layout.scss */
+/* line 258, ../scss/_layout.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 212, ../scss/_layout.scss */
+/* line 260, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -697,7 +769,7 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 222, ../scss/_layout.scss */
+/* line 270, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;
@@ -799,43 +871,43 @@ a {
 .hrd_cnt, .hrd_cnt a {
   color: #FFF;
 }
-/* line 71, ../scss/_navigation.scss */
-.hrd_cnt a .fa {
+/* line 72, ../scss/_navigation.scss */
+.hrd_cnt .fa, .hrd_cnt a .fa {
   color: #fddf00;
 }
 
-/* line 74, ../scss/_navigation.scss */
+/* line 76, ../scss/_navigation.scss */
 .menu {
   padding-left: 60px;
   padding-top: 7em;
   padding-bottom: 2em;
 }
-/* line 80, ../scss/_navigation.scss */
+/* line 82, ../scss/_navigation.scss */
 .menu li {
   display: block;
   width: 360px;
   float: left;
   margin-right: 15px;
 }
-/* line 84, ../scss/_navigation.scss */
+/* line 86, ../scss/_navigation.scss */
 .menu li a {
   font-size: 3em;
   color: #FFF;
   padding: 0.1em;
 }
-/* line 86, ../scss/_navigation.scss */
+/* line 88, ../scss/_navigation.scss */
 .menu li.current-menu-item a,
 .menu li a:hover {
   color: #fcde00;
 }
 
-/* line 95, ../scss/_navigation.scss */
+/* line 97, ../scss/_navigation.scss */
 .active.site-header .site-title {
   position: relative;
   z-index: 1001;
   border-color: #fff;
 }
-/* line 100, ../scss/_navigation.scss */
+/* line 102, ../scss/_navigation.scss */
 .active.site-header .site-title a {
   color: #fff;
 }
@@ -954,17 +1026,21 @@ a {
   float: left;
   padding: 1.45em 0 0 1.3em;
 }
-/* line 12, ../scss/_home.scss */
+/* line 13, ../scss/_home.scss */
 .home .hentry {
   padding: 4em 0 0 0;
 }
-/* line 16, ../scss/_home.scss */
+/* line 17, ../scss/_home.scss */
 .home .entry-content {
   font-size: 1.2em;
   color: #666;
 }
-/* line 20, ../scss/_home.scss */
+/* line 21, ../scss/_home.scss */
 .home .banner {
   height: 270px;
   background-size: inherit;
+}
+/* line 26, ../scss/_home.scss */
+.home .wrapper-wide {
+  margin: 0 -span(1 of 12);
 }

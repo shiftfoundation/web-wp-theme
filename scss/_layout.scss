@@ -140,6 +140,7 @@ a {
 
 		.name {
 			position: absolute;
+			z-index: 20;
 			top: 1.5em; right: 1.5em;
 			max-width: 80%;
 			background: #FFF;
@@ -149,6 +150,7 @@ a {
 			strong {
 				display: block;
 				font-size: 1.5em;
+				@extend %MSS9;
 			}
 		}
 
@@ -156,6 +158,52 @@ a {
 			opacity: 1;
 			top: 0;
 		}
+	}
+}
+
+.getincontact {
+	overflow: hidden;
+	color: #000;
+	line-height: 52px;
+	border: solid 4px $activeColor;
+	margin: 1em span(1 of 12 wide);
+
+	.copy { width: 40%; }
+	.person { width: 60%; }
+	
+	.copy, .person {
+	   	float: left; padding: 1em 2em; 
+		@extend %MSS7;
+	}
+
+	.copy {
+		text-align: center;
+		background: $activeColor;
+		position: relative;
+
+		&:after {
+			display: block;
+			content: '';
+				width: 0;
+				height: 0;
+				border-top: 42px solid transparent;
+				border-left: 25px solid $activeColor;
+				border-bottom: 42px solid transparent;
+				position: absolute; right: -24px; top: 0;
+		}
+	}
+
+	.person { 
+		position: relative; padding-left: 110px;
+
+		.avatar {
+			display: inline-block; width: 52px; height: 52px; overflow: hidden; border-radius: 50%;
+			position: absolute; left: 2.7em;
+
+			img { display: block; width: 100%; height: 100%; }
+	   	}
+		
+		a:hover { background: $activeColor; text-decoration: underline; }
 	}
 }
 

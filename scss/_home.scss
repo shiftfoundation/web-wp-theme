@@ -7,6 +7,7 @@
 		font-weight: bold;
 		float: left;
 		padding: 1.45em 0 0 1.3em;
+		@extend %MSS9;
 	}
 
 	.hentry {
@@ -20,5 +21,9 @@
 	.banner {
 		height: 270px;
 		background-size: inherit;
+	}
+
+	.wrapper-wide {
+		margin: 0 -span(1 of 12);
 	}
 }

@@ -21,6 +21,30 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
+			<?php 
+			$featuredUser = get_users( array(
+				'connected_type' => 'page_to_users',
+				'connected_items' => $post
+			) ); ?>
+
+			<?php
+			// Display connected pages
+			if ( $featuredUser ) { ?>
+
+			<div class="getincontact">
+				<div class="copy">
+					We'd love to hear from you
+				</div>
+				<div class="person">
+					<?php $avatar = get_user_meta($featuredUser[0]->ID, 'avatar', true); ?>
+					<div class="avatar">
+						<?php echo wp_get_attachment_image( $avatar, 'thumbnail' ); ?>
+					</div>
+					Email me - <a href="mailto:<?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>"><?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?></a>
+				</div>
+			</div>
+			<?php } ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
