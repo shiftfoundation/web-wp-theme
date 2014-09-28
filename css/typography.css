@@ -45,7 +45,7 @@
  * Typography
  * */
 /* line 73, ../scss/typography.scss */
-body {
+body, form, textarea, input {
   font: 16px/1.4 "MuseoSans300", sans-serif;
 }
 

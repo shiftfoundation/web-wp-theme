@@ -107,17 +107,31 @@ get_header(); ?>
 
 				</section>
 
-				<?php 
-				/*
-				Connected User: 
-				$users = get_users( array(
-				  'connected_type' => 'projects_to_users',
-				  'connected_items' => $post
-				 ) );
+<?php /*
+				$featuredUser = get_users( array(
+					'connected_type' => 'product_to_users_featured',
+					'connected_items' => $post
+				) ); ?>
 
-					echo $users[0]->user_nicename;
-				 */
-				?>
+<?php
+				print_r($featuredUser);
+				// Display connected pages
+				if ( $featuredUser ) { ?>
+
+				<div class="getincontact">
+					<div class="copy">
+						We'd love to hear from you
+					</div>
+					<div class="person">
+						<?php $avatar = get_user_meta($featuredUser[0]->ID, 'avatar', true); ?>
+						<div class="avatar">
+							<?php echo wp_get_attachment_image( $avatar, 'thumbnail' ); ?>
+						</div>
+						Email me - <a href="mailto:<?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>"><?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?></a>
+					</div>
+				</div>
+				<?php } */ ?>
+
 
 			</article>
 

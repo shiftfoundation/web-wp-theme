@@ -90,10 +90,25 @@ function product_to_users() {
     p2p_register_connection_type( array(
         'name' => 'product_to_users',
         'from' => 'product',
-        'to' => 'user'
+		'to' => 'user'
     ) );
 }
 add_action( 'p2p_init', 'product_to_users' );
+
+/**
+ * Product to User
+ */
+function product_to_users_featured() {
+    p2p_register_connection_type( array(
+        'name' => 'product_to_users_featured',
+        'from' => 'product',
+		'to' => 'user',
+		'from_labels' => array(
+		   'column_title' => 'Featured user'
+		)
+    ) );
+}
+add_action( 'p2p_init', 'product_to_users_featured' );
 
 /**
  * Research to Product

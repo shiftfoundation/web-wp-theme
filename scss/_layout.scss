@@ -165,7 +165,7 @@ a {
 	overflow: hidden;
 	color: #000;
 	line-height: 52px;
-	border: solid 4px $activeColor;
+	border: solid 4px #ababab;
 	margin: 1em span(1 of 12 wide);
 
 	.copy { width: 40%; }
@@ -178,7 +178,7 @@ a {
 
 	.copy {
 		text-align: center;
-		background: $activeColor;
+		background: #ababab;
 		position: relative;
 
 		&:after {
@@ -187,7 +187,7 @@ a {
 				width: 0;
 				height: 0;
 				border-top: 42px solid transparent;
-				border-left: 25px solid $activeColor;
+				border-left: 25px solid #ababab;
 				border-bottom: 42px solid transparent;
 				position: absolute; right: -24px; top: 0;
 		}
@@ -204,6 +204,18 @@ a {
 	   	}
 		
 		a:hover { background: $activeColor; text-decoration: underline; }
+	}
+
+	&:hover {
+		border-color: $activeColor;
+
+		.copy { 
+			background: $activeColor;
+
+			&:after {
+				border-left-color: $activeColor;
+			}
+	   	}
 	}
 }
 

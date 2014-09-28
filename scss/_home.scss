@@ -32,3 +32,28 @@
 		p:last-child { padding: 0; }
 	}
 }
+
+.page-id-8437 {
+	
+}
+
+.post-8437 {
+	padding: 0 span(1 of 12 wide) !important;
+
+	.entry-header { text-align: center; }
+
+	form {
+		padding: 0 span(2 of 12 wide);
+
+		label.mc_var_label { margin: 0; @extend %MSS7; }
+
+		input, textarea { 
+			border: 2px solid #000; padding: 0.2em 0.4em; outline: none; 
+
+			&:focus { background: $activeColor; }
+		}
+
+		#mc_signup_submit { width: 100%; padding: 0.6em; color: #000; font-weight: normal; display: block; border: none; @extend %MSS7 }
+		#mc_signup_submit:hover { background: $activeColor; cursor: pointer; }
+	}
+}

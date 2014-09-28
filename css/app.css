@@ -95,7 +95,7 @@ html {
  * Typography
  * */
 /* line 73, ../scss/typography.scss */
-body {
+body, form, textarea, input {
   font: 16px/1.4 "MuseoSans300", sans-serif;
 }
 
@@ -105,7 +105,7 @@ h4, h5, h6, .entry-content blockquote p:last-child, .wp-editor blockquote p:last
 }
 
 /* line 77, ../scss/typography.scss */
-h2, h3, .entry-content blockquote p, .wp-editor blockquote p, .getincontact .copy, .getincontact .person, .hentry .byline {
+h2, h3, .entry-content blockquote p, .wp-editor blockquote p, .getincontact .copy, .getincontact .person, .hentry .byline, .post-8437 form label.mc_var_label, .post-8437 form #mc_signup_submit {
   font-family: "MuseoSans700", sans-serif;
 }
 
@@ -599,7 +599,7 @@ a {
   overflow: hidden;
   color: #000;
   line-height: 52px;
-  border: solid 4px #fcde00;
+  border: solid 4px #ababab;
   margin: 1em 75px;
 }
 /* line 171, ../scss/_layout.scss */
@@ -618,7 +618,7 @@ a {
 /* line 179, ../scss/_layout.scss */
 .getincontact .copy {
   text-align: center;
-  background: #fcde00;
+  background: #ababab;
   position: relative;
 }
 /* line 184, ../scss/_layout.scss */
@@ -628,7 +628,7 @@ a {
   width: 0;
   height: 0;
   border-top: 42px solid transparent;
-  border-left: 25px solid #fcde00;
+  border-left: 25px solid #ababab;
   border-bottom: 42px solid transparent;
   position: absolute;
   right: -24px;
@@ -660,25 +660,37 @@ a {
   background: #fcde00;
   text-decoration: underline;
 }
+/* line 209, ../scss/_layout.scss */
+.getincontact:hover {
+  border-color: #fcde00;
+}
+/* line 212, ../scss/_layout.scss */
+.getincontact:hover .copy {
+  background: #fcde00;
+}
+/* line 215, ../scss/_layout.scss */
+.getincontact:hover .copy:after {
+  border-left-color: #fcde00;
+}
 
-/* line 210, ../scss/_layout.scss */
+/* line 222, ../scss/_layout.scss */
 .listing.products li {
   width: 50%;
   height: 33%;
   max-height: 400px;
   display: block !important;
 }
-/* line 213, ../scss/_layout.scss */
+/* line 225, ../scss/_layout.scss */
 .listing.products li .name strong {
   line-height: 1;
   font-weight: normal;
 }
-/* line 215, ../scss/_layout.scss */
+/* line 227, ../scss/_layout.scss */
 .listing.products li .wp-post-image {
   border: none !important;
 }
 
-/* line 219, ../scss/_layout.scss */
+/* line 231, ../scss/_layout.scss */
 .banner {
   height: 470px;
   overflow: hidden;
@@ -687,26 +699,26 @@ a {
   background-position: center;
   background-size: cover;
 }
-/* line 227, ../scss/_layout.scss */
+/* line 239, ../scss/_layout.scss */
 .banner h1 {
   padding: 0;
 }
-/* line 229, ../scss/_layout.scss */
+/* line 241, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 231, ../scss/_layout.scss */
+/* line 243, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 233, ../scss/_layout.scss */
+/* line 245, ../scss/_layout.scss */
 .banner .wrapper, .banner .hrd_cnt, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 235, ../scss/_layout.scss */
+/* line 247, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -717,7 +729,7 @@ a {
   padding: 1.5em;
   text-align: right;
 }
-/* line 237, ../scss/_layout.scss */
+/* line 249, ../scss/_layout.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -727,24 +739,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 245, ../scss/_layout.scss */
+/* line 257, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 247, ../scss/_layout.scss */
+/* line 259, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 249, ../scss/_layout.scss */
+/* line 261, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 250, ../scss/_layout.scss */
+/* line 262, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 253, ../scss/_layout.scss */
+/* line 265, ../scss/_layout.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -755,12 +767,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 258, ../scss/_layout.scss */
+/* line 270, ../scss/_layout.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 260, ../scss/_layout.scss */
+/* line 272, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -769,7 +781,7 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 270, ../scss/_layout.scss */
+/* line 282, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;
@@ -965,35 +977,39 @@ a {
   overflow: hidden;
 }
 /* line 44, ../scss/_hentry.scss */
+.hentry .entry-footer, .hentry .entry-footer a {
+  text-decoration: none;
+}
+/* line 46, ../scss/_hentry.scss */
 .hentry .entry-footer .byline {
   padding-right: 0.5em;
 }
-/* line 45, ../scss/_hentry.scss */
+/* line 47, ../scss/_hentry.scss */
 .hentry .entry-footer .posted-on {
   padding-left: 0.5em;
 }
-/* line 48, ../scss/_hentry.scss */
+/* line 50, ../scss/_hentry.scss */
 .hentry .comments-link {
   float: right;
 }
 
-/* line 53, ../scss/_hentry.scss */
+/* line 55, ../scss/_hentry.scss */
 .tabs-container {
   display: none;
 }
 
-/* line 54, ../scss/_hentry.scss */
+/* line 56, ../scss/_hentry.scss */
 .tabs-container:target {
   display: block;
 }
 
 /*TODO: FIX*/
-/* line 57, ../scss/_hentry.scss */
+/* line 59, ../scss/_hentry.scss */
 .tabs-container p {
   clear: both;
 }
 
-/* line 59, ../scss/_hentry.scss */
+/* line 61, ../scss/_hentry.scss */
 #comments {
   display: none;
 }
@@ -1051,4 +1067,45 @@ a {
 /* line 32, ../scss/_home.scss */
 .home .hentry.page.desc p:last-child {
   padding: 0;
+}
+
+/* line 40, ../scss/_home.scss */
+.post-8437 {
+  padding: 0 75px !important;
+}
+/* line 43, ../scss/_home.scss */
+.post-8437 .entry-header {
+  text-align: center;
+}
+/* line 45, ../scss/_home.scss */
+.post-8437 form {
+  padding: 0 150px;
+}
+/* line 48, ../scss/_home.scss */
+.post-8437 form label.mc_var_label {
+  margin: 0;
+}
+/* line 50, ../scss/_home.scss */
+.post-8437 form input, .post-8437 form textarea {
+  border: 2px solid #000;
+  padding: 0.2em 0.4em;
+  outline: none;
+}
+/* line 53, ../scss/_home.scss */
+.post-8437 form input:focus, .post-8437 form textarea:focus {
+  background: #fcde00;
+}
+/* line 56, ../scss/_home.scss */
+.post-8437 form #mc_signup_submit {
+  width: 100%;
+  padding: 0.6em;
+  color: #000;
+  font-weight: normal;
+  display: block;
+  border: none;
+}
+/* line 57, ../scss/_home.scss */
+.post-8437 form #mc_signup_submit:hover {
+  background: #fcde00;
+  cursor: pointer;
 }

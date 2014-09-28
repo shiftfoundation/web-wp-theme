@@ -41,7 +41,7 @@ get_header(); ?>
 					</span>
 				</li>
 				<li>
-					/tori
+					/kathleen
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>People</strong>
@@ -73,6 +73,7 @@ get_header(); ?>
 					</span>
 				</li>
 				<li>
+					/room
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>Space</strong>
