@@ -198,12 +198,17 @@ h6 {
 	img.image.left { float: left; margin-right: 1em; }
 
 	blockquote {
-		quotes:"\201C""\201D"; 
+		margin: 1em;
+		quotes:"\201C""\201D";
+			
 
-		p:first-child:before,
-		p:first-child:after { color:#999; font-size:4em; line-height: 0.000001em; position: relative; top: 0.5em;  }
-		p:first-child:before { content:open-quote; padding-right: 5px;  }
-		p:first-child:after { content:close-quote; padding-left: 5px; }
+		p { @extend %MSS7; text-decoration: underline; }
+		p:last-child { @extend %MSS5; text-decoration: none; }
+
+		/*p:first-child:before,*/
+		/*p:first-child:after { color:#999; font-size:4em; line-height: 0.000001em; position: relative; top: 0.5em;  }*/
+		/*p:first-child:before { content:open-quote; padding-right: 5px;  }*/
+		/*p:first-child:after { content:close-quote; padding-left: 5px; }*/
 	}
 	
 }

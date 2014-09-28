@@ -100,12 +100,12 @@ body {
 }
 
 /* line 76, ../scss/typography.scss */
-h4, h5, h6 {
+h4, h5, h6, .entry-content blockquote p:last-child, .wp-editor blockquote p:last-child {
   font-family: "MuseoSans500", sans-serif;
 }
 
 /* line 77, ../scss/typography.scss */
-h2, h3, .hentry .byline {
+h2, h3, .entry-content blockquote p, .wp-editor blockquote p, .hentry .byline {
   font-family: "MuseoSans700", sans-serif;
 }
 
@@ -326,27 +326,20 @@ h6 {
 }
 /* line 200, ../scss/typography.scss */
 .entry-content blockquote, .wp-editor blockquote {
+  margin: 1em;
   quotes: "\201C" "\201D";
-}
-/* line 203, ../scss/typography.scss */
-.entry-content blockquote p:first-child:before,
-.entry-content blockquote p:first-child:after, .wp-editor blockquote p:first-child:before,
-.wp-editor blockquote p:first-child:after {
-  color: #999;
-  font-size: 4em;
-  line-height: 0.000001em;
-  position: relative;
-  top: 0.5em;
+  /*p:first-child:before,*/
+  /*p:first-child:after { color:#999; font-size:4em; line-height: 0.000001em; position: relative; top: 0.5em;  }*/
+  /*p:first-child:before { content:open-quote; padding-right: 5px;  }*/
+  /*p:first-child:after { content:close-quote; padding-left: 5px; }*/
 }
 /* line 205, ../scss/typography.scss */
-.entry-content blockquote p:first-child:before, .wp-editor blockquote p:first-child:before {
-  content: open-quote;
-  padding-right: 5px;
+.entry-content blockquote p, .wp-editor blockquote p {
+  text-decoration: underline;
 }
 /* line 206, ../scss/typography.scss */
-.entry-content blockquote p:first-child:after, .wp-editor blockquote p:first-child:after {
-  content: close-quote;
-  padding-left: 5px;
+.entry-content blockquote p:last-child, .wp-editor blockquote p:last-child {
+  text-decoration: none;
 }
 
 /*
