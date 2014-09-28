@@ -21,21 +21,28 @@ get_header(); ?>
 						<header>
 							<h1>Profile</h1>
 						</header>
-						<div class="col c5">
-						  <?php echo wpautop($curauth->description, false); ?>
+					  <?php echo wpautop($curauth->description, false); ?>
 
-						  <?php if(get_user_meta($curauth->ID, 'e-mail', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'e-mail', true) ); ?></p><?php } ?>
-						  <?php if(get_user_meta($curauth->ID, 'phone', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'phone', true) ); ?></p><?php } ?>
-						</div>
+					  <?php if(get_user_meta($curauth->ID, 'e-mail', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'e-mail', true) ); ?></p><?php } ?>
+					  <?php if(get_user_meta($curauth->ID, 'phone', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'phone', true) ); ?></p><?php } ?>
 					</div>
 
 					<div id="comment" class="tabs-container">
 						<header class="entry-header">
 							<h1>Comment</h1>
 						</header>
-					</div>
 
-					
+						<?php
+						// Display connected pages
+						foreach ( $current_user_posts as $post ) : setup_postdata( $post ); ?>
+
+							<?php get_template_part( 'content', get_post_format() ); ?>
+
+						<?php
+						endforeach; 
+						wp_reset_postdata();?>
+
+					</div>
 
 					<div id="research" class="tabs-container">
 						<header class="entry-header">
@@ -43,17 +50,10 @@ get_header(); ?>
 						</header>
 
 						<?php
-						// Find connected pages
-						$connected = new WP_Query( array(
-						  'connected_type' => 'research_to_user',
-						  'connected_items' => get_queried_object(),
-						  'nopaging' => true,
-						) );
-
 						// Display connected pages
-						if ( $connected->have_posts() ) :
+						if ( $connected_research->have_posts() ) :
 						?>
-						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+						<?php while ( $connected_research->have_posts() ) : $connected_research->the_post(); ?>
 
 							<div class="cleaning"></div>
 							<a target="_blank" class="research-image" href="<?php echo get_post_meta( get_the_ID(), 'file_url', true ); ?>"><?php the_post_thumbnail(array('class' => 'research')); ?></a>
@@ -64,7 +64,6 @@ get_header(); ?>
 							</div>
 
 						<?php endwhile; ?>
-
 						<?php 
 						// Prevent weirdness
 						wp_reset_postdata();
@@ -79,19 +78,11 @@ get_header(); ?>
 							<h1>Products</h1>
 						</header>
 
-
 						<?php
-						// Find connected pages
-						$connected = new WP_Query( array(
-						  'connected_type' => 'product_to_users',
-						  'connected_items' => get_queried_object(),
-						  'nopaging' => true,
-						) );
-
 						// Display connected pages
-						if ( $connected->have_posts() ) : ?>
+						if ( $connected_product->have_posts() ) : ?>
 						<ul class="listing products">
-						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+						<?php while ( $connected_product->have_posts() ) : $connected_product->the_post(); ?>
 
 							<li id="project-<?php echo $user->id; ?>">	
 								<a href="<?php the_permalink(); ?>">

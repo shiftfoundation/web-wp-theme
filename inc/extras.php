@@ -150,3 +150,12 @@ function dashboard_Redirect(){
 	wp_redirect(admin_url('edit.php'));
 }
 add_action('load-index.php', 'dashboard_Redirect');
+
+add_filter( 'pre_user_query', function( $query ) {
+	global $wpdb;
+
+	if ( false == stripos( $query->query_where, 'corder' ) && is_admin() )
+		return;
+
+	$query->query_orderby = str_replace( "{$wpdb->usermeta}.meta_value", "CAST( {$wpdb->usermeta}.meta_value AS UNSIGNED)", $query->query_orderby );
+} );

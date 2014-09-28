@@ -30,17 +30,10 @@ get_header(); ?>
 						</header>
 
 						<?php
-						// Find connected pages
-						$connected = new WP_Query( array(
-						  'connected_type' => 'research_to_product',
-						  'connected_items' => get_queried_object(),
-						  'nopaging' => true,
-						) );
 
 						// Display connected pages
-						if ( $connected->have_posts() ) :
-						?>
-						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+						if ( $research_to_product->have_posts() ) : ?>
+						<?php while ( $research_to_product->have_posts() ) : $research_to_product->the_post(); ?>
 
 							<div class="cleaning"></div>
 							<a target="_blank" class="research-image" href="<?php echo get_post_meta( get_the_ID(), 'file_url', true ); ?>"><?php the_post_thumbnail(array('class' => 'research')); ?></a>
@@ -50,12 +43,9 @@ get_header(); ?>
 								<?php the_content(); ?>
 							</div>
 
-						<?php endwhile; ?>
-
-						<?php 
+						<?php endwhile;	
 						// Prevent weirdness
 						wp_reset_postdata();
-
 						endif;
 						?>
 
@@ -67,24 +57,13 @@ get_header(); ?>
 						</header>
 
 						<?php
-						// Find connected pages
-						$connected = new WP_Query( array(
-						  'connected_type' => 'post_to_product',
-						  'connected_items' => get_queried_object(),
-						  'nopaging' => true,
-						) );
-
 						// Display connected pages
-						if ( $connected->have_posts() ) :
-						?>
-						<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+						if ( $post_to_product->have_posts() ) : ?>
+						<?php while ( $post_to_product->have_posts() ) : $post_to_product->the_post(); ?>
 							<?php get_template_part( 'content', get_post_format() ); ?>
-						<?php endwhile; ?>
-
-						<?php 
+						<?php endwhile; 	
 						// Prevent weirdness
 						wp_reset_postdata();
-
 						endif;
 						?>
 

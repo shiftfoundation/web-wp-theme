@@ -424,27 +424,29 @@ a {
 }
 
 /* line 53, ../scss/_layout.scss */
+.author .hentry,
 .page .hentry,
 .single .hentry {
   padding: 0 75px;
 }
-/* line 57, ../scss/_layout.scss */
+/* line 58, ../scss/_layout.scss */
+.author .hentry .hentry,
 .page .hentry .hentry,
 .single .hentry .hentry {
   padding: 0;
 }
 
-/* line 62, ../scss/_layout.scss */
+/* line 63, ../scss/_layout.scss */
 .blog .site-content {
   padding-left: 75px;
 }
-/* line 66, ../scss/_layout.scss */
+/* line 67, ../scss/_layout.scss */
 .blog #primary {
   width: 510px;
   float: left;
   margin-right: 15px;
 }
-/* line 70, ../scss/_layout.scss */
+/* line 71, ../scss/_layout.scss */
 .blog #secondary {
   width: 285px;
   float: right;
@@ -452,89 +454,89 @@ a {
 }
 
 /* Grid */
-/* line 75, ../scss/_layout.scss */
+/* line 76, ../scss/_layout.scss */
 .col.c1 {
   width: 75px;
   float: left;
   margin-right: 15px;
 }
-/* line 76, ../scss/_layout.scss */
+/* line 77, ../scss/_layout.scss */
 .col.c2 {
   width: 150px;
   float: left;
   margin-right: 15px;
 }
-/* line 77, ../scss/_layout.scss */
+/* line 78, ../scss/_layout.scss */
 .col.c3 {
   width: 225px;
   float: left;
   margin-right: 15px;
 }
-/* line 78, ../scss/_layout.scss */
+/* line 79, ../scss/_layout.scss */
 .col.c4 {
   width: 300px;
   float: left;
   margin-right: 15px;
 }
-/* line 79, ../scss/_layout.scss */
+/* line 80, ../scss/_layout.scss */
 .col.c5 {
   width: 375px;
   float: left;
   margin-right: 15px;
 }
-/* line 80, ../scss/_layout.scss */
+/* line 81, ../scss/_layout.scss */
 .col.c6 {
   width: 450px;
   float: left;
   margin-right: 15px;
 }
 
-/* line 83, ../scss/_layout.scss */
+/* line 84, ../scss/_layout.scss */
 .content-area {
   padding-bottom: 3em;
 }
 
-/* line 89, ../scss/_layout.scss */
+/* line 90, ../scss/_layout.scss */
 .site-footer .site-info, .site-footer .widgets {
   padding: 2.5em;
 }
-/* line 93, ../scss/_layout.scss */
+/* line 94, ../scss/_layout.scss */
 .site-footer .widgets {
   background: #fcde00;
 }
-/* line 96, ../scss/_layout.scss */
+/* line 97, ../scss/_layout.scss */
 .site-footer .widgets h4 {
   margin: 0 0 1em 0;
 }
-/* line 98, ../scss/_layout.scss */
+/* line 99, ../scss/_layout.scss */
 .site-footer .widgets li {
   list-style: none outside;
 }
-/* line 100, ../scss/_layout.scss */
+/* line 101, ../scss/_layout.scss */
 .site-footer .widgets a:hover {
   text-decoration: underline;
 }
-/* line 101, ../scss/_layout.scss */
+/* line 102, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-2x {
   background: #000;
   border-radius: 50%;
 }
-/* line 102, ../scss/_layout.scss */
+/* line 103, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-1x {
   color: #fcde00;
 }
-/* line 105, ../scss/_layout.scss */
+/* line 106, ../scss/_layout.scss */
 .site-footer .site-info {
   text-align: center;
 }
 
-/* line 111, ../scss/_layout.scss */
+/* line 112, ../scss/_layout.scss */
 .listing {
   overflow: hidden;
   padding: 0;
   margin: 0;
 }
-/* line 114, ../scss/_layout.scss */
+/* line 115, ../scss/_layout.scss */
 .listing li {
   display: block;
   list-style: none outside;
@@ -545,8 +547,7 @@ a {
   position: relative;
   padding: 0;
 }
-/* line 124, ../scss/_layout.scss */
-.listing li a,
+/* line 125, ../scss/_layout.scss */
 .listing li img {
   display: block;
   width: 100%;
@@ -840,22 +841,28 @@ a {
   padding-bottom: 0.5em;
 }
 /* line 21, ../scss/_hentry.scss */
+.hentry .byline a:hover {
+  background: #fcde00;
+  text-decoration: underline;
+}
+/* line 24, ../scss/_hentry.scss */
 .hentry .entry-header,
 .hentry .entry-content {
   overflow: hidden;
 }
-/* line 25, ../scss/_hentry.scss */
+/* line 28, ../scss/_hentry.scss */
 .hentry .entry-header:after,
 .hentry .entry-content:after {
   display: block;
   content: '';
   clear: both;
 }
-/* line 31, ../scss/_hentry.scss */
+/* line 34, ../scss/_hentry.scss */
 .hentry .posted-on, .hentry .posted-on a {
   color: #CCC;
+  pointer-events: none;
 }
-/* line 34, ../scss/_hentry.scss */
+/* line 37, ../scss/_hentry.scss */
 .hentry .entry-footer {
   font-size: 0.75em;
   border-bottom: 1px solid #ababab;
@@ -863,36 +870,36 @@ a {
   margin-bottom: 5em;
   overflow: hidden;
 }
-/* line 41, ../scss/_hentry.scss */
+/* line 44, ../scss/_hentry.scss */
 .hentry .entry-footer .byline {
   padding-right: 0.5em;
 }
-/* line 42, ../scss/_hentry.scss */
+/* line 45, ../scss/_hentry.scss */
 .hentry .entry-footer .posted-on {
   padding-left: 0.5em;
 }
-/* line 45, ../scss/_hentry.scss */
+/* line 48, ../scss/_hentry.scss */
 .hentry .comments-link {
   float: right;
 }
 
-/* line 50, ../scss/_hentry.scss */
+/* line 53, ../scss/_hentry.scss */
 .tabs-container {
   display: none;
 }
 
-/* line 51, ../scss/_hentry.scss */
+/* line 54, ../scss/_hentry.scss */
 .tabs-container:target {
   display: block;
 }
 
 /*TODO: FIX*/
-/* line 54, ../scss/_hentry.scss */
+/* line 57, ../scss/_hentry.scss */
 .tabs-container p {
   clear: both;
 }
 
-/* line 56, ../scss/_hentry.scss */
+/* line 59, ../scss/_hentry.scss */
 #comments {
   display: none;
 }

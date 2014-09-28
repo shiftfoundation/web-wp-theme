@@ -50,6 +50,7 @@ a {
 	overflow: hidden;
 }
 
+.author .hentry,
 .page .hentry,
 .single .hentry {
 	padding: 0 span(1 of 12 wide);
@@ -121,7 +122,6 @@ a {
 		position: relative;
 		padding: 0;
 
-		a,
 		img { display: block; width: 100%; height: auto; }
 		
 

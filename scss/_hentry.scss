@@ -15,8 +15,11 @@
 		display: block; float: left; margin-right: 1em; margin-bottom: 2em; padding-bottom: 0.5em;
 	}
 
-	.byline { @extend %MSS7; }
+	.byline { 
+		@extend %MSS7; 
 
+		a:hover { background: $activeColor; text-decoration: underline; } 
+	}
 
 	.entry-header,
 	.entry-content {
@@ -28,7 +31,7 @@
 	}
 
 	.posted-on {
-		&, a { color: #CCC; }
+		&, a { color: #CCC; pointer-events: none; }
 	}
 
 	.entry-footer {

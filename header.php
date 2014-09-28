@@ -67,12 +67,34 @@
 			<?php echo '<span class="info"><h1 class="name">' . get_the_title() . '</h1><span class="title">' . get_post_meta( get_the_ID(), 'what_does_it_do', true ) . '</span></span>'; ?>
 		
 			<a class="nav-btn all" href="/products"><i class="fa fa-th"></i> All Products</a>
-			<?php /* ?><a class="nav-btn next" href="#"><i class="fa fa-angle-right"></i> Next Project</a><?php */ ?>
+			<?php
+			$next_post = get_next_post();
+			if (!empty( $next_post )): ?>
+			  <a class="nav-btn next" href="<?php echo get_permalink( $next_post->ID ); ?>">Next Project</a>
+			<?php endif;
+
+			// Find connected pages
+			global $post_to_product;
+			$post_to_product = new WP_Query( array(
+				'connected_type' => 'post_to_product',
+				'connected_items' => get_queried_object(),
+				'nopaging' => true,
+			) );
+
+			// Find connected pages
+			global $research_to_product;
+			$research_to_product = new WP_Query( array(
+			  'connected_type' => 'research_to_product',
+			  'connected_items' => get_queried_object(),
+			  'nopaging' => true,
+			) );
+
+			?>
 
 			<ul class="subnav">
 				<li class="selected"><a href="#overview">Overview</a></li>
-				<li><a href="#research">Research</a></li>
-				<li><a href="#comment">Comment</a></li>
+				<?php if ( $research_to_product->have_posts() ) { ?><li><a href="#research">Research</a></li><?php } ?>
+				<?php if ( $post_to_product->have_posts() ) { ?><li><a href="#comment">Comment</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?><li><a href="#coverage">Coverage</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'partners', true ) ) { ?><li><a href="#partners">Partners</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) { ?><li><a href="#jobs">Jobs</a></li><?php } ?>
@@ -87,13 +109,55 @@
 			<?php echo '<span class="info"><h1 class="name">' . $curauth->first_name . ' ' . $curauth->last_name . '</h1><span class="title">' . $curauth->job_title . '</span></span>'; ?>
 
 			<a class="nav-btn all" href="/people"><i class="fa fa-th"></i> All People</a>
-			<a class="nav-btn next" href="/people"><i class="fa fa-angle-right"></i> Next Profile</a>
+			<?php 
+				$nextuser = get_users( array(
+					'meta_query' => array(
+						array(
+							'key' => 'corder',
+							'type' => 'numeric',
+							'value' => (get_user_meta($curauth->ID, 'corder', true)+1),
+							'compare' => '=',
+						),
+					),
+					'orderby' => 'meta_value',
+				) );
+
+				foreach ( $nextuser as $user ) { ?>
+				<a class="nav-btn next" href="/people/<?php echo $user->user_nicename; ?>"><i class="fa fa-angle-right"></i> Next Profile</a>
+				<?php }
+
+				// Find connected research
+				global $connected_research;
+				$connected_research = new WP_Query( array(
+				  'connected_type' => 'research_to_user',
+				  'connected_items' => get_queried_object(),
+				  'nopaging' => true,
+				) );
+
+				// Find connected products
+				global $connected_product;
+				$connected_product = new WP_Query( array(
+				  'connected_type' => 'product_to_users',
+				  'connected_items' => get_queried_object(),
+				  'nopaging' => true,
+				) );
+
+				$args = array(
+					'author'        =>  $curauth->ID, // I could also use $user_ID, right?
+					'orderby'       =>  'post_date',
+					'order'         =>  'ASC' 
+				);
+
+				// get his posts 'ASC'
+				global $current_user_posts;
+				$current_user_posts = get_posts( $args );
+			?>
 
 			<ul class="subnav">
 				<li class="selected"><a href="#profile">Profile</a></li>
-				<li><a href="#comment">Comment</a></li>
-				<li><a href="#research">Research</a></li>
-				<li><a href="#products">Products</a></li>
+				<?php if ( count($current_user_posts) > 0 ) { ?><li><a href="#comment">Comment</a></li><?php } ?>
+				<?php if ( $connected_research->have_posts() ) { ?><li><a href="#research">Research</a></li><?php } ?>
+				<?php if ( $connected_product->have_posts() ) { ?><li><a href="#products">Products</a></li><?php } ?>
 			</ul>
 
 		<?php }	?>
