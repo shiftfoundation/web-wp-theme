@@ -17,7 +17,7 @@ get_header(); ?>
 
 				<section class="entry-content">
 
-					<div id="overview" class="tabs-container">
+					<div id="overview" class="tabs-container active">
 						<header class="entry-header">
 							<h1><?php echo get_post_meta( get_the_ID(), 'tagline', true ); ?></h1>
 						</header>

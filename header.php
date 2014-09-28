@@ -92,7 +92,7 @@
 			?>
 
 			<ul class="subnav">
-				<li class="selected"><a href="#overview">Overview</a></li>
+				<li><a href="#overview">Overview</a></li>
 				<?php if ( $research_to_product->have_posts() ) { ?><li><a href="#research">Research</a></li><?php } ?>
 				<?php if ( $post_to_product->have_posts() ) { ?><li><a href="#comment">Comment</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?><li><a href="#coverage">Coverage</a></li><?php } ?>
@@ -154,7 +154,7 @@
 			?>
 
 			<ul class="subnav">
-				<li class="selected"><a href="#profile">Profile</a></li>
+				<li><a href="#profile">Profile</a></li>
 				<?php if ( count($current_user_posts) > 0 ) { ?><li><a href="#comment">Comment</a></li><?php } ?>
 				<?php if ( $connected_research->have_posts() ) { ?><li><a href="#research">Research</a></li><?php } ?>
 				<?php if ( $connected_product->have_posts() ) { ?><li><a href="#products">Products</a></li><?php } ?>
