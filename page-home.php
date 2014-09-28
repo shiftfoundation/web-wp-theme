@@ -12,9 +12,7 @@ get_header(); ?>
 
 		  <?php while ( have_posts() ) : the_post(); ?>
 			<article>
-				<header class="page-title">
-					<h1>Welcome</h1>
-				</header>
+				<?php the_content(); ?>
 			</article>
 		  <?php endwhile; // end of the loop. ?>
 
