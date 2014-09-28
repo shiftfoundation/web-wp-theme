@@ -52,11 +52,30 @@
 	}
 }
 
+.hrd_cnt {
+	@extend .wrapper;
+	padding-left: span(1 of 12);
+	padding-bottom: 3em;
+	
+	li { 
+		border-top: 1px solid #CCC;
+		display: block; list-style: none outside;
+		@include span(5 of 12);
+		padding-top: 1.5em;
+		margin: 0;
+
+		&:nth-child(2) { padding-left: 1.2em; }
+   	}
+
+	&, a { color: #FFF; }
+	a .fa { color: #fddf00; }
+}
+
 .menu {
 	@extend .wrapper;
 	padding-left: span(1 of 12);
 	padding-top: 7em;
-	padding-bottom: 4em;
+	padding-bottom: 2em;
 
 	li {
 		display: block; 

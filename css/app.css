@@ -352,13 +352,13 @@ a {
 }
 
 /* line 10, ../scss/_layout.scss */
-.wrapper, .menu {
+.wrapper, .hrd_cnt, .menu {
   width: 885px;
   margin-left: auto;
   margin-right: auto;
 }
 /* line 12, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-.wrapper:after, .menu:after {
+.wrapper:after, .hrd_cnt:after, .menu:after {
   content: " ";
   display: block;
   clear: both;
@@ -629,7 +629,7 @@ a {
   display: block;
 }
 /* line 185, ../scss/_layout.scss */
-.banner .wrapper, .banner .menu {
+.banner .wrapper, .banner .hrd_cnt, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
@@ -776,37 +776,66 @@ a {
 }
 
 /* line 55, ../scss/_navigation.scss */
+.hrd_cnt {
+  padding-left: 60px;
+  padding-bottom: 3em;
+}
+/* line 60, ../scss/_navigation.scss */
+.hrd_cnt li {
+  border-top: 1px solid #CCC;
+  display: block;
+  list-style: none outside;
+  width: 360px;
+  float: left;
+  margin-right: 15px;
+  padding-top: 1.5em;
+  margin: 0;
+}
+/* line 67, ../scss/_navigation.scss */
+.hrd_cnt li:nth-child(2) {
+  padding-left: 1.2em;
+}
+/* line 70, ../scss/_navigation.scss */
+.hrd_cnt, .hrd_cnt a {
+  color: #FFF;
+}
+/* line 71, ../scss/_navigation.scss */
+.hrd_cnt a .fa {
+  color: #fddf00;
+}
+
+/* line 74, ../scss/_navigation.scss */
 .menu {
   padding-left: 60px;
   padding-top: 7em;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
 }
-/* line 61, ../scss/_navigation.scss */
+/* line 80, ../scss/_navigation.scss */
 .menu li {
   display: block;
   width: 360px;
   float: left;
   margin-right: 15px;
 }
-/* line 65, ../scss/_navigation.scss */
+/* line 84, ../scss/_navigation.scss */
 .menu li a {
   font-size: 3em;
   color: #FFF;
   padding: 0.1em;
 }
-/* line 67, ../scss/_navigation.scss */
+/* line 86, ../scss/_navigation.scss */
 .menu li.current-menu-item a,
 .menu li a:hover {
   color: #fcde00;
 }
 
-/* line 76, ../scss/_navigation.scss */
+/* line 95, ../scss/_navigation.scss */
 .active.site-header .site-title {
   position: relative;
   z-index: 1001;
   border-color: #fff;
 }
-/* line 81, ../scss/_navigation.scss */
+/* line 100, ../scss/_navigation.scss */
 .active.site-header .site-title a {
   color: #fff;
 }

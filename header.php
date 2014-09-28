@@ -35,6 +35,14 @@
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<ul class="hrd_cnt">
+					<li>
+						<a href="/sign-up-to-newsletter"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x"></i></span> Sign up to our e-newsletter</a>
+					</li>
+					<li>
+						<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x"></i></span> Call us: +44 (0)20 7148 7666
+					</li>
+				</ul>
 			</nav><!-- #site-navigation -->
 			<p><?php bloginfo( 'description' ); ?></p>
 
