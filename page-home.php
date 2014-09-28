@@ -11,8 +11,9 @@ get_header(); ?>
 	    <main id="main" class="site-main" role="main">
 
 		  <?php while ( have_posts() ) : the_post(); ?>
-			<article>
+			<article class="hentry page">
 				<?php the_content(); ?>
+				<br><br>
 			</article>
 		  <?php endwhile; // end of the loop. ?>
 
