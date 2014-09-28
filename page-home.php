@@ -11,9 +11,10 @@ get_header(); ?>
 	    <main id="main" class="site-main" role="main">
 
 		  <?php while ( have_posts() ) : the_post(); ?>
-			<article class="hentry page">
-				<?php the_content(); ?>
-				<br><br>
+			<article class="hentry page desc">
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div>
 			</article>
 		  <?php endwhile; // end of the loop. ?>
 
@@ -22,23 +23,25 @@ get_header(); ?>
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>About</strong>
-						Product design for social change
+						Read about our approach
 					</p>
 					<span class="info">
 						<a href="/about" class="button">See more</a>
 					</span>
 				</li>
 				<li>
+					/video game
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>Products</strong>
-						Some of our great work
+						Some of our recent work
 					</p>
 					<span class="info">
 						<a href="/products" class="button">See more</a>
 					</span>
 				</li>
 				<li>
+					/tori
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>People</strong>
@@ -52,17 +55,18 @@ get_header(); ?>
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>Comment</strong>
-						Good ideas
+						Latest views from our team
 					</p>
 					<span class="info">
 						<a href="/comment" class="button">See more</a>
 					</span>
 				</li>
 				<li>
+					/nick
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>Speaking</strong>
-						View our speaker process
+						View our speakers
 					</p>
 					<span class="info">
 						<a href="/speaking" class="button">See more</a>
@@ -72,7 +76,7 @@ get_header(); ?>
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<p class="name">
 						<strong>Space</strong>
-						Explore our rentable space 71b
+						See our rentable space 71b
 					</p>
 					<span class="info">
 						<a href="/space" class="button">See more</a>

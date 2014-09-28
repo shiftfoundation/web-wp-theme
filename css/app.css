@@ -1044,3 +1044,11 @@ a {
 .home .wrapper-wide {
   margin: 0 -span(1 of 12);
 }
+/* line 30, ../scss/_home.scss */
+.home .hentry.page.desc {
+  padding: 2em 225px;
+}
+/* line 32, ../scss/_home.scss */
+.home .hentry.page.desc p:last-child {
+  padding: 0;
+}

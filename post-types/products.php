@@ -106,3 +106,15 @@ function research_to_product() {
     ) );
 }
 add_action( 'p2p_init', 'research_to_product' );
+
+/**
+ * Research to User
+ */
+function research_to_user() {
+    p2p_register_connection_type( array(
+        'name' => 'research_to_user',
+        'from' => 'research',
+        'to' => 'user'
+    ) );
+}
+add_action( 'p2p_init', 'research_to_user' );

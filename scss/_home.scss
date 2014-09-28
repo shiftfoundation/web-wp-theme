@@ -26,4 +26,9 @@
 	.wrapper-wide {
 		margin: 0 -span(1 of 12);
 	}
+
+	.hentry.page.desc {
+		padding: 2em span(3 of 12 wide);
+		p:last-child { padding: 0; }
+	}
 }
