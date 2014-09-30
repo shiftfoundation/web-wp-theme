@@ -151,7 +151,7 @@
 				) );
 
 				$args = array(
-					'author'        =>  $curauth->ID, // I could also use $user_ID, right?
+					'author'        =>  $curauth->ID,
 					'orderby'       =>  'post_date',
 					'order'         =>  'ASC' 
 				);
