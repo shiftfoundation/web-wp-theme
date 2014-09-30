@@ -34,17 +34,11 @@
 
 	.getincontact {
 		margin: 0;
-		border-color: #000;
 
 		.copy {
 			width: 45%;
 			padding-left: 0;
 			padding-right: 0;
-			background: #000;
-
-			&:after {
-				border-left-color: #000;
-			}
 		}
 
 		.person {
@@ -54,7 +48,6 @@
 			text-align: center;
 		}
 
-		.copy,
 		.fa-stack-1x { color: $activeColor; }
 	}
 }

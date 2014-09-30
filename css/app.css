@@ -1133,59 +1133,52 @@ a {
 /* line 35, ../scss/_home.scss */
 .home .getincontact {
   margin: 0;
-  border-color: #000;
 }
-/* line 39, ../scss/_home.scss */
+/* line 38, ../scss/_home.scss */
 .home .getincontact .copy {
   width: 45%;
   padding-left: 0;
   padding-right: 0;
-  background: #000;
 }
-/* line 45, ../scss/_home.scss */
-.home .getincontact .copy:after {
-  border-left-color: #000;
-}
-/* line 50, ../scss/_home.scss */
+/* line 44, ../scss/_home.scss */
 .home .getincontact .person {
   width: 55%;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
 }
-/* line 57, ../scss/_home.scss */
-.home .getincontact .copy,
+/* line 51, ../scss/_home.scss */
 .home .getincontact .fa-stack-1x {
   color: #fcde00;
 }
 
-/* line 66, ../scss/_home.scss */
+/* line 59, ../scss/_home.scss */
 .post-8437 {
   padding: 0 75px !important;
 }
-/* line 69, ../scss/_home.scss */
+/* line 62, ../scss/_home.scss */
 .post-8437 .entry-header {
   text-align: center;
 }
-/* line 71, ../scss/_home.scss */
+/* line 64, ../scss/_home.scss */
 .post-8437 form {
   padding: 0 150px;
 }
-/* line 74, ../scss/_home.scss */
+/* line 67, ../scss/_home.scss */
 .post-8437 form label.mc_var_label {
   margin: 0;
 }
-/* line 76, ../scss/_home.scss */
+/* line 69, ../scss/_home.scss */
 .post-8437 form input, .post-8437 form textarea {
   border: 2px solid #000;
   padding: 0.2em 0.4em;
   outline: none;
 }
-/* line 79, ../scss/_home.scss */
+/* line 72, ../scss/_home.scss */
 .post-8437 form input:focus, .post-8437 form textarea:focus {
   background: #fcde00;
 }
-/* line 82, ../scss/_home.scss */
+/* line 75, ../scss/_home.scss */
 .post-8437 form #mc_signup_submit {
   width: 100%;
   padding: 0.6em;
@@ -1194,7 +1187,7 @@ a {
   display: block;
   border: none;
 }
-/* line 83, ../scss/_home.scss */
+/* line 76, ../scss/_home.scss */
 .post-8437 form #mc_signup_submit:hover {
   background: #fcde00;
   cursor: pointer;
