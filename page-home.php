@@ -50,7 +50,7 @@ get_header(); ?>
 					</div>
 				</li>
 				<li>
-					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8451, 'thumbnail'); ?>
 					<p class="name">
 						<strong>Comment</strong>
 						Latest views from our team
@@ -70,7 +70,7 @@ get_header(); ?>
 					</span>
 				</li>
 				<li>
-					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8450, 'thumbnail'); ?>
 					<p class="name">
 						<strong>Space</strong>
 						See our rentable space 71b
