@@ -15,7 +15,7 @@
 	}
 
 	.entry-content {
-		font-size: 1.2em; color: #666;
+		font-size: 1.2em;
 	}
 
 	.banner {
@@ -37,17 +37,14 @@
 
 		.copy {
 			width: 45%;
-			padding-left: 0;
-			padding-right: 0;
 		}
 
 		.person {
 			width: 55%;
 			padding-left: 0;
-			padding-right: 0;
-			text-align: center;
 		}
 
+		.fa-stack-2x { color: #ababab; }
 		.fa-stack-1x { color: $activeColor; }
 	}
 

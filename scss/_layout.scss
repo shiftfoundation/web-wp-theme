@@ -187,11 +187,13 @@ a {
 
 	&:hover .c2 { display: block; }
 
-	.copy { width: 40%; }
-	.person { width: 60%; }
+	.copy { width: 35%; }
+	.person { width: 65%; }
 	
 	.copy, .person {
-	   	float: left; padding: 1em 2em; 
+	   	float: left; padding: 1em 0; 
+		text-align: center;
+		white-space: nowrap;
 		@extend %MSS7;
 	}
 
@@ -301,7 +303,7 @@ a {
 	ul { }
 	li {
 		display: block; list-style: none outside; position: relative;
-		padding: 1em 0 1em 70px; color: #666;
+		padding: 1em 0 1em 70px;
 
 		span { display: block; }
 

@@ -62,10 +62,6 @@ get_header(); ?>
 						<span class="c2">We'd love to hear from you</span>
 					</div>
 					<div class="person">
-						<?php $avatar = get_user_meta($featuredUser[0]->ID, 'avatar', true); ?>
-						<div class="avatar">
-							<?php echo wp_get_attachment_image( $avatar, 'thumbnail' ); ?>
-						</div>
 						<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x"></i></span>
 						Sign up to our newsletter
 					</div>
