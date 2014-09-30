@@ -20,7 +20,7 @@ get_header(); ?>
 
 			<ul class="listing">
 				<li>
-					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 479, 'thumbnail'); ?>
 					<p class="name">
 						<strong>About</strong>
 						Read about our approach
