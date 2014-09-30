@@ -50,6 +50,19 @@
 
 		.fa-stack-1x { color: $activeColor; }
 	}
+
+	.listing {
+		.info {
+		   	p { text-align: right; padding: 0 0 1em 1em; }
+			.button {
+				float: none;
+				position: absolute;
+				bottom: 1.5em;
+				right: 1.5em;
+			}
+		}
+
+	}
 }
 
 .page-id-8437 {

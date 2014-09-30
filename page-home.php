@@ -18,68 +18,39 @@ get_header(); ?>
 			</article>
 		  <?php endwhile; // end of the loop. ?>
 
-			<ul class="listing">
-				<li>
-					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
-					<p class="name">
-						<strong>About</strong>
-						Read about our approach
-					</p>
-					<span class="info">
-						<a href="/about" class="button">See more</a>
-					</span>
-				</li>
-				<li>
-					<?php echo wp_get_attachment_image( 8154, 'thumbnail'); ?>
-					<p class="name">
-						<strong>Products</strong>
-						Some of our recent work
-					</p>
-					<span class="info">
-						<a href="/products" class="button">See more</a>
-					</span>
-				</li>
-				<li>
-					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
-					<p class="name">
-						<strong>People</strong>
-						Meet our team
-					</p>
-					<div class="info">
-						<a href="/people" class="button">See more</a>
-					</div>
-				</li>
-				<li>
-					<?php echo wp_get_attachment_image( 8451, 'thumbnail'); ?>
-					<p class="name">
-						<strong>Comment</strong>
-						Latest views from our team
-					</p>
-					<span class="info">
-						<a href="/comment" class="button">See more</a>
-					</span>
-				</li>
-				<li>
-					<?php echo wp_get_attachment_image( 8202, 'thumbnail'); ?>
-					<p class="name">
-						<strong>Speaking</strong>
-						View our speakers
-					</p>
-					<span class="info">
-						<a href="/speaking" class="button">See more</a>
-					</span>
-				</li>
-				<li>
-					<?php echo wp_get_attachment_image( 8450, 'thumbnail'); ?>
-					<p class="name">
-						<strong>Space</strong>
-						See our rentable space 71b
-					</p>
-					<span class="info">
-						<a href="/space" class="button">See more</a>
-					</span>
-				</li>
-			</ul>
+			<?php if( have_rows('tout') ): ?>
+
+				<ul class="listing">
+
+				<?php while( have_rows('tout') ): the_row(); 
+
+					// vars
+					$title = get_sub_field('title');
+					$subtitle = get_sub_field('subtitle');
+					$desc = get_sub_field('description');
+					$link = get_sub_field('link');
+					$image = get_sub_field('image');
+
+					?>
+
+					<?php if( $link ) { ?>
+					<li>
+						<?php echo wp_get_attachment_image( $image, 'thumbnail'); ?>
+						<p class="name">
+							<strong><?php echo $title; ?></strong>
+							<?php echo $subtitle; ?>
+						</p>
+						<span class="info">
+							<p><?php echo $desc; ?></p>
+							<a href="<?php echo $link; ?>" class="button">See more</a>
+						</span>
+					</li>
+					<?php } ?>
+
+				<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
+
 
 			<article class="hentry">
 				<h1>@Shift</h1>
