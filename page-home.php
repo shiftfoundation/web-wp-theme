@@ -81,14 +81,25 @@ get_header(); ?>
 				</li>
 			</ul>
 
-			<div class="getincontact">
-				<div class="copy">
-					Want to find out more?
-				</div>
-				<div class="person">
-					<a href="/sign-up-to-newsletter">Sign up to the newsletter for updates</a>
-				</div>
-			</div>
+			<article class="hentry">
+				<h1>@Shift</h1>
+				<div id="twitter"></div>
+
+				<a class="getincontact" href="/sign-up-to-newsletter">
+					<div class="copy">
+						<span class="c1">Do you want to get involved?</span>
+						<span class="c2">We'd love to hear from you</span>
+					</div>
+					<div class="person">
+						<?php $avatar = get_user_meta($featuredUser[0]->ID, 'avatar', true); ?>
+						<div class="avatar">
+							<?php echo wp_get_attachment_image( $avatar, 'thumbnail' ); ?>
+						</div>
+						<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x"></i></span>
+						Sign up to our newsletter
+					</div>
+				</a>
+			</article>
 
 	    </main><!-- #main -->
 	</div><!-- #primary -->

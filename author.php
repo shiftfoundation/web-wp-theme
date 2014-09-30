@@ -42,6 +42,8 @@ get_header(); ?>
 						endforeach; 
 						wp_reset_postdata();?>
 
+						<h1>@Shift</h1>
+						<div id="twitter"></div>
 					</div>
 
 					<div id="research" class="tabs-container">

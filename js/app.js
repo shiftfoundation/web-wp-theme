@@ -26,5 +26,40 @@ jQuery(function($){
 		$('#masthead').toggleClass('active');
 	});
 
+	if ( $('body').hasClass('home') ) {
+
+		$('#twitter').twittie({
+			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
+			'username' : 'wearewhatwedo',
+			'count' : 3,
+			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><h3>{{user_name}}</h3><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
+			'dateFormat' : '%d %B %Y',
+			'hideReplies' : true
+		});
+	}
+
+	if ( $('body').hasClass('author') ) {
+
+		$('#twitter').twittie({
+			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
+			'username' : 'wearewhatwedo',
+			'count' : 3,
+			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><h3>{{user_name}}</h3><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
+			'dateFormat' : '%d %B %Y',
+			'hideReplies' : true
+		});
+	}
+
+	if ( $('body').hasClass('single-product') ) {
+
+		$('#twitter').twittie({
+			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
+			'username' : 'wearewhatwedo',
+			'count' : 3,
+			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><h3>{{user_name}}</h3><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
+			'dateFormat' : '%d %B %Y',
+			'hideReplies' : true
+		});
+	}
 
 });

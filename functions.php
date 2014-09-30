@@ -103,6 +103,7 @@ function shiftwp_scripts() {
 	wp_enqueue_style( 'shiftwp-iconfont', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'shiftwp-style', get_template_directory_uri() . '/css/app.css' );
 
+	wp_enqueue_script( 'shiftwp-twitter', get_template_directory_uri() . '/tweetie/tweetie.min.js', array('jquery'), '20120206' );
 	wp_enqueue_script( 'shiftwp-app', get_template_directory_uri() . '/js/app.js', array('jquery'), '20120206' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

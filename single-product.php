@@ -67,6 +67,8 @@ get_header(); ?>
 						endif;
 						?>
 
+						<h1>@Shift</h1>
+						<div id="twitter"></div>
 					</div>
 
 					<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?>
@@ -106,6 +108,7 @@ get_header(); ?>
 					<?php } ?>
 
 				</section>
+
 
 <?php /*
 				$featuredUser = get_users( array(

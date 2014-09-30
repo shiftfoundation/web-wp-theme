@@ -50,6 +50,9 @@
 	</header><!-- #masthead -->
 
 	<?php
+
+	global $post;
+
 	if( is_single() || is_front_page() ) {
 
 		$bannerImage = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
@@ -174,4 +177,4 @@
 	<?php }	?>
 
 
-	<div id="content" class="site-content <?php if( is_archive() || is_front_page() || $post->post_name == 'people' ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">
+	<div id="content" class="site-content <?php if( (is_archive() || is_front_page() || $post->post_name == 'people') && !is_author() ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">

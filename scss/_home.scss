@@ -27,9 +27,35 @@
 		margin: 0 -span(1 of 12);
 	}
 
-	.hentry.page.desc {
+	article.hentry {
 		padding: 2em span(3 of 12 wide);
 		p:last-child { padding: 0; }
+	}
+
+	.getincontact {
+		margin: 0;
+		border-color: #000;
+
+		.copy {
+			width: 45%;
+			padding-left: 0;
+			padding-right: 0;
+			background: #000;
+
+			&:after {
+				border-left-color: #000;
+			}
+		}
+
+		.person {
+			width: 55%;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+
+		.copy,
+		.fa-stack-1x { color: $activeColor; }
 	}
 }
 
