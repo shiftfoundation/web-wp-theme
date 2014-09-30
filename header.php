@@ -53,9 +53,19 @@
 
 	global $post;
 
-	if( is_single() || is_front_page() ) {
+	if( is_single() ) {
 
 		$bannerImage = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+
+	}else if( is_front_page() ) {
+
+		$media = get_attached_media( 'image' );
+		$images = array();
+
+		foreach ( $media as $image ) {
+			$images[] = wp_get_attachment_image_src( $image->ID, 'full' );
+		}
+		$bannerImage = $images[array_rand($images)];
 
 	}else if( is_author() ) {
 

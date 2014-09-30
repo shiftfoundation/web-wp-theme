@@ -20,7 +20,7 @@ get_header(); ?>
 
 			<ul class="listing">
 				<li>
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
 					<p class="name">
 						<strong>About</strong>
 						Read about our approach
@@ -30,7 +30,7 @@ get_header(); ?>
 					</span>
 				</li>
 				<li>
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8154, 'thumbnail'); ?>
 					<p class="name">
 						<strong>Products</strong>
 						Some of our recent work
@@ -40,7 +40,7 @@ get_header(); ?>
 					</span>
 				</li>
 				<li>
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
 					<p class="name">
 						<strong>People</strong>
 						Meet our team
@@ -50,7 +50,7 @@ get_header(); ?>
 					</div>
 				</li>
 				<li>
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
 					<p class="name">
 						<strong>Comment</strong>
 						Latest views from our team
@@ -60,7 +60,7 @@ get_header(); ?>
 					</span>
 				</li>
 				<li>
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8202, 'thumbnail'); ?>
 					<p class="name">
 						<strong>Speaking</strong>
 						View our speakers
@@ -70,7 +70,7 @@ get_header(); ?>
 					</span>
 				</li>
 				<li>
-					<?php the_post_thumbnail('thumbnail'); ?>
+					<?php echo wp_get_attachment_image( 8197, 'thumbnail'); ?>
 					<p class="name">
 						<strong>Space</strong>
 						See our rentable space 71b
@@ -103,6 +103,5 @@ get_header(); ?>
 
 	    </main><!-- #main -->
 	</div><!-- #primary -->
-
 
 <?php get_footer(); ?>
