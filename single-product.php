@@ -119,7 +119,7 @@ get_header(); ?>
 				// Display connected pages
 				if ( $featuredUser ) { ?>
 
-				<a class="getincontact" href="mailto:<?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>">
+				<a class="getincontact" target="_blank" href="mailto:<?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>">
 					<div class="copy">
 						<span class="c1">Do you want to get involved?</span>
 						<span class="c2">We'd love to hear from you</span>
