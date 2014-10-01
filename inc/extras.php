@@ -159,3 +159,71 @@ add_filter( 'pre_user_query', function( $query ) {
 
 	$query->query_orderby = str_replace( "{$wpdb->usermeta}.meta_value", "CAST( {$wpdb->usermeta}.meta_value AS UNSIGNED)", $query->query_orderby );
 } );
+
+
+
+class AuthorsWidget extends WP_Widget {
+
+	function AuthorsWidget() {
+		// Instantiate the parent object
+		parent::__construct( false, 'Authors' );
+	}
+
+	function widget( $args, $instance ) {
+		$title = apply_filters( 'widget_title', $instance['title'] );
+
+		// before and after widget arguments are defined by themes
+		echo $args['before_widget'];
+		echo $args['before_title'] . 'Authors' . $args['after_title']; ?>
+
+					<ul class="users">
+<?php
+		global $wpdb;
+		$min_posts = 1; // Make sure it's int, it's not escaped in the query
+		$author_ids = $wpdb->get_col("SELECT `post_author` FROM
+			(SELECT `post_author`, COUNT(*) AS `count` FROM {$wpdb->posts}
+        WHERE `post_status`='publish' GROUP BY `post_author`) AS `stats`
+		WHERE `count` >= {$min_posts} ORDER BY `count` DESC;");
+
+						$blogusers = get_users( array(
+							'include' => $author_ids,
+							'meta_query' => array(
+								array(
+									'key' => 'corder',
+									'type' => 'numeric',
+									'value' => 0,
+									'compare' => '>',
+								),
+							),
+							'orderby' => 'meta_value'
+						) );
+
+						foreach ( $blogusers as $user ) { ?>
+							<li id="user-<?php echo $user->ID; ?>">	
+								<?php
+									$avatar = get_user_meta($user->ID, 'avatar', true);
+								?>
+								<div class="avatar"><?php echo wp_get_attachment_image( $avatar, 'thumbnail' ); ?></div>
+								<strong><?php echo esc_html( $user->display_name ); ?></strong> | <a href="/people/<?php echo $user->user_nicename; ?>/#comment">View Articles</a>
+							</li>
+						<?php } ?>
+					</ul>
+		<?php
+		echo $args['after_widget'];
+	}
+
+	function update( $new_instance, $old_instance ) {
+		// Save widget options
+	}
+
+	function form( $instance ) {
+		// Output admin widget options form
+	}
+}
+
+function shiftwp_register_widgets() {
+	register_widget( 'AuthorsWidget' );
+}
+
+add_action( 'widgets_init', 'shiftwp_register_widgets' );
+
