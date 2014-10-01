@@ -10,6 +10,9 @@ jQuery(function($){
 	function checkLocation(){
 		if ( window.location.hash ) {
 			$('a[href="' + window.location.hash + '"]').click().parent().addClass('selected').siblings().removeClass('selected');
+			window.setTimeout( function(){
+				$(window).scrollTop(0);
+			}, 50);
 		}
 		else
 		{
