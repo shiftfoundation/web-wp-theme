@@ -168,14 +168,15 @@ a {
 
 .listing.products li {
 	width: 50%; height: 33%; max-height: 400px; display: block !important;
-
 	.name strong { @extend %MSS9; line-height: 1; font-weight: normal; }
-
 	.wp-post-image { border: none !important; }
-
 	.author & { max-height: 300px; }
 }
 
+.listing.users {
+	li .info p:first-of-type { padding-bottom: 0; }
+	li .info p { text-align: left; }
+}
 
 
 .getincontact {

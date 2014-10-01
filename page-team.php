@@ -35,26 +35,25 @@ get_header(); ?>
 
 						foreach ( $blogusers as $user ) { ?>
 							<li id="user-<?php echo $user->ID; ?>">	
-							<?php
-							/*
-							echo get_user_meta($user->ID, 'corder', true); 
-							*/
-							$avatar = get_user_meta($user->ID, 'avatar', true);
+								<a href="/people/<?php echo $user->user_nicename; ?>">
+								<?php
+									$avatar = get_user_meta($user->ID, 'avatar', true);
 
-							echo wp_get_attachment_image( $avatar, 'thumbnail' ); 
-							?>
+									echo wp_get_attachment_image( $avatar, 'thumbnail' ); 
+								?>
 
-							<span class="info">
-								<p class="name">
-									<strong><?php echo esc_html( $user->display_name ); ?></strong>
-									<?php echo esc_html( $user->job_title ); ?>
-								</p>
-								<?php if( get_user_meta($user->ID, 'e-mail', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->ID, 'e-mail', true) ); ?></p><?php } ?>
-								<?php if( get_user_meta($user->ID, 'phone', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->ID, 'phone', true) ); ?></p><?php } ?>
+								<span class="info">
+									<span class="name">
+										<strong><?php echo esc_html( $user->display_name ); ?></strong>
+										<?php echo esc_html( $user->job_title ); ?>
+									</span>
+									<?php if( get_user_meta($user->ID, 'e-mail', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->ID, 'e-mail', true) ); ?></p><?php } ?>
+									<?php if( get_user_meta($user->ID, 'phone', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->ID, 'phone', true) ); ?></p><?php } ?>
 
-								<a href="/people/<?php echo $user->user_nicename; ?>" class="button">View Profile</a>
-							</span>
-							
+									<span class="button">View Profile</span>
+								</span>
+								
+							</a>
 						</li>
 						<?php } ?>
 					</ul>
