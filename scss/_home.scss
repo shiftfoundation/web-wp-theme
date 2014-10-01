@@ -45,7 +45,11 @@
 		}
 
 		.fa-stack-2x { color: #ababab; }
-		.fa-stack-1x { color: $activeColor; }
+		.fa-stack-1x { color: #000; }
+
+		&:hover {
+			.fa-stack-2x { color: $activeColor; }
+		}
 	}
 
 	.listing {

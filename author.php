@@ -107,6 +107,15 @@ get_header(); ?>
 
 					</div>
 
+					<?php if(get_user_meta($curauth->ID, 'coverage', true)) { ?>
+					<div id="coverage">
+						<header class="entry-header">
+							<h1>Coverage</h1>
+						</header>
+						<?php echo wpautop(get_user_meta($curauth->ID, 'coverage', true)); ?>
+					</div>
+					<?php } ?>
+
 				</section>
 				<?php /*
 				<ul>

@@ -179,6 +179,7 @@
 				<?php if ( count($current_user_posts) > 0 ) { ?><li><a href="#comment">Comment</a></li><?php } ?>
 				<?php if ( $connected_research->have_posts() ) { ?><li><a href="#research">Research</a></li><?php } ?>
 				<?php if ( $connected_product->have_posts() ) { ?><li><a href="#products">Products</a></li><?php } ?>
+				<?php if ( get_user_meta($curauth->ID, 'coverage', true)) { ?><li><a href="#coverage">Coverage</a></li><?php } ?>
 			</ul>
 
 		<?php }	?>

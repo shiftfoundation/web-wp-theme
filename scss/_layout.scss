@@ -180,7 +180,7 @@ a {
 	color: #000;
 	line-height: 52px;
 	border: solid 4px #ababab;
-	margin: 1em span(1 of 12 wide);
+	margin: 1em 0;
 
 	&:hover .c1,
 	.c2 { display: none; }

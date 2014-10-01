@@ -625,7 +625,7 @@ a {
   color: #000;
   line-height: 52px;
   border: solid 4px #ababab;
-  margin: 1em 75px;
+  margin: 1em 0;
 }
 /* line 185, ../scss/_layout.scss */
 .getincontact:hover .c1,
@@ -1149,14 +1149,18 @@ a {
 }
 /* line 48, ../scss/_home.scss */
 .home .getincontact .fa-stack-1x {
+  color: #000;
+}
+/* line 51, ../scss/_home.scss */
+.home .getincontact:hover .fa-stack-2x {
   color: #fcde00;
 }
-/* line 53, ../scss/_home.scss */
+/* line 57, ../scss/_home.scss */
 .home .listing .info p {
   text-align: right;
   padding: 0 0 1em 1em;
 }
-/* line 54, ../scss/_home.scss */
+/* line 58, ../scss/_home.scss */
 .home .listing .info .button {
   float: none;
   position: absolute;
@@ -1164,33 +1168,33 @@ a {
   right: 1.5em;
 }
 
-/* line 69, ../scss/_home.scss */
+/* line 73, ../scss/_home.scss */
 .post-8437 {
   padding: 0 75px !important;
 }
-/* line 72, ../scss/_home.scss */
+/* line 76, ../scss/_home.scss */
 .post-8437 .entry-header {
   text-align: center;
 }
-/* line 74, ../scss/_home.scss */
+/* line 78, ../scss/_home.scss */
 .post-8437 form {
   padding: 0 150px;
 }
-/* line 77, ../scss/_home.scss */
+/* line 81, ../scss/_home.scss */
 .post-8437 form label.mc_var_label {
   margin: 0;
 }
-/* line 79, ../scss/_home.scss */
+/* line 83, ../scss/_home.scss */
 .post-8437 form input, .post-8437 form textarea {
   border: 2px solid #000;
   padding: 0.2em 0.4em;
   outline: none;
 }
-/* line 82, ../scss/_home.scss */
+/* line 86, ../scss/_home.scss */
 .post-8437 form input:focus, .post-8437 form textarea:focus {
   background: #fcde00;
 }
-/* line 85, ../scss/_home.scss */
+/* line 89, ../scss/_home.scss */
 .post-8437 form #mc_signup_submit {
   width: 100%;
   padding: 0.6em;
@@ -1199,7 +1203,7 @@ a {
   display: block;
   border: none;
 }
-/* line 86, ../scss/_home.scss */
+/* line 90, ../scss/_home.scss */
 .post-8437 form #mc_signup_submit:hover {
   background: #fcde00;
   cursor: pointer;
