@@ -35,15 +35,17 @@ get_header(); ?>
 
 					<?php if( $link ) { ?>
 					<li>
-						<?php echo wp_get_attachment_image( $image, 'thumbnail'); ?>
-						<p class="name">
-							<strong><?php echo $title; ?></strong>
-							<?php echo $subtitle; ?>
-						</p>
-						<span class="info">
-							<p><?php echo $desc; ?></p>
-							<a href="<?php echo $link; ?>" class="button">See more</a>
-						</span>
+						<a href="<?php echo $link; ?>">
+							<?php echo wp_get_attachment_image( $image, 'thumbnail'); ?>
+							<p class="name">
+								<strong><?php echo $title; ?></strong>
+								<?php echo $subtitle; ?>
+							</p>
+							<span class="info">
+								<p><?php echo $desc; ?></p>
+								<span class="button">See more</span>
+							</span>
+						</a>
 					</li>
 					<?php } ?>
 

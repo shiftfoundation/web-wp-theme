@@ -554,7 +554,11 @@ a {
   width: 100%;
   height: auto;
 }
-/* line 130, ../scss/_layout.scss */
+/* line 129, ../scss/_layout.scss */
+.listing li a {
+  display: block;
+}
+/* line 131, ../scss/_layout.scss */
 .listing li .info {
   display: block;
   width: 100%;
@@ -571,12 +575,13 @@ a {
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
-/* line 139, ../scss/_layout.scss */
+/* line 140, ../scss/_layout.scss */
 .listing li .info .button {
+  display: block;
   float: right;
   margin-top: 1em;
 }
-/* line 142, ../scss/_layout.scss */
+/* line 143, ../scss/_layout.scss */
 .listing li .name {
   position: absolute;
   z-index: 20;
@@ -587,39 +592,39 @@ a {
   padding: 1.2em 1.5em;
   text-align: right;
 }
-/* line 151, ../scss/_layout.scss */
+/* line 152, ../scss/_layout.scss */
 .listing li .name strong {
   display: block;
   font-size: 1.5em;
 }
-/* line 158, ../scss/_layout.scss */
+/* line 159, ../scss/_layout.scss */
 .listing li:hover .info {
   opacity: 1;
   top: 0;
 }
 
-/* line 165, ../scss/_layout.scss */
+/* line 166, ../scss/_layout.scss */
 .listing.products li {
   width: 50%;
   height: 33%;
   max-height: 400px;
   display: block !important;
 }
-/* line 168, ../scss/_layout.scss */
+/* line 169, ../scss/_layout.scss */
 .listing.products li .name strong {
   line-height: 1;
   font-weight: normal;
 }
-/* line 170, ../scss/_layout.scss */
+/* line 171, ../scss/_layout.scss */
 .listing.products li .wp-post-image {
   border: none !important;
 }
-/* line 172, ../scss/_layout.scss */
+/* line 173, ../scss/_layout.scss */
 .author .listing.products li {
   max-height: 300px;
 }
 
-/* line 177, ../scss/_layout.scss */
+/* line 178, ../scss/_layout.scss */
 .getincontact {
   overflow: hidden;
   display: block;
@@ -628,37 +633,37 @@ a {
   border: solid 4px #ababab;
   margin: 1em 0;
 }
-/* line 185, ../scss/_layout.scss */
+/* line 186, ../scss/_layout.scss */
 .getincontact:hover .c1,
 .getincontact .c2 {
   display: none;
 }
-/* line 188, ../scss/_layout.scss */
+/* line 189, ../scss/_layout.scss */
 .getincontact:hover .c2 {
   display: block;
 }
-/* line 190, ../scss/_layout.scss */
+/* line 191, ../scss/_layout.scss */
 .getincontact .copy {
   width: 35%;
 }
-/* line 191, ../scss/_layout.scss */
+/* line 192, ../scss/_layout.scss */
 .getincontact .person {
   width: 65%;
 }
-/* line 193, ../scss/_layout.scss */
+/* line 194, ../scss/_layout.scss */
 .getincontact .copy, .getincontact .person {
   float: left;
   padding: 1em 0;
   text-align: center;
   white-space: nowrap;
 }
-/* line 200, ../scss/_layout.scss */
+/* line 201, ../scss/_layout.scss */
 .getincontact .copy {
   text-align: center;
   background: #ababab;
   position: relative;
 }
-/* line 205, ../scss/_layout.scss */
+/* line 206, ../scss/_layout.scss */
 .getincontact .copy:after {
   display: block;
   content: '';
@@ -671,12 +676,12 @@ a {
   right: -24px;
   top: 0;
 }
-/* line 217, ../scss/_layout.scss */
+/* line 218, ../scss/_layout.scss */
 .getincontact .person {
   position: relative;
   padding-left: 110px;
 }
-/* line 220, ../scss/_layout.scss */
+/* line 221, ../scss/_layout.scss */
 .getincontact .person .avatar {
   display: inline-block;
   width: 52px;
@@ -686,26 +691,26 @@ a {
   position: absolute;
   left: 2.7em;
 }
-/* line 224, ../scss/_layout.scss */
+/* line 225, ../scss/_layout.scss */
 .getincontact .person .avatar img {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 228, ../scss/_layout.scss */
+/* line 229, ../scss/_layout.scss */
 .getincontact:hover {
   border-color: #fcde00;
 }
-/* line 231, ../scss/_layout.scss */
+/* line 232, ../scss/_layout.scss */
 .getincontact:hover .copy {
   background: #fcde00;
 }
-/* line 234, ../scss/_layout.scss */
+/* line 235, ../scss/_layout.scss */
 .getincontact:hover .copy:after {
   border-left-color: #fcde00;
 }
 
-/* line 242, ../scss/_layout.scss */
+/* line 243, ../scss/_layout.scss */
 .banner {
   height: 470px;
   overflow: hidden;
@@ -714,26 +719,26 @@ a {
   background-position: center;
   background-size: cover;
 }
-/* line 250, ../scss/_layout.scss */
+/* line 251, ../scss/_layout.scss */
 .banner h1 {
   padding: 0;
 }
-/* line 252, ../scss/_layout.scss */
+/* line 253, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 254, ../scss/_layout.scss */
+/* line 255, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 256, ../scss/_layout.scss */
+/* line 257, ../scss/_layout.scss */
 .banner .wrapper, .banner .hrd_cnt, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 258, ../scss/_layout.scss */
+/* line 259, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -744,7 +749,7 @@ a {
   padding: 1.5em;
   text-align: right;
 }
-/* line 260, ../scss/_layout.scss */
+/* line 261, ../scss/_layout.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -754,24 +759,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 268, ../scss/_layout.scss */
+/* line 269, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 270, ../scss/_layout.scss */
+/* line 271, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 272, ../scss/_layout.scss */
+/* line 273, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 273, ../scss/_layout.scss */
+/* line 274, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 276, ../scss/_layout.scss */
+/* line 277, ../scss/_layout.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -782,12 +787,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 281, ../scss/_layout.scss */
+/* line 282, ../scss/_layout.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 283, ../scss/_layout.scss */
+/* line 284, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -796,29 +801,29 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 293, ../scss/_layout.scss */
+/* line 294, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;
   color: #000;
 }
 
-/* line 301, ../scss/_layout.scss */
+/* line 302, ../scss/_layout.scss */
 #twitter {
   padding-bottom: 4em;
 }
-/* line 304, ../scss/_layout.scss */
+/* line 305, ../scss/_layout.scss */
 #twitter li {
   display: block;
   list-style: none outside;
   position: relative;
   padding: 1em 0 1em 70px;
 }
-/* line 308, ../scss/_layout.scss */
+/* line 309, ../scss/_layout.scss */
 #twitter li span {
   display: block;
 }
-/* line 310, ../scss/_layout.scss */
+/* line 311, ../scss/_layout.scss */
 #twitter li .avatar {
   display: block;
   width: 48px;
@@ -830,24 +835,24 @@ a {
   left: 0;
   margin-top: -24px;
 }
-/* line 314, ../scss/_layout.scss */
+/* line 315, ../scss/_layout.scss */
 #twitter li .date {
   position: absolute;
   top: 0;
   right: 0;
   color: #CCC;
 }
-/* line 317, ../scss/_layout.scss */
+/* line 318, ../scss/_layout.scss */
 #twitter li .tweet {
   border-left: 1px solid #CCC;
   padding-left: 1.5em;
 }
-/* line 320, ../scss/_layout.scss */
+/* line 321, ../scss/_layout.scss */
 #twitter li .tweet a {
   text-decoration: underline;
   color: #000;
 }
-/* line 321, ../scss/_layout.scss */
+/* line 322, ../scss/_layout.scss */
 #twitter li .tweet a:hover {
   background: #fcde00;
 }

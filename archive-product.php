@@ -19,14 +19,11 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<li id="project-<?php echo $user->id; ?>">	
 						<a href="<?php the_permalink(); ?>">
-
 							<?php the_post_thumbnail('thumbnail'); ?>
-
 							<p class="name">
 								<strong><?php the_title(); ?></strong>
 								<?php echo get_post_meta( get_the_ID(), 'what_does_it_do', true ); ?>
 							</p>
-
 						</a>
 					</li>
 				<?php endwhile; // end of the loop. ?>
