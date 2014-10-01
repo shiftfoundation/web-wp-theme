@@ -100,7 +100,7 @@ body, form, textarea, input {
 }
 
 /* line 76, ../scss/typography.scss */
-h4, h5, h6, .entry-content blockquote p:last-child, .wp-editor blockquote p:last-child {
+h4, h5, h6, .entry-content blockquote p:last-child, .wp-editor blockquote p:last-child, .home .banner .formerly span {
   font-family: "MuseoSans500", sans-serif;
 }
 
@@ -403,47 +403,48 @@ a {
 .wrapper-wide {
   max-width: 1035px;
   margin: 0 auto;
+  position: relative;
 }
-/* line 39, ../scss/_layout.scss */
+/* line 40, ../scss/_layout.scss */
 .wrapper-wide:after {
   content: '';
   display: block;
   clear: both;
 }
-/* line 43, ../scss/_layout.scss */
+/* line 44, ../scss/_layout.scss */
 .wrapper-wide .page-title {
   padding-left: 150px;
 }
 
-/* line 49, ../scss/_layout.scss */
+/* line 50, ../scss/_layout.scss */
 .site-content {
   overflow: hidden;
 }
 
-/* line 53, ../scss/_layout.scss */
+/* line 54, ../scss/_layout.scss */
 .author .hentry,
 .page .hentry,
 .single .hentry {
   padding: 0 75px;
 }
-/* line 58, ../scss/_layout.scss */
+/* line 59, ../scss/_layout.scss */
 .author .hentry .hentry,
 .page .hentry .hentry,
 .single .hentry .hentry {
   padding: 0;
 }
 
-/* line 63, ../scss/_layout.scss */
+/* line 64, ../scss/_layout.scss */
 .blog .site-content {
   padding-left: 75px;
 }
-/* line 67, ../scss/_layout.scss */
+/* line 68, ../scss/_layout.scss */
 .blog #primary {
   width: 510px;
   float: left;
   margin-right: 15px;
 }
-/* line 71, ../scss/_layout.scss */
+/* line 72, ../scss/_layout.scss */
 .blog #secondary {
   width: 285px;
   float: right;
@@ -451,92 +452,92 @@ a {
 }
 
 /* Grid */
-/* line 76, ../scss/_layout.scss */
+/* line 77, ../scss/_layout.scss */
 .col.c1 {
   width: 75px;
   float: left;
   margin-right: 15px;
 }
-/* line 77, ../scss/_layout.scss */
+/* line 78, ../scss/_layout.scss */
 .col.c2 {
   width: 150px;
   float: left;
   margin-right: 15px;
 }
-/* line 78, ../scss/_layout.scss */
+/* line 79, ../scss/_layout.scss */
 .col.c3 {
   width: 225px;
   float: left;
   margin-right: 15px;
 }
-/* line 79, ../scss/_layout.scss */
+/* line 80, ../scss/_layout.scss */
 .col.c4 {
   width: 300px;
   float: left;
   margin-right: 15px;
 }
-/* line 80, ../scss/_layout.scss */
+/* line 81, ../scss/_layout.scss */
 .col.c5 {
   width: 375px;
   float: left;
   margin-right: 15px;
 }
-/* line 81, ../scss/_layout.scss */
+/* line 82, ../scss/_layout.scss */
 .col.c6 {
   width: 450px;
   float: left;
   margin-right: 15px;
 }
 
-/* line 84, ../scss/_layout.scss */
+/* line 85, ../scss/_layout.scss */
 .content-area {
   padding-bottom: 3em;
 }
 
-/* line 90, ../scss/_layout.scss */
+/* line 91, ../scss/_layout.scss */
 .site-footer .site-info, .site-footer .widgets {
   padding: 2.5em;
 }
-/* line 94, ../scss/_layout.scss */
+/* line 95, ../scss/_layout.scss */
 .site-footer .widgets {
   background: #fcde00;
 }
-/* line 97, ../scss/_layout.scss */
+/* line 98, ../scss/_layout.scss */
 .site-footer .widgets h4 {
   margin: 0 0 1em 0;
 }
-/* line 99, ../scss/_layout.scss */
+/* line 100, ../scss/_layout.scss */
 .site-footer .widgets li {
   list-style: none outside;
 }
-/* line 101, ../scss/_layout.scss */
+/* line 102, ../scss/_layout.scss */
 .site-footer .widgets a:hover {
   text-decoration: underline;
 }
-/* line 102, ../scss/_layout.scss */
+/* line 103, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-2x {
   background: #000;
   border-radius: 50%;
 }
-/* line 103, ../scss/_layout.scss */
+/* line 104, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-1x {
   color: #fcde00;
 }
-/* line 106, ../scss/_layout.scss */
+/* line 107, ../scss/_layout.scss */
 .site-footer .site-info {
   text-align: center;
 }
 
-/* line 112, ../scss/_layout.scss */
+/* line 113, ../scss/_layout.scss */
 .listing {
   overflow: hidden;
   margin: 0;
 }
-/* line 114, ../scss/_layout.scss */
+/* line 115, ../scss/_layout.scss */
 .listing, .entry-content .listing {
   padding: 0;
 }
-/* line 117, ../scss/_layout.scss */
+/* line 118, ../scss/_layout.scss */
 .listing li {
   display: block;
   list-style: none outside;
@@ -547,13 +548,13 @@ a {
   position: relative;
   padding: 0;
 }
-/* line 127, ../scss/_layout.scss */
+/* line 128, ../scss/_layout.scss */
 .listing li img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 130, ../scss/_layout.scss */
+/* line 131, ../scss/_layout.scss */
 .listing li .info {
   display: block;
   width: 100%;
@@ -570,12 +571,12 @@ a {
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
-/* line 139, ../scss/_layout.scss */
+/* line 140, ../scss/_layout.scss */
 .listing li .info .button {
   float: right;
   margin-top: 1em;
 }
-/* line 142, ../scss/_layout.scss */
+/* line 143, ../scss/_layout.scss */
 .listing li .name {
   position: absolute;
   z-index: 20;
@@ -586,39 +587,39 @@ a {
   padding: 1.2em 1.5em;
   text-align: right;
 }
-/* line 151, ../scss/_layout.scss */
+/* line 152, ../scss/_layout.scss */
 .listing li .name strong {
   display: block;
   font-size: 1.5em;
 }
-/* line 158, ../scss/_layout.scss */
+/* line 159, ../scss/_layout.scss */
 .listing li:hover .info {
   opacity: 1;
   top: 0;
 }
 
-/* line 165, ../scss/_layout.scss */
+/* line 166, ../scss/_layout.scss */
 .listing.products li {
   width: 50%;
   height: 33%;
   max-height: 400px;
   display: block !important;
 }
-/* line 168, ../scss/_layout.scss */
+/* line 169, ../scss/_layout.scss */
 .listing.products li .name strong {
   line-height: 1;
   font-weight: normal;
 }
-/* line 170, ../scss/_layout.scss */
+/* line 171, ../scss/_layout.scss */
 .listing.products li .wp-post-image {
   border: none !important;
 }
-/* line 172, ../scss/_layout.scss */
+/* line 173, ../scss/_layout.scss */
 .author .listing.products li {
   max-height: 300px;
 }
 
-/* line 177, ../scss/_layout.scss */
+/* line 178, ../scss/_layout.scss */
 .getincontact {
   overflow: hidden;
   display: block;
@@ -627,37 +628,37 @@ a {
   border: solid 4px #ababab;
   margin: 1em 0;
 }
-/* line 185, ../scss/_layout.scss */
+/* line 186, ../scss/_layout.scss */
 .getincontact:hover .c1,
 .getincontact .c2 {
   display: none;
 }
-/* line 188, ../scss/_layout.scss */
+/* line 189, ../scss/_layout.scss */
 .getincontact:hover .c2 {
   display: block;
 }
-/* line 190, ../scss/_layout.scss */
+/* line 191, ../scss/_layout.scss */
 .getincontact .copy {
   width: 35%;
 }
-/* line 191, ../scss/_layout.scss */
+/* line 192, ../scss/_layout.scss */
 .getincontact .person {
   width: 65%;
 }
-/* line 193, ../scss/_layout.scss */
+/* line 194, ../scss/_layout.scss */
 .getincontact .copy, .getincontact .person {
   float: left;
   padding: 1em 0;
   text-align: center;
   white-space: nowrap;
 }
-/* line 200, ../scss/_layout.scss */
+/* line 201, ../scss/_layout.scss */
 .getincontact .copy {
   text-align: center;
   background: #ababab;
   position: relative;
 }
-/* line 205, ../scss/_layout.scss */
+/* line 206, ../scss/_layout.scss */
 .getincontact .copy:after {
   display: block;
   content: '';
@@ -670,12 +671,12 @@ a {
   right: -24px;
   top: 0;
 }
-/* line 217, ../scss/_layout.scss */
+/* line 218, ../scss/_layout.scss */
 .getincontact .person {
   position: relative;
   padding-left: 110px;
 }
-/* line 220, ../scss/_layout.scss */
+/* line 221, ../scss/_layout.scss */
 .getincontact .person .avatar {
   display: inline-block;
   width: 52px;
@@ -685,26 +686,26 @@ a {
   position: absolute;
   left: 2.7em;
 }
-/* line 224, ../scss/_layout.scss */
+/* line 225, ../scss/_layout.scss */
 .getincontact .person .avatar img {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 228, ../scss/_layout.scss */
+/* line 229, ../scss/_layout.scss */
 .getincontact:hover {
   border-color: #fcde00;
 }
-/* line 231, ../scss/_layout.scss */
+/* line 232, ../scss/_layout.scss */
 .getincontact:hover .copy {
   background: #fcde00;
 }
-/* line 234, ../scss/_layout.scss */
+/* line 235, ../scss/_layout.scss */
 .getincontact:hover .copy:after {
   border-left-color: #fcde00;
 }
 
-/* line 242, ../scss/_layout.scss */
+/* line 243, ../scss/_layout.scss */
 .banner {
   height: 470px;
   overflow: hidden;
@@ -713,26 +714,26 @@ a {
   background-position: center;
   background-size: cover;
 }
-/* line 250, ../scss/_layout.scss */
+/* line 251, ../scss/_layout.scss */
 .banner h1 {
   padding: 0;
 }
-/* line 252, ../scss/_layout.scss */
+/* line 253, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 254, ../scss/_layout.scss */
+/* line 255, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 256, ../scss/_layout.scss */
+/* line 257, ../scss/_layout.scss */
 .banner .wrapper, .banner .hrd_cnt, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 258, ../scss/_layout.scss */
+/* line 259, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -743,7 +744,7 @@ a {
   padding: 1.5em;
   text-align: right;
 }
-/* line 260, ../scss/_layout.scss */
+/* line 261, ../scss/_layout.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -753,24 +754,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 268, ../scss/_layout.scss */
+/* line 269, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 270, ../scss/_layout.scss */
+/* line 271, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 272, ../scss/_layout.scss */
+/* line 273, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 273, ../scss/_layout.scss */
+/* line 274, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 276, ../scss/_layout.scss */
+/* line 277, ../scss/_layout.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -781,12 +782,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 281, ../scss/_layout.scss */
+/* line 282, ../scss/_layout.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 283, ../scss/_layout.scss */
+/* line 284, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -795,29 +796,29 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 293, ../scss/_layout.scss */
+/* line 294, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;
   color: #000;
 }
 
-/* line 301, ../scss/_layout.scss */
+/* line 302, ../scss/_layout.scss */
 #twitter {
   padding-bottom: 4em;
 }
-/* line 304, ../scss/_layout.scss */
+/* line 305, ../scss/_layout.scss */
 #twitter li {
   display: block;
   list-style: none outside;
   position: relative;
   padding: 1em 0 1em 70px;
 }
-/* line 308, ../scss/_layout.scss */
+/* line 309, ../scss/_layout.scss */
 #twitter li span {
   display: block;
 }
-/* line 310, ../scss/_layout.scss */
+/* line 311, ../scss/_layout.scss */
 #twitter li .avatar {
   display: block;
   width: 48px;
@@ -829,24 +830,24 @@ a {
   left: 0;
   margin-top: -24px;
 }
-/* line 314, ../scss/_layout.scss */
+/* line 315, ../scss/_layout.scss */
 #twitter li .date {
   position: absolute;
   top: 0;
   right: 0;
   color: #CCC;
 }
-/* line 317, ../scss/_layout.scss */
+/* line 318, ../scss/_layout.scss */
 #twitter li .tweet {
   border-left: 1px solid #CCC;
   padding-left: 1.5em;
 }
-/* line 320, ../scss/_layout.scss */
+/* line 321, ../scss/_layout.scss */
 #twitter li .tweet a {
   text-decoration: underline;
   color: #000;
 }
-/* line 321, ../scss/_layout.scss */
+/* line 322, ../scss/_layout.scss */
 #twitter li .tweet a:hover {
   background: #fcde00;
 }
@@ -1118,49 +1119,66 @@ a {
   height: 270px;
   background-size: inherit;
 }
-/* line 26, ../scss/_home.scss */
+/* line 25, ../scss/_home.scss */
+.home .banner .formerly {
+  font-size: 0.8em;
+  width: 11.5em;
+  padding: 1.2em 0.5em 0.5em 0.5em;
+  box-shadow: 0 0 1em #000;
+  text-align: right;
+  color: #FFF;
+  background: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 36, ../scss/_home.scss */
+.home .banner .formerly span {
+  display: block;
+}
+/* line 40, ../scss/_home.scss */
 .home .wrapper-wide {
   margin: 0 -span(1 of 12);
 }
-/* line 30, ../scss/_home.scss */
+/* line 44, ../scss/_home.scss */
 .home article.hentry {
   padding: 2em 225px;
 }
-/* line 32, ../scss/_home.scss */
+/* line 46, ../scss/_home.scss */
 .home article.hentry p:last-child {
   padding: 0;
 }
-/* line 35, ../scss/_home.scss */
+/* line 49, ../scss/_home.scss */
 .home .getincontact {
   margin: 0;
 }
-/* line 38, ../scss/_home.scss */
+/* line 52, ../scss/_home.scss */
 .home .getincontact .copy {
   width: 45%;
 }
-/* line 42, ../scss/_home.scss */
+/* line 56, ../scss/_home.scss */
 .home .getincontact .person {
   width: 55%;
   padding-left: 0;
 }
-/* line 47, ../scss/_home.scss */
+/* line 61, ../scss/_home.scss */
 .home .getincontact .fa-stack-2x {
   color: #ababab;
 }
-/* line 48, ../scss/_home.scss */
+/* line 62, ../scss/_home.scss */
 .home .getincontact .fa-stack-1x {
   color: #000;
 }
-/* line 51, ../scss/_home.scss */
+/* line 65, ../scss/_home.scss */
 .home .getincontact:hover .fa-stack-2x {
   color: #fcde00;
 }
-/* line 57, ../scss/_home.scss */
+/* line 71, ../scss/_home.scss */
 .home .listing .info p {
   text-align: right;
   padding: 0 0 1em 1em;
 }
-/* line 58, ../scss/_home.scss */
+/* line 72, ../scss/_home.scss */
 .home .listing .info .button {
   float: none;
   position: absolute;
@@ -1168,33 +1186,33 @@ a {
   right: 1.5em;
 }
 
-/* line 73, ../scss/_home.scss */
+/* line 87, ../scss/_home.scss */
 .post-8437 {
   padding: 0 75px !important;
 }
-/* line 76, ../scss/_home.scss */
+/* line 90, ../scss/_home.scss */
 .post-8437 .entry-header {
   text-align: center;
 }
-/* line 78, ../scss/_home.scss */
+/* line 92, ../scss/_home.scss */
 .post-8437 form {
   padding: 0 150px;
 }
-/* line 81, ../scss/_home.scss */
+/* line 95, ../scss/_home.scss */
 .post-8437 form label.mc_var_label {
   margin: 0;
 }
-/* line 83, ../scss/_home.scss */
+/* line 97, ../scss/_home.scss */
 .post-8437 form input, .post-8437 form textarea {
   border: 2px solid #000;
   padding: 0.2em 0.4em;
   outline: none;
 }
-/* line 86, ../scss/_home.scss */
+/* line 100, ../scss/_home.scss */
 .post-8437 form input:focus, .post-8437 form textarea:focus {
   background: #fcde00;
 }
-/* line 89, ../scss/_home.scss */
+/* line 103, ../scss/_home.scss */
 .post-8437 form #mc_signup_submit {
   width: 100%;
   padding: 0.6em;
@@ -1203,7 +1221,7 @@ a {
   display: block;
   border: none;
 }
-/* line 90, ../scss/_home.scss */
+/* line 104, ../scss/_home.scss */
 .post-8437 form #mc_signup_submit:hover {
   background: #fcde00;
   cursor: pointer;

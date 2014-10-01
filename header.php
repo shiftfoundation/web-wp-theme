@@ -83,6 +83,14 @@
 	if( $bannerImage[0] ) {	?>
 	<div class="banner" style="background-image: url(<?php echo $bannerImage[0]; ?>);">
 
+		<?php if( is_front_page() ) { ?>
+			<div class="wrapper-wide">
+				<div class="formerly">
+					Formerly
+					<span>We Are What We Do</span>
+				</div>
+			</div>
+		<?php } ?>
 		<?php if( get_post_type( $post ) == 'product' ) { ?>
 
 			<?php echo '<span class="info"><h1 class="name">' . get_the_title() . '</h1><span class="title">' . get_post_meta( get_the_ID(), 'what_does_it_do', true ) . '</span></span>'; ?>

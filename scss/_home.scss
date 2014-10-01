@@ -21,6 +21,20 @@
 	.banner {
 		height: 270px;
 		background-size: inherit;
+
+		.formerly { 
+			font-size: 0.8em;
+			width: 11.5em;
+			padding: 1.2em 0.5em 0.5em 0.5em;
+			box-shadow: 0 0 1em #000;
+			text-align: right;
+			color: #FFF;
+			background: #000;
+			position: absolute;
+			top: 0; right: 0;
+
+			span { display: block; @extend %MSS5; }
+		}
 	}
 
 	.wrapper-wide {
