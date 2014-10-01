@@ -31,19 +31,21 @@ get_header(); ?>
 			// Display connected pages
 			if ( $featuredUser ) { ?>
 
-			<a class="getincontact" href="mailto:<?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>">
-				<div class="copy">
-					<span class="c1">Do you want to get involved?</span>
-					<span class="c2">We'd love to hear from you</span>
-				</div>
-				<div class="person">
-					<?php $avatar = get_user_meta($featuredUser[0]->ID, 'avatar', true); ?>
-					<div class="avatar">
-						<?php echo wp_get_attachment_image( $avatar, 'thumbnail' ); ?>
+			<article class="hentry">
+				<a class="getincontact" target="_blank" href="mailto:<?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>">
+					<div class="copy">
+						<span class="c1">Do you want to get involved?</span>
+						<span class="c2">We'd love to hear from you</span>
 					</div>
-					Email me - <?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>
-				</div>
-			</a>
+					<div class="person">
+						<?php $avatar = get_user_meta($featuredUser[0]->ID, 'avatar', true); ?>
+						<div class="avatar">
+							<?php echo wp_get_attachment_image( $avatar, 'thumbnail' ); ?>
+						</div>
+						Email me - <?php echo get_user_meta($featuredUser[0]->ID, 'e-mail', true); ?>
+					</div>
+				</a>
+			</article>
 			<?php } ?>
 
 		</main><!-- #main -->

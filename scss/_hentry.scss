@@ -56,6 +56,7 @@
 .tabs-container:target { display: block; }
 
 /*TODO: FIX*/
-.tabs-container p { clear: both; }
+#awards.tabs-container p { clear: both; }
+#partners.tabs-container p { clear: both; }
 
 #comments { display: none; }

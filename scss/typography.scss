@@ -79,7 +79,6 @@ body, form, textarea, input { font: 16px/1.4 "MuseoSans300", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;
-	clear: both;
 	line-height: 1.2;
 }
 
@@ -98,12 +97,11 @@ h3 {
 	@extend %MSS7;
 	font-size: 1.2em;
 	padding: 0.2em 0.3em;
-	float: left;
+	display: inline-block;
 	background: #FCDE00;
 
 	&, a { color: #000; }
 	a:hover { text-decoration: underline; }
-	& ~ * { clear: both; }
 }
 
 h4 {
@@ -200,12 +198,15 @@ h6 {
 	img.image.left { float: left; margin-right: 1em; }
 
 	blockquote {
-		margin: 1em;
+		width: 45%;
+		float: right;
+		margin: 1em 1em 1em 2em;
 		quotes:"\201C""\201D";
 			
 
 		p { @extend %MSS7; text-decoration: underline; }
 		p:last-child { @extend %MSS5; text-decoration: none; }
+		& + p { clear: none; }
 
 		/*p:first-child:before,*/
 		/*p:first-child:after { color:#999; font-size:4em; line-height: 0.000001em; position: relative; top: 0.5em;  }*/

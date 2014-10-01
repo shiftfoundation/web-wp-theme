@@ -118,13 +118,24 @@
 			  'nopaging' => true,
 			) );
 
+			$tab_image = array();
+			if( have_rows('tab') ) { while( have_rows('tab') ): the_row(); 
+
+				// vars
+				$title = strtolower(get_sub_field('title'));
+				$image = get_sub_field('image');
+					
+				$tab_image[$title] = $image; 
+
+			endwhile; }
+
 			?>
 
 			<ul class="subnav">
 				<li><a href="#overview">Overview</a></li>
 				<?php if ( $research_to_product->have_posts() ) { ?><li><a href="#research">Research</a></li><?php } ?>
 				<?php if ( $post_to_product->have_posts() ) { ?><li><a href="#comment">Comment</a></li><?php } ?>
-				<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?><li><a href="#coverage">Coverage</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?><li><a <?php if($tab_image['coverage']) { echo 'data-image="' . $tab_image[$title] . '"'; } ?> href="#coverage">Coverage</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'partners', true ) ) { ?><li><a href="#partners">Partners</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) { ?><li><a href="#jobs">Jobs</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'awards', true ) ) { ?><li><a href="#awards">Awards</a></li><?php } ?>

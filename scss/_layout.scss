@@ -35,7 +35,6 @@ a {
 .wrapper-wide {
 	max-width: span(14 of 14);
 	margin: 0 auto;
-	position: relative;
 
 	&:after {
 		@include clearfix;
