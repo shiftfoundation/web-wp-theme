@@ -24,6 +24,9 @@ get_header(); ?>
 								<strong><?php the_title(); ?></strong>
 								<?php echo get_post_meta( get_the_ID(), 'what_does_it_do', true ); ?>
 							</p>
+							<span class="info">
+								<span class="button">See more</span>
+							</span>
 						</a>
 					</li>
 				<?php endwhile; // end of the loop. ?>

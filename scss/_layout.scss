@@ -137,7 +137,10 @@ a {
 			@include transition(all 0.3s ease-in);
 			overflow: hidden;
 
-			.button { display: block; float: right; margin-top: 1em; }
+			p { text-align: right; padding: 0 0 1em 1em; }
+
+			.button { position: absolute; bottom: 1.5em; right: 1.5em; }
+
 		}
 
 		.name {
