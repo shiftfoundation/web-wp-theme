@@ -178,12 +178,17 @@ h6 {
 	table[align=right] { margin-left: 1em; }
 
 	img[align=left],
-	table[align=left] 	{ margin-right: 1em; }
+	table[align=left] { margin-right: 1em; }
+
+	img { max-width: 100%; height: auto; }
+
+	div.separator { display: block; margin: 20px 0 20px -40px; background: #FFF; padding: 10px; }
+	img.separator { display: block; width: 710px; margin: 0 0 20px -40px; border: solid #FFF; border-width: 10px 0; }
 
 	img.bannertop,
 	img.bannerbottom	{ display: block; width: 100%; height: auto; }
-	img.bannertop		{ }
-	img.bannerbottom	{ }
+	img.bannertop		{  }
+	img.bannerbottom	{  }
 
 	img.image { display: block; width: 40%; height: auto; margin: 0 0 0.5em 0; }
 

@@ -55,6 +55,12 @@
 .tabs-container { display: none; }
 .tabs-container:target { display: block; }
 
+.gallery { 
+	.gallery-item { width: 20%; float: left; padding-right: 0.5em; }
+}
+
+
+
 /*TODO: FIX*/
 #awards.tabs-container p { clear: both; }
 #partners.tabs-container p { clear: both; }

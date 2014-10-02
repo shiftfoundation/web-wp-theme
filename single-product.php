@@ -67,7 +67,7 @@ get_header(); ?>
 						endif;
 						?>
 
-						<h1>@Shift</h1>
+						<h1><a href="https://twitter.com/shift_org">@Shift_org</a></h1>
 						<div id="twitter"></div>
 					</div>
 

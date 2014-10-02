@@ -40,7 +40,7 @@
 						<a href="/sign-up-to-newsletter"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x"></i></span> Sign up to our e-newsletter</a>
 					</li>
 					<li>
-						<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x"></i></span> Call us: +44 (0)20 7148 7666
+						<span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-stack-1x">@</i></span> Email us at <a href="mailto:hello@shiftdesign.org.uk" target="_blank">hello@shiftdesign.org.uk</a>
 					</li>
 				</ul>
 			</nav><!-- #site-navigation -->
@@ -132,14 +132,14 @@
 			?>
 
 			<ul class="subnav">
-				<li><a href="#overview">Overview</a></li>
-				<?php if ( $research_to_product->have_posts() ) { ?><li><a href="#research">Research</a></li><?php } ?>
-				<?php if ( $post_to_product->have_posts() ) { ?><li><a href="#comment">Comment</a></li><?php } ?>
-				<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) { ?><li><a <?php if($tab_image['coverage']) { echo 'data-image="' . $tab_image[$title] . '"'; } ?> href="#coverage">Coverage</a></li><?php } ?>
-				<?php if( get_post_meta( get_the_ID(), 'partners', true ) ) { ?><li><a href="#partners">Partners</a></li><?php } ?>
-				<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) { ?><li><a href="#jobs">Jobs</a></li><?php } ?>
-				<?php if( get_post_meta( get_the_ID(), 'awards', true ) ) { ?><li><a href="#awards">Awards</a></li><?php } ?>
-				<?php if( get_post_meta( get_the_ID(), 'link', true ) ) { ?><li><a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'link', true ); ?>">Website</a></li><?php } ?>
+				<li><a <?php echo 'data-image="' . $bannerImage[0] . '"'; ?> href="#overview">Overview</a></li>
+				<?php if ( $research_to_product->have_posts() ) {				?><li><a <?php if($tab_image['research']) { echo 'data-image="' . $tab_image['research'] . '"'; } ?> href="#research">Research</a></li><?php } ?>
+				<?php if ( $post_to_product->have_posts() ) {					?><li><a <?php if($tab_image['comment'])  { echo 'data-image="' . $tab_image['comment'] . '"'; } ?> href="#comment">Comment</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'coverage', true ) ) {	?><li><a <?php if($tab_image['coverage']) { echo 'data-image="' . $tab_image['coverage'] . '"'; } ?> href="#coverage">Coverage</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'partners', true ) ) {	?><li><a <?php if($tab_image['partners']) { echo 'data-image="' . $tab_image['partners'] . '"'; } ?> href="#partners">Partners</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) {		?><li><a <?php if($tab_image['jobs'])	  { echo 'data-image="'	. $tab_image['jobs'] . '"'; } ?> href="#jobs">Jobs</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'awards', true ) ) {		?><li><a <?php if($tab_image['awards'])	  { echo 'data-image="'	. $tab_image['awards'] . '"'; } ?> href="#awards">Awards</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'link', true ) ) {		?><li><a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'link', true ); ?>">Website</a></li><?php } ?>
 			</ul>
 
 		<?php }	?>
@@ -185,7 +185,7 @@
 				$args = array(
 					'author'        =>  $curauth->ID,
 					'orderby'       =>  'post_date',
-					'order'         =>  'ASC' 
+					'order'         =>  'DESC' 
 				);
 
 				// get his posts 'ASC'

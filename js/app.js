@@ -2,6 +2,13 @@ jQuery(function($){
 
 	$('.subnav').delegate('a[href^="#"]', 'click', function(e){
 		$(this).parent().addClass('selected').siblings().removeClass('selected');
+
+		if( $('body').hasClass('single-product') ) {
+			$('.banner').attr("style", "background-image: url(" + $(this).attr('data-image') + ");" );
+		}
+
+		console.log($(this).attr('data-image'));
+
 		window.location = $(this).attr('href');
 		$(window).scrollTop(0);
 		e.preventDefault();

@@ -42,7 +42,7 @@ get_header(); ?>
 						endforeach; 
 						wp_reset_postdata();?>
 
-						<h1>@Shift</h1>
+						<h1><a href="https://twitter.com/shift_org">@Shift_org</a></h1>
 						<div id="twitter"></div>
 					</div>
 
@@ -108,7 +108,7 @@ get_header(); ?>
 					</div>
 
 					<?php if(get_user_meta($curauth->ID, 'coverage', true)) { ?>
-					<div id="coverage">
+					<div id="coverage" class="tabs-container">
 						<header class="entry-header">
 							<h1>Coverage</h1>
 						</header>

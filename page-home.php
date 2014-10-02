@@ -55,7 +55,7 @@ get_header(); ?>
 
 
 			<article class="hentry">
-				<h1>@Shift</h1>
+				<h1><a href="https://twitter.com/shift_org">@Shift_org</a></h1>
 				<div id="twitter"></div>
 
 				<a class="getincontact" href="/sign-up-to-newsletter">

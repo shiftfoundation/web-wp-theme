@@ -286,6 +286,26 @@ h6 {
   margin-right: 1em;
 }
 /* line 183, ../scss/typography.scss */
+.entry-content img, .wp-editor img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 185, ../scss/typography.scss */
+.entry-content div.separator, .wp-editor div.separator {
+  display: block;
+  margin: 20px 0 20px -40px;
+  background: #FFF;
+  padding: 10px;
+}
+/* line 186, ../scss/typography.scss */
+.entry-content img.separator, .wp-editor img.separator {
+  display: block;
+  width: 710px;
+  margin: 0 0 20px -40px;
+  border: solid #FFF;
+  border-width: 10px 0;
+}
+/* line 188, ../scss/typography.scss */
 .entry-content img.bannertop,
 .entry-content img.bannerbottom, .wp-editor img.bannertop,
 .wp-editor img.bannerbottom {
@@ -293,19 +313,19 @@ h6 {
   width: 100%;
   height: auto;
 }
-/* line 188, ../scss/typography.scss */
+/* line 193, ../scss/typography.scss */
 .entry-content img.image, .wp-editor img.image {
   display: block;
   width: 40%;
   height: auto;
   margin: 0 0 0.5em 0;
 }
-/* line 190, ../scss/typography.scss */
+/* line 195, ../scss/typography.scss */
 .entry-content a.float, .wp-editor a.float {
   clear: both;
   margin-bottom: 1em;
 }
-/* line 192, ../scss/typography.scss */
+/* line 197, ../scss/typography.scss */
 .entry-content a.float.right,
 .entry-content img.aligright,
 .entry-content img.image.right, .wp-editor a.float.right,
@@ -314,7 +334,7 @@ h6 {
   float: right;
   margin-left: 1em;
 }
-/* line 196, ../scss/typography.scss */
+/* line 201, ../scss/typography.scss */
 .entry-content a.float.left,
 .entry-content img.alignleft,
 .entry-content img.image.left, .wp-editor a.float.left,
@@ -323,7 +343,7 @@ h6 {
   float: left;
   margin-right: 1em;
 }
-/* line 200, ../scss/typography.scss */
+/* line 205, ../scss/typography.scss */
 .entry-content blockquote, .wp-editor blockquote {
   width: 45%;
   float: right;
@@ -334,15 +354,15 @@ h6 {
   /*p:first-child:before { content:open-quote; padding-right: 5px;  }*/
   /*p:first-child:after { content:close-quote; padding-left: 5px; }*/
 }
-/* line 207, ../scss/typography.scss */
+/* line 212, ../scss/typography.scss */
 .entry-content blockquote p, .wp-editor blockquote p {
   text-decoration: underline;
 }
-/* line 208, ../scss/typography.scss */
+/* line 213, ../scss/typography.scss */
 .entry-content blockquote p:last-child, .wp-editor blockquote p:last-child {
   text-decoration: none;
 }
-/* line 209, ../scss/typography.scss */
+/* line 214, ../scss/typography.scss */
 .entry-content blockquote + p, .wp-editor blockquote + p {
   clear: none;
 }
@@ -1159,18 +1179,25 @@ a {
   display: block;
 }
 
-/*TODO: FIX*/
 /* line 59, ../scss/_hentry.scss */
+.gallery .gallery-item {
+  width: 20%;
+  float: left;
+  padding-right: 0.5em;
+}
+
+/*TODO: FIX*/
+/* line 65, ../scss/_hentry.scss */
 #awards.tabs-container p {
   clear: both;
 }
 
-/* line 60, ../scss/_hentry.scss */
+/* line 66, ../scss/_hentry.scss */
 #partners.tabs-container p {
   clear: both;
 }
 
-/* line 62, ../scss/_hentry.scss */
+/* line 68, ../scss/_hentry.scss */
 #comments {
   display: none;
 }

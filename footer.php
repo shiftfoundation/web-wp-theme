@@ -21,7 +21,7 @@
 						London<br>
 						EC1M 4NJ, UK<br>
 						United Kingdom<br>
-						+44 (0)20 7148 7666
+						<a href="mailto:hello@shiftdesign.org.uk" target="_blank">hello@shiftdesign.org.uk</a>
 					</div>
 				</div>
 				<div class="widget col c4">
@@ -38,8 +38,8 @@
 				<div class="widget col c3">
 					<h4>Connect</h4>
 					<div class="cnt">
-						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>
-						<a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+						<a href="https://twitter.com/shift_org"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+						<a href="https://www.linkedin.com/company/1273971?trk=prof-exp-company-name"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
 					</div>
 				</div>
 

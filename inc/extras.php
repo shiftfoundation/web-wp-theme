@@ -227,3 +227,58 @@ function shiftwp_register_widgets() {
 
 add_action( 'widgets_init', 'shiftwp_register_widgets' );
 
+
+// Tiny MCE
+
+function my_mce_buttons_2( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+
+function my_mce_before_init( $settings ) {
+
+    $style_formats = array(
+        array(
+            'title' => '(Link) Button',
+            'selector' => 'a',
+            'classes' => 'button'
+        ),
+        array(
+            'title' => '(Image) Separator',
+            'selector' => 'img',
+            'classes' => 'separator',
+            'wrapper' => false
+        ),
+        array(
+            'title' => '(Image) Top banner',
+            'selector' => 'img',
+            'classes' => 'bannertop',
+            'wrapper' => false
+        ),
+        array(
+            'title' => '(Image) Bottom banner',
+            'selector' => 'img',
+            'classes' => 'bannerbottom',
+            'wrapper' => false
+        ),
+        array(
+            'title' => '(Image) Stick to left',
+            'selector' => 'img',
+            'classes' => 'image left',
+            'wrapper' => false
+        ),
+        array(
+            'title' => '(Image) Stick to right',
+            'selector' => 'img',
+            'classes' => 'image right',
+            'wrapper' => false
+        )
+    );
+
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+
+}
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init' );
