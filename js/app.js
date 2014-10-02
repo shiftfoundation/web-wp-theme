@@ -35,7 +35,7 @@ jQuery(function($){
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
 			'username' : 'wearewhatwedo',
 			'count' : 3,
-			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><h3>{{user_name}}</h3><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
+			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
 			'dateFormat' : '%d %B %Y',
 			'hideReplies' : true
 		});
@@ -47,7 +47,7 @@ jQuery(function($){
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
 			'username' : 'wearewhatwedo',
 			'count' : 3,
-			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><h3>{{user_name}}</h3><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
+			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
 			'dateFormat' : '%d %B %Y',
 			'hideReplies' : true
 		});
@@ -59,7 +59,7 @@ jQuery(function($){
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
 			'username' : 'wearewhatwedo',
 			'count' : 3,
-			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><h3>{{user_name}}</h3><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
+			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
 			'dateFormat' : '%d %B %Y',
 			'hideReplies' : true
 		});

@@ -440,104 +440,111 @@ a {
 }
 /* line 67, ../scss/_layout.scss */
 .blog #primary {
-  width: 510px;
+  width: 435px;
   float: left;
   margin-right: 15px;
+  margin-right: 0;
 }
-/* line 71, ../scss/_layout.scss */
+/* line 72, ../scss/_layout.scss */
 .blog #secondary {
   width: 285px;
   float: right;
   margin-right: 0;
+  margin-left: 2em;
+}
+/* line 78, ../scss/_layout.scss */
+.blog .entry-content iframe {
+  width: 100%;
+  height: 15em !important;
 }
 
 /* Grid */
-/* line 76, ../scss/_layout.scss */
+/* line 84, ../scss/_layout.scss */
 .col.c1 {
   width: 75px;
   float: left;
   margin-right: 15px;
 }
-/* line 77, ../scss/_layout.scss */
+/* line 85, ../scss/_layout.scss */
 .col.c2 {
   width: 150px;
   float: left;
   margin-right: 15px;
 }
-/* line 78, ../scss/_layout.scss */
+/* line 86, ../scss/_layout.scss */
 .col.c3 {
   width: 225px;
   float: left;
   margin-right: 15px;
 }
-/* line 79, ../scss/_layout.scss */
+/* line 87, ../scss/_layout.scss */
 .col.c4 {
   width: 300px;
   float: left;
   margin-right: 15px;
 }
-/* line 80, ../scss/_layout.scss */
+/* line 88, ../scss/_layout.scss */
 .col.c5 {
   width: 375px;
   float: left;
   margin-right: 15px;
 }
-/* line 81, ../scss/_layout.scss */
+/* line 89, ../scss/_layout.scss */
 .col.c6 {
   width: 450px;
   float: left;
   margin-right: 15px;
 }
 
-/* line 84, ../scss/_layout.scss */
+/* line 92, ../scss/_layout.scss */
 .content-area {
   padding-bottom: 3em;
 }
 
-/* line 90, ../scss/_layout.scss */
+/* line 98, ../scss/_layout.scss */
 .site-footer .site-info, .site-footer .widgets {
   padding: 2.5em;
 }
-/* line 94, ../scss/_layout.scss */
+/* line 102, ../scss/_layout.scss */
 .site-footer .widgets {
   background: #fcde00;
 }
-/* line 97, ../scss/_layout.scss */
+/* line 105, ../scss/_layout.scss */
 .site-footer .widgets h4 {
   margin: 0 0 1em 0;
 }
-/* line 99, ../scss/_layout.scss */
+/* line 107, ../scss/_layout.scss */
 .site-footer .widgets li {
   list-style: none outside;
 }
-/* line 101, ../scss/_layout.scss */
+/* line 109, ../scss/_layout.scss */
 .site-footer .widgets a:hover {
   text-decoration: underline;
 }
-/* line 102, ../scss/_layout.scss */
+/* line 110, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-2x {
   background: #000;
   border-radius: 50%;
 }
-/* line 103, ../scss/_layout.scss */
+/* line 111, ../scss/_layout.scss */
 .site-footer .widgets a:hover .fa-stack-1x {
   color: #fcde00;
 }
-/* line 106, ../scss/_layout.scss */
+/* line 114, ../scss/_layout.scss */
 .site-footer .site-info {
   text-align: center;
 }
 
-/* line 112, ../scss/_layout.scss */
+/* line 120, ../scss/_layout.scss */
 .listing {
   overflow: hidden;
   margin: 0;
 }
-/* line 114, ../scss/_layout.scss */
+/* line 122, ../scss/_layout.scss */
 .listing, .entry-content .listing {
   padding: 0;
 }
-/* line 117, ../scss/_layout.scss */
+/* line 125, ../scss/_layout.scss */
 .listing li {
   display: block;
   list-style: none outside;
@@ -548,17 +555,17 @@ a {
   position: relative;
   padding: 0;
 }
-/* line 127, ../scss/_layout.scss */
+/* line 135, ../scss/_layout.scss */
 .listing li img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 129, ../scss/_layout.scss */
+/* line 137, ../scss/_layout.scss */
 .listing li a {
   display: block;
 }
-/* line 131, ../scss/_layout.scss */
+/* line 139, ../scss/_layout.scss */
 .listing li .info {
   display: block;
   width: 100%;
@@ -575,18 +582,18 @@ a {
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
-/* line 140, ../scss/_layout.scss */
+/* line 148, ../scss/_layout.scss */
 .listing li .info p {
   text-align: right;
   padding: 0 0 1em 1em;
 }
-/* line 142, ../scss/_layout.scss */
+/* line 150, ../scss/_layout.scss */
 .listing li .info .button {
   position: absolute;
   bottom: 1.5em;
   right: 1.5em;
 }
-/* line 146, ../scss/_layout.scss */
+/* line 154, ../scss/_layout.scss */
 .listing li .name {
   position: absolute;
   z-index: 20;
@@ -597,48 +604,48 @@ a {
   padding: 1.2em 1.5em;
   text-align: right;
 }
-/* line 155, ../scss/_layout.scss */
+/* line 163, ../scss/_layout.scss */
 .listing li .name strong {
   display: block;
   font-size: 1.5em;
 }
-/* line 162, ../scss/_layout.scss */
+/* line 170, ../scss/_layout.scss */
 .listing li:hover .info {
   opacity: 1;
   top: 0;
 }
 
-/* line 169, ../scss/_layout.scss */
+/* line 177, ../scss/_layout.scss */
 .listing.products li {
   width: 50%;
   height: 33%;
   max-height: 400px;
   display: block !important;
 }
-/* line 171, ../scss/_layout.scss */
+/* line 179, ../scss/_layout.scss */
 .listing.products li .name strong {
   line-height: 1;
   font-weight: normal;
 }
-/* line 172, ../scss/_layout.scss */
+/* line 180, ../scss/_layout.scss */
 .listing.products li .wp-post-image {
   border: none !important;
 }
-/* line 173, ../scss/_layout.scss */
+/* line 181, ../scss/_layout.scss */
 .author .listing.products li {
   max-height: 300px;
 }
 
-/* line 177, ../scss/_layout.scss */
+/* line 185, ../scss/_layout.scss */
 .listing.users li .info p:first-of-type {
   padding-bottom: 0;
 }
-/* line 178, ../scss/_layout.scss */
+/* line 186, ../scss/_layout.scss */
 .listing.users li .info p {
   text-align: left;
 }
 
-/* line 181, ../scss/_layout.scss */
+/* line 189, ../scss/_layout.scss */
 .getincontact {
   overflow: hidden;
   display: block;
@@ -647,37 +654,37 @@ a {
   border: solid 4px #ababab;
   margin: 1em 0;
 }
-/* line 189, ../scss/_layout.scss */
+/* line 197, ../scss/_layout.scss */
 .getincontact:hover .c1,
 .getincontact .c2 {
   display: none;
 }
-/* line 192, ../scss/_layout.scss */
+/* line 200, ../scss/_layout.scss */
 .getincontact:hover .c2 {
   display: block;
 }
-/* line 194, ../scss/_layout.scss */
+/* line 202, ../scss/_layout.scss */
 .getincontact .copy {
   width: 35%;
 }
-/* line 195, ../scss/_layout.scss */
+/* line 203, ../scss/_layout.scss */
 .getincontact .person {
   width: 65%;
 }
-/* line 197, ../scss/_layout.scss */
+/* line 205, ../scss/_layout.scss */
 .getincontact .copy, .getincontact .person {
   float: left;
   padding: 1em 0;
   text-align: center;
   white-space: nowrap;
 }
-/* line 204, ../scss/_layout.scss */
+/* line 212, ../scss/_layout.scss */
 .getincontact .copy {
   text-align: center;
   background: #ababab;
   position: relative;
 }
-/* line 209, ../scss/_layout.scss */
+/* line 217, ../scss/_layout.scss */
 .getincontact .copy:after {
   display: block;
   content: '';
@@ -690,12 +697,12 @@ a {
   right: -24px;
   top: 0;
 }
-/* line 221, ../scss/_layout.scss */
+/* line 229, ../scss/_layout.scss */
 .getincontact .person {
   position: relative;
   padding-left: 110px;
 }
-/* line 224, ../scss/_layout.scss */
+/* line 232, ../scss/_layout.scss */
 .getincontact .person .avatar {
   display: inline-block;
   width: 52px;
@@ -705,26 +712,26 @@ a {
   position: absolute;
   left: 2.7em;
 }
-/* line 228, ../scss/_layout.scss */
+/* line 236, ../scss/_layout.scss */
 .getincontact .person .avatar img {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 232, ../scss/_layout.scss */
+/* line 240, ../scss/_layout.scss */
 .getincontact:hover {
   border-color: #fcde00;
 }
-/* line 235, ../scss/_layout.scss */
+/* line 243, ../scss/_layout.scss */
 .getincontact:hover .copy {
   background: #fcde00;
 }
-/* line 238, ../scss/_layout.scss */
+/* line 246, ../scss/_layout.scss */
 .getincontact:hover .copy:after {
   border-left-color: #fcde00;
 }
 
-/* line 246, ../scss/_layout.scss */
+/* line 254, ../scss/_layout.scss */
 .banner {
   height: 470px;
   overflow: hidden;
@@ -733,26 +740,26 @@ a {
   background-position: center;
   background-size: cover;
 }
-/* line 254, ../scss/_layout.scss */
+/* line 262, ../scss/_layout.scss */
 .banner h1 {
   padding: 0;
 }
-/* line 256, ../scss/_layout.scss */
+/* line 264, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 258, ../scss/_layout.scss */
+/* line 266, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 260, ../scss/_layout.scss */
+/* line 268, ../scss/_layout.scss */
 .banner .wrapper, .banner .hrd_cnt, .banner .menu {
   position: absolute;
   top: 0;
   height: 100%;
 }
-/* line 262, ../scss/_layout.scss */
+/* line 270, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -763,7 +770,7 @@ a {
   padding: 1.5em;
   text-align: right;
 }
-/* line 264, ../scss/_layout.scss */
+/* line 272, ../scss/_layout.scss */
 .banner .nav-btn {
   display: block;
   position: absolute;
@@ -773,24 +780,24 @@ a {
   color: #FFF;
   z-index: 20;
 }
-/* line 272, ../scss/_layout.scss */
+/* line 280, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 274, ../scss/_layout.scss */
+/* line 282, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 276, ../scss/_layout.scss */
+/* line 284, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 277, ../scss/_layout.scss */
+/* line 285, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 280, ../scss/_layout.scss */
+/* line 288, ../scss/_layout.scss */
 .banner .subnav {
   position: absolute;
   bottom: 0;
@@ -801,12 +808,12 @@ a {
   white-space: nowrap;
   font-size: 0;
 }
-/* line 285, ../scss/_layout.scss */
+/* line 293, ../scss/_layout.scss */
 .banner .subnav li {
   display: inline-block;
   list-style: none outside;
 }
-/* line 287, ../scss/_layout.scss */
+/* line 295, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 16px;
   display: block;
@@ -815,29 +822,29 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 297, ../scss/_layout.scss */
+/* line 305, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;
   color: #000;
 }
 
-/* line 305, ../scss/_layout.scss */
+/* line 313, ../scss/_layout.scss */
 #twitter {
   padding-bottom: 4em;
 }
-/* line 308, ../scss/_layout.scss */
+/* line 316, ../scss/_layout.scss */
 #twitter li {
   display: block;
   list-style: none outside;
   position: relative;
   padding: 1em 0 1em 70px;
 }
-/* line 312, ../scss/_layout.scss */
+/* line 320, ../scss/_layout.scss */
 #twitter li span {
   display: block;
 }
-/* line 314, ../scss/_layout.scss */
+/* line 322, ../scss/_layout.scss */
 #twitter li .avatar {
   display: block;
   width: 48px;
@@ -849,34 +856,34 @@ a {
   left: 0;
   margin-top: -24px;
 }
-/* line 318, ../scss/_layout.scss */
+/* line 326, ../scss/_layout.scss */
 #twitter li .date {
   position: absolute;
   top: 0;
   right: 0;
   color: #CCC;
 }
-/* line 321, ../scss/_layout.scss */
+/* line 329, ../scss/_layout.scss */
 #twitter li .tweet {
   border-left: 1px solid #CCC;
   padding-left: 1.5em;
 }
-/* line 324, ../scss/_layout.scss */
+/* line 332, ../scss/_layout.scss */
 #twitter li .tweet a {
   text-decoration: underline;
   color: #000;
 }
-/* line 325, ../scss/_layout.scss */
+/* line 333, ../scss/_layout.scss */
 #twitter li .tweet a:hover {
   background: #fcde00;
 }
 
-/* line 331, ../scss/_layout.scss */
+/* line 339, ../scss/_layout.scss */
 .widget {
   overflow: hidden;
   padding-bottom: 2em;
 }
-/* line 335, ../scss/_layout.scss */
+/* line 343, ../scss/_layout.scss */
 .widget .users li {
   display: block;
   list-style: none outside;
@@ -885,23 +892,23 @@ a {
   padding: 1.5em 1em;
   padding-left: 5em;
 }
-/* line 340, ../scss/_layout.scss */
+/* line 348, ../scss/_layout.scss */
 .widget .users li strong {
   padding-right: 0.5em;
 }
-/* line 342, ../scss/_layout.scss */
+/* line 350, ../scss/_layout.scss */
 .widget .users li a {
   color: #666;
   display: inline-block;
   padding: 0 0.3em;
 }
-/* line 343, ../scss/_layout.scss */
+/* line 351, ../scss/_layout.scss */
 .widget .users li a:hover {
   color: #000;
   text-decoration: underline;
   background: #fcde00;
 }
-/* line 346, ../scss/_layout.scss */
+/* line 354, ../scss/_layout.scss */
 .widget .users .avatar {
   width: 50px;
   height: 50px;
@@ -913,11 +920,28 @@ a {
   left: 0;
   margin-top: -25px;
 }
-/* line 350, ../scss/_layout.scss */
+/* line 358, ../scss/_layout.scss */
 .widget .users .avatar img {
   display: block;
   width: 100%;
   height: auto;
+}
+/* line 363, ../scss/_layout.scss */
+.widget.widget_tag_cloud a {
+  font-size: 0.8em !important;
+  margin: 0 0.5em 0.5em 0;
+  border-radius: 2px;
+  display: inline-block;
+  border: 1px solid #e0e0e0;
+  padding: 0.3em 0.5em;
+  color: #ababab;
+  background: #f7f7f7;
+}
+/* line 367, ../scss/_layout.scss */
+.widget.widget_tag_cloud a:hover {
+  border-color: #000;
+  background: #fcde00;
+  color: #000;
 }
 
 /*
