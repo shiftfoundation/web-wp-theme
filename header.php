@@ -124,7 +124,9 @@
 				// vars
 				$title = strtolower(get_sub_field('title'));
 				$image = get_sub_field('image');
-					
+				
+				echo '<div class="loader" style="background: url(' . get_sub_field('image') . ');"></div>';
+
 				$tab_image[$title] = $image; 
 
 			endwhile; }
