@@ -1,4 +1,4 @@
-/* A fonts by Jos Buivenga (exljbris) -> www.exljbris.com */
+/* A fonts by Jos Buivenga (exljbris) -> www.exljbris.com * /
 
 @font-face {
     font-family: 'MuseoSlab500';
@@ -66,16 +66,27 @@
     font-style: normal;
 }
 
-/*
- * Typography
- * */
-
 body, form, textarea, input { font: 16px/1.4 "MuseoSans300", sans-serif; }
 
 %MSS3 { font-family: "MuseoSans300", sans-serif; }
 %MSS5 { font-family: "MuseoSans500", sans-serif; }
 %MSS7 { font-family: "MuseoSans700", sans-serif; }
 %MSS9 { font-family: "MuseoSans900", sans-serif; }
+*/
+
+@import url('http://fast.fonts.net/cssapi/a4ee3472-268c-453f-ad7a-f5ec0201b53c.css');
+
+/*
+ * Typography
+ * */
+
+%MSS3 { font-family: "Museo Sans W01 300", sans-serif; }
+%MSS5 { font-family: "Museo Sans W01 500", sans-serif; }
+%MSS7 { font-family: "Museo Sans W01 700", sans-serif; }
+%MSS9 { font-family: "Museo Sans W01 900", sans-serif; }
+
+body, form, textarea, input { font: 16px/1.4 "Museo Sans W01 300", sans-serif; }
+
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;

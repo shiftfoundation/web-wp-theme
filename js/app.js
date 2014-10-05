@@ -1,5 +1,6 @@
 jQuery(function($){
-	var nav_ot = Math.round( $('.subnav').offset().top );
+
+	if ( $('.subnav').size() > 0 ) var nav_ot = Math.round( $('.subnav').offset().top );
 
 	$('.subnav').delegate('a[href^="#"]', 'click', function(e){
 		$(this).parent().addClass('selected').siblings().removeClass('selected');
