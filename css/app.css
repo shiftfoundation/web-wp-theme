@@ -1179,7 +1179,11 @@ a {
   display: block;
 }
 
-/* line 59, ../scss/_hentry.scss */
+/* line 58, ../scss/_hentry.scss */
+.gallery {
+  clear: both;
+}
+/* line 61, ../scss/_hentry.scss */
 .gallery .gallery-item {
   width: 20%;
   float: left;
@@ -1187,17 +1191,17 @@ a {
 }
 
 /*TODO: FIX*/
-/* line 65, ../scss/_hentry.scss */
+/* line 67, ../scss/_hentry.scss */
 #awards.tabs-container p {
   clear: both;
 }
 
-/* line 66, ../scss/_hentry.scss */
+/* line 68, ../scss/_hentry.scss */
 #partners.tabs-container p {
   clear: both;
 }
 
-/* line 68, ../scss/_hentry.scss */
+/* line 70, ../scss/_hentry.scss */
 #comments {
   display: none;
 }

@@ -56,6 +56,8 @@
 .tabs-container:target { display: block; }
 
 .gallery { 
+	clear: both;
+
 	.gallery-item { width: 20%; float: left; padding-right: 0.5em; }
 }
 
