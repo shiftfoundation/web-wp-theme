@@ -1,4 +1,5 @@
 jQuery(function($){
+	var nav_ot = Math.round( $('.subnav').offset().top );
 
 	$('.subnav').delegate('a[href^="#"]', 'click', function(e){
 		$(this).parent().addClass('selected').siblings().removeClass('selected');
@@ -7,10 +8,10 @@ jQuery(function($){
 			$('.banner').attr("style", "background-image: url(" + $(this).attr('data-image') + ");" );
 		}
 
-		console.log($(this).attr('data-image'));
-
 		window.location = $(this).attr('href');
-		$(window).scrollTop(0);
+		
+		$(window).scrollTop(nav_ot);
+
 		e.preventDefault();
 	});
 
@@ -18,7 +19,8 @@ jQuery(function($){
 		if ( window.location.hash ) {
 			$('a[href="' + window.location.hash + '"]').click().parent().addClass('selected').siblings().removeClass('selected');
 			window.setTimeout( function(){
-				$(window).scrollTop(0);
+				$(window).scrollTop(nav_ot);
+				console.log(nav_ot);
 			}, 50);
 		}
 		else
