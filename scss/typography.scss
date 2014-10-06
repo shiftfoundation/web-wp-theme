@@ -75,6 +75,7 @@ body, form, textarea, input { font: 16px/1.4 "MuseoSans300", sans-serif; }
 */
 
 @import url('http://fast.fonts.net/cssapi/a4ee3472-268c-453f-ad7a-f5ec0201b53c.css');
+@import "mixins";
 
 /*
  * Typography
@@ -87,6 +88,13 @@ body, form, textarea, input { font: 16px/1.4 "MuseoSans300", sans-serif; }
 
 body, form, textarea, input { font: 16px/1.4 "Museo Sans W01 300", sans-serif; }
 
+@include bp(tablet) {
+	body, form, textarea, input { font-size: 14px; }
+}
+
+@include bp(phone) {
+	body, form, textarea, input { font-size: 12px; }
+}
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;

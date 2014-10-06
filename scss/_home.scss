@@ -44,7 +44,15 @@
 	}
 
 	article.hentry {
-		padding: 2em span(3 of 12 wide);
+
+		@include bp(desktop) {
+			padding: 2em span(3 of 12 wide);
+		}
+
+		@include bp(mobile) {
+			padding: 2em;
+		}
+		
 		p:last-child { padding: 0; }
 	}
 
@@ -74,12 +82,14 @@
 }
 
 .post-8437 {
-	padding: 0 span(1 of 12 wide) !important;
+	@include bp(desktop) {
+		padding: 0 span(1 of 12 wide) !important;
+		form { padding: 0 span(2 of 12 wide); }
+	}
 
 	.entry-header { text-align: center; }
 
 	form {
-		padding: 0 span(2 of 12 wide);
 
 		label.mc_var_label { margin: 0; @extend %MSS7; }
 

@@ -10,15 +10,16 @@ $susy: (
 );
 
 .col {
-	float: left;
-	overflow: hidden;
+	@include bp(desktop) {
+		float: left;
+		overflow: hidden;
 
-	&.c2 {
-		@include span(2 of 12);
-	}
-
-	&.c5 {
-		@include span(5 of 12);
+		&.c1 { @include span(1 wide of 12) }
+		&.c2 { @include span(2 wide of 12) }
+		&.c3 { @include span(3 wide of 12) }
+		&.c4 { @include span(4 wide of 12) }
+		&.c5 { @include span(5 wide of 12) }
+		&.c6 { @include span(6 wide of 12) }
 	}
 	
 }
