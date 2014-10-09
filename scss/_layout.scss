@@ -79,7 +79,7 @@ body.archive {
 	}
 }
 
-.blog {
+.blog, .archive {
 
 	@include bp(desktop) {
 		.site-content {
@@ -160,6 +160,7 @@ body.archive {
 		}
 
 		img { display: block; width: 100%; height: auto; }
+		.wp-post-image { margin: 0; }
 		
 		a { display: block; }
 

@@ -209,4 +209,4 @@
 	<?php }	?>
 
 
-	<div id="content" class="site-content <?php if( (is_archive() || is_front_page() || $post->post_name == 'people') && !is_author() ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">
+	<div id="content" class="site-content <?php if( ( is_post_type_archive( 'product' ) || is_front_page() || $post->post_name == 'people') && !is_author() ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">

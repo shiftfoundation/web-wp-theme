@@ -38,8 +38,8 @@
 				<div class="widget col c3">
 					<h4>Connect</h4>
 					<div class="cnt">
-						<a href="https://twitter.com/shift_org"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>
-						<a href="https://www.linkedin.com/company/1273971?trk=prof-exp-company-name"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
+						<a target="_blank" href="https://twitter.com/shift_org"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>
+						<a target="_blank" href="https://www.linkedin.com/company/1273971?trk=prof-exp-company-name"><span class="fa-stack fa-lg"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a>
 					</div>
 				</div>
 
