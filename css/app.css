@@ -547,18 +547,18 @@ a {
 
 @media (min-width: 980px) {
   /* line 85, ../scss/_layout.scss */
-  .blog .site-content, .archive .site-content {
+  .blog .site-content, .tax-issues .site-content {
     padding-left: 75px;
   }
   /* line 89, ../scss/_layout.scss */
-  .blog #primary, .archive #primary {
+  .blog #primary, .tax-issues #primary {
     width: 435px;
     float: left;
     margin-right: 15px;
     margin-right: 0;
   }
   /* line 94, ../scss/_layout.scss */
-  .blog #secondary, .archive #secondary {
+  .blog #secondary, .tax-issues #secondary {
     width: 285px;
     float: right;
     margin-right: 0;
@@ -566,7 +566,7 @@ a {
   }
 }
 /* line 101, ../scss/_layout.scss */
-.blog .entry-content iframe, .archive .entry-content iframe {
+.blog .entry-content iframe, .tax-issues .entry-content iframe {
   width: 100%;
   height: 15em !important;
 }
