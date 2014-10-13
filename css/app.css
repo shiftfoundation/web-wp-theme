@@ -755,6 +755,8 @@ a {
 /* line 224, ../scss/_layout.scss */
 .listing.users li .info p {
   text-align: left;
+  white-space: nowrap;
+  padding-left: 0;
 }
 
 /* line 227, ../scss/_layout.scss */
