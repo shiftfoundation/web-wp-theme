@@ -64,8 +64,10 @@
 
 
 /*TODO: FIX*/
-#awards.tabs-container p { clear: both; }
-#partners.tabs-container p { clear: both; }
+#awards, #partners {
+	h2,
+	p { clear: both; }
+}
 
 .alm-btn-wrap,
 #comments { display: none; }

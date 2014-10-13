@@ -220,8 +220,7 @@ body.archive {
 }
 
 .listing.users {
-	li .info p:first-of-type { padding-bottom: 0; }
-	li .info p { text-align: left; white-space: nowrap; padding-left: 0; }
+	li .info p { text-align: left; white-space: nowrap; padding: 0; }
 }
 
 .getincontact {

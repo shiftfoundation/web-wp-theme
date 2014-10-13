@@ -749,17 +749,13 @@ a {
 }
 
 /* line 223, ../scss/_layout.scss */
-.listing.users li .info p:first-of-type {
-  padding-bottom: 0;
-}
-/* line 224, ../scss/_layout.scss */
 .listing.users li .info p {
   text-align: left;
   white-space: nowrap;
-  padding-left: 0;
+  padding: 0;
 }
 
-/* line 227, ../scss/_layout.scss */
+/* line 226, ../scss/_layout.scss */
 .getincontact {
   overflow: hidden;
   display: block;
@@ -767,30 +763,30 @@ a {
   border: solid 4px #ababab;
   margin: 1em 0;
 }
-/* line 234, ../scss/_layout.scss */
+/* line 233, ../scss/_layout.scss */
 .getincontact:hover .c1,
 .getincontact .c2 {
   display: none;
 }
-/* line 237, ../scss/_layout.scss */
+/* line 236, ../scss/_layout.scss */
 .getincontact:hover .c2 {
   display: block;
 }
-/* line 239, ../scss/_layout.scss */
+/* line 238, ../scss/_layout.scss */
 .getincontact .copy, .getincontact .person {
   padding: 1em 0;
   text-align: center;
 }
-/* line 245, ../scss/_layout.scss */
+/* line 244, ../scss/_layout.scss */
 .getincontact .copy {
   background: #ababab;
 }
-/* line 249, ../scss/_layout.scss */
+/* line 248, ../scss/_layout.scss */
 .getincontact .person {
   position: relative;
   padding-left: 90px !important;
 }
-/* line 252, ../scss/_layout.scss */
+/* line 251, ../scss/_layout.scss */
 .getincontact .person .avatar {
   display: inline-block;
   width: 52px;
@@ -800,49 +796,49 @@ a {
   position: absolute;
   left: 2.7em;
 }
-/* line 256, ../scss/_layout.scss */
+/* line 255, ../scss/_layout.scss */
 .getincontact .person .avatar img {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 260, ../scss/_layout.scss */
+/* line 259, ../scss/_layout.scss */
 .getincontact:hover {
   border-color: #fcde00;
 }
-/* line 263, ../scss/_layout.scss */
+/* line 262, ../scss/_layout.scss */
 .getincontact:hover .copy {
   background: #fcde00;
 }
-/* line 266, ../scss/_layout.scss */
+/* line 265, ../scss/_layout.scss */
 .getincontact:hover .copy:after {
   border-left-color: #fcde00;
 }
 @media (min-width: 980px) {
-  /* line 227, ../scss/_layout.scss */
+  /* line 226, ../scss/_layout.scss */
   .getincontact {
     line-height: 52px;
   }
-  /* line 275, ../scss/_layout.scss */
+  /* line 274, ../scss/_layout.scss */
   .getincontact .copy, .getincontact .person {
     float: left;
     padding: 1em 0;
     white-space: nowrap;
   }
-  /* line 280, ../scss/_layout.scss */
+  /* line 279, ../scss/_layout.scss */
   .getincontact .copy {
     width: 35%;
   }
-  /* line 281, ../scss/_layout.scss */
+  /* line 280, ../scss/_layout.scss */
   .getincontact .person {
     width: 65%;
   }
-  /* line 283, ../scss/_layout.scss */
+  /* line 282, ../scss/_layout.scss */
   .getincontact .copy {
     background: #ababab;
     position: relative;
   }
-  /* line 287, ../scss/_layout.scss */
+  /* line 286, ../scss/_layout.scss */
   .getincontact .copy:after {
     display: block;
     content: '';
@@ -857,17 +853,17 @@ a {
   }
 }
 @media (max-width: 980px) {
-  /* line 301, ../scss/_layout.scss */
+  /* line 300, ../scss/_layout.scss */
   .getincontact .person {
     padding-left: 0;
   }
-  /* line 302, ../scss/_layout.scss */
+  /* line 301, ../scss/_layout.scss */
   .getincontact .person .avatar {
     display: none;
   }
 }
 
-/* line 307, ../scss/_layout.scss */
+/* line 306, ../scss/_layout.scss */
 .banner {
   overflow: hidden;
   background: #666;
@@ -876,31 +872,31 @@ a {
   background-size: cover;
 }
 @media (min-width: 980px) {
-  /* line 307, ../scss/_layout.scss */
+  /* line 306, ../scss/_layout.scss */
   .banner {
     height: 470px;
   }
-  /* line 317, ../scss/_layout.scss */
+  /* line 316, ../scss/_layout.scss */
   .banner .wrapper, .banner .hrd_cnt, .banner .menu {
     position: absolute;
     top: 0;
     height: 100%;
   }
 }
-/* line 320, ../scss/_layout.scss */
+/* line 319, ../scss/_layout.scss */
 .banner h1 {
   padding: 0;
 }
-/* line 322, ../scss/_layout.scss */
+/* line 321, ../scss/_layout.scss */
 .banner img {
   display: block;
   margin: 0 auto;
 }
-/* line 324, ../scss/_layout.scss */
+/* line 323, ../scss/_layout.scss */
 .banner span {
   display: block;
 }
-/* line 327, ../scss/_layout.scss */
+/* line 326, ../scss/_layout.scss */
 .banner .info {
   background: #FFF;
   color: #000;
@@ -908,7 +904,7 @@ a {
   text-align: right;
 }
 @media (min-width: 980px) {
-  /* line 327, ../scss/_layout.scss */
+  /* line 326, ../scss/_layout.scss */
   .banner .info {
     width: 30%;
     position: absolute;
@@ -916,7 +912,7 @@ a {
     top: 30%;
   }
 }
-/* line 336, ../scss/_layout.scss */
+/* line 335, ../scss/_layout.scss */
 .banner .nav-btn {
   display: none;
   background: #231f20;
@@ -924,7 +920,7 @@ a {
   z-index: 20;
 }
 @media (min-width: 980px) {
-  /* line 336, ../scss/_layout.scss */
+  /* line 335, ../scss/_layout.scss */
   .banner .nav-btn {
     display: block;
     position: absolute;
@@ -932,31 +928,31 @@ a {
     padding: 1em 1.3em;
   }
 }
-/* line 348, ../scss/_layout.scss */
+/* line 347, ../scss/_layout.scss */
 .banner .nav-btn:hover {
   background: #fcde00;
   color: #000;
 }
-/* line 350, ../scss/_layout.scss */
+/* line 349, ../scss/_layout.scss */
 .banner .nav-btn i {
   padding-right: 0.5em;
 }
-/* line 352, ../scss/_layout.scss */
+/* line 351, ../scss/_layout.scss */
 .banner .nav-btn.all {
   left: 0;
 }
-/* line 353, ../scss/_layout.scss */
+/* line 352, ../scss/_layout.scss */
 .banner .nav-btn.next {
   right: 0;
 }
-/* line 356, ../scss/_layout.scss */
+/* line 355, ../scss/_layout.scss */
 .banner .subnav {
   z-index: 10;
   width: 100%;
   text-align: center;
   white-space: nowrap;
 }
-/* line 360, ../scss/_layout.scss */
+/* line 359, ../scss/_layout.scss */
 .banner .subnav a {
   font-size: 1em;
   display: block;
@@ -965,62 +961,62 @@ a {
   font-weight: bold;
   color: #FFF;
 }
-/* line 370, ../scss/_layout.scss */
+/* line 369, ../scss/_layout.scss */
 .banner .subnav li.selected a,
 .banner .subnav a:hover {
   background: #fcde00;
   color: #000;
 }
 @media (min-width: 980px) {
-  /* line 356, ../scss/_layout.scss */
+  /* line 355, ../scss/_layout.scss */
   .banner .subnav {
     font-size: 0;
     position: absolute;
     bottom: 0;
     left: 0;
   }
-  /* line 380, ../scss/_layout.scss */
+  /* line 379, ../scss/_layout.scss */
   .banner .subnav a {
     font-size: 16px;
   }
-  /* line 381, ../scss/_layout.scss */
+  /* line 380, ../scss/_layout.scss */
   .banner .subnav li {
     display: inline-block;
     list-style: none outside;
   }
 }
 @media (max-width: 980px) {
-  /* line 356, ../scss/_layout.scss */
+  /* line 355, ../scss/_layout.scss */
   .banner .subnav {
     border-top: solid 1px #999;
   }
-  /* line 386, ../scss/_layout.scss */
+  /* line 385, ../scss/_layout.scss */
   .banner .subnav li {
     display: block;
     border-bottom: solid 1px #999;
   }
-  /* line 387, ../scss/_layout.scss */
+  /* line 386, ../scss/_layout.scss */
   .banner .subnav a {
     padding: 0.5em 0;
   }
 }
 
-/* line 393, ../scss/_layout.scss */
+/* line 392, ../scss/_layout.scss */
 #twitter {
   padding-bottom: 4em;
 }
-/* line 396, ../scss/_layout.scss */
+/* line 395, ../scss/_layout.scss */
 #twitter li {
   display: block;
   list-style: none outside;
   position: relative;
   padding: 1em 0 1em 70px;
 }
-/* line 400, ../scss/_layout.scss */
+/* line 399, ../scss/_layout.scss */
 #twitter li span {
   display: block;
 }
-/* line 402, ../scss/_layout.scss */
+/* line 401, ../scss/_layout.scss */
 #twitter li .avatar {
   display: block;
   width: 48px;
@@ -1032,34 +1028,34 @@ a {
   left: 0;
   margin-top: -24px;
 }
-/* line 406, ../scss/_layout.scss */
+/* line 405, ../scss/_layout.scss */
 #twitter li .date {
   position: absolute;
   top: 0;
   right: 0;
   color: #CCC;
 }
-/* line 409, ../scss/_layout.scss */
+/* line 408, ../scss/_layout.scss */
 #twitter li .tweet {
   border-left: 1px solid #CCC;
   padding-left: 1.5em;
 }
-/* line 412, ../scss/_layout.scss */
+/* line 411, ../scss/_layout.scss */
 #twitter li .tweet a {
   text-decoration: underline;
   color: #000;
 }
-/* line 413, ../scss/_layout.scss */
+/* line 412, ../scss/_layout.scss */
 #twitter li .tweet a:hover {
   background: #fcde00;
 }
 
-/* line 419, ../scss/_layout.scss */
+/* line 418, ../scss/_layout.scss */
 .widget {
   overflow: hidden;
   padding-bottom: 2em;
 }
-/* line 423, ../scss/_layout.scss */
+/* line 422, ../scss/_layout.scss */
 .widget .users li {
   display: block;
   list-style: none outside;
@@ -1068,23 +1064,23 @@ a {
   padding: 1.5em 1em;
   padding-left: 5em;
 }
-/* line 428, ../scss/_layout.scss */
+/* line 427, ../scss/_layout.scss */
 .widget .users li strong {
   padding-right: 0.5em;
 }
-/* line 430, ../scss/_layout.scss */
+/* line 429, ../scss/_layout.scss */
 .widget .users li a {
   color: #666;
   display: inline-block;
   padding: 0 0.3em;
 }
-/* line 431, ../scss/_layout.scss */
+/* line 430, ../scss/_layout.scss */
 .widget .users li a:hover {
   color: #000;
   text-decoration: underline;
   background: #fcde00;
 }
-/* line 434, ../scss/_layout.scss */
+/* line 433, ../scss/_layout.scss */
 .widget .users .avatar {
   width: 50px;
   height: 50px;
@@ -1096,13 +1092,13 @@ a {
   left: 0;
   margin-top: -25px;
 }
-/* line 438, ../scss/_layout.scss */
+/* line 437, ../scss/_layout.scss */
 .widget .users .avatar img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 443, ../scss/_layout.scss */
+/* line 442, ../scss/_layout.scss */
 .widget.widget_tag_cloud a {
   font-size: 0.8em !important;
   margin: 0 0.5em 0.5em 0;
@@ -1113,7 +1109,7 @@ a {
   color: #ababab;
   background: #f7f7f7;
 }
-/* line 447, ../scss/_layout.scss */
+/* line 446, ../scss/_layout.scss */
 .widget.widget_tag_cloud a:hover {
   border-color: #000;
   background: #fcde00;
@@ -1377,17 +1373,14 @@ a {
 }
 
 /*TODO: FIX*/
-/* line 67, ../scss/_hentry.scss */
-#awards.tabs-container p {
-  clear: both;
-}
-
 /* line 68, ../scss/_hentry.scss */
-#partners.tabs-container p {
+#awards h2,
+#awards p, #partners h2,
+#partners p {
   clear: both;
 }
 
-/* line 70, ../scss/_hentry.scss */
+/* line 72, ../scss/_hentry.scss */
 .alm-btn-wrap,
 #comments {
   display: none;
