@@ -236,7 +236,6 @@ body.archive {
 
 	&:hover .c2 { display: block; }
 
-	
 	.copy, .person {
 	   	padding: 1em 0; 
 		text-align: center;
@@ -248,7 +247,7 @@ body.archive {
 	}
 
 	.person { 
-		position: relative; padding-left: 110px;
+		position: relative; padding-left: 90px !important;
 
 		.avatar {
 			display: inline-block; width: 52px; height: 52px; overflow: hidden; border-radius: 50%;
