@@ -9,7 +9,7 @@ jQuery(function($){
 		$(this).parent().addClass('selected').siblings().removeClass('selected');
 
 		if( $('body').hasClass('single-product') ) {
-			$('.banner').attr("style", "background-image: url(" + $(this).attr('data-image') + ");" );
+			if ( $(this).attr('data-image') ) $('.banner').attr("style", "background-image: url(" + $(this).attr('data-image') + ");" );
 		}
 
 		window.location = $(this).attr('href');
@@ -30,7 +30,10 @@ jQuery(function($){
 		{
 			$('.subnav a[href^="#"]:eq(0)').parent().addClass('selected').siblings().removeClass('selected');
 			$('.tabs-container:eq(0)').css("display", "block");
-			$('.banner').attr("style", "background-image: url(" + $('.subnav a[href^="#"]:eq(0)').attr('data-image') + ");" );
+
+			if( $('body').hasClass('single-product') ) {
+					$('.banner').attr("style", "background-image: url(" + $('.subnav a[href^="#"]:eq(0)').attr('data-image') + ");" );
+			}
 		}
 	}
 
@@ -47,7 +50,7 @@ jQuery(function($){
 
 		$('#twitter').twittie({
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
-			'username' : 'wearewhatwedo',
+			'username' : 'shift_org',
 			'count' : 3,
 			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
 			'dateFormat' : '%d %B %Y',
@@ -59,7 +62,7 @@ jQuery(function($){
 
 		$('#twitter').twittie({
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
-			'username' : 'wearewhatwedo',
+			'username' : 'shift_org',
 			'count' : 3,
 			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
 			'dateFormat' : '%d %B %Y',
@@ -71,7 +74,7 @@ jQuery(function($){
 
 		$('#twitter').twittie({
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
-			'username' : 'wearewhatwedo',
+			'username' : 'shift_org',
 			'count' : 3,
 			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
 			'dateFormat' : '%d %B %Y',
