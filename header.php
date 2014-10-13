@@ -157,10 +157,11 @@
 						array(
 							'key' => 'corder',
 							'type' => 'numeric',
-							'value' => (get_user_meta($curauth->ID, 'corder', true)+1),
-							'compare' => '=',
+							'value' => get_user_meta($curauth->ID, 'corder', true),
+							'compare' => '>',
 						),
 					),
+					'number' => 1,
 					'orderby' => 'meta_value',
 				) );
 
