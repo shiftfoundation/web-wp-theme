@@ -43,10 +43,10 @@
       );
 
       $url = '/lists/statuses';
-    } else if($hashtag) {
+	} else if($hashtag) {
       $params = array(
-          'count' => $number,
-          'q' => '#'.$hashtag
+		  'count' => $number,
+		  'q' => ($username != '' ? '@' . $username .' OR ' : '') . '#' . $hashtag.' from:@wearewhatwedo'
       );
 
       $url = '/search/tweets';

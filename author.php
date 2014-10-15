@@ -21,12 +21,12 @@ get_header(); ?>
 						<header>
 							<h1>Profile</h1>
 						</header>
-					  <?php echo wpautop($curauth->description, false); ?>
+						<?php echo wpautop($curauth->description, false); ?>
 
-					  <?php if(get_user_meta($curauth->ID, 'e-mail', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'e-mail', true) ); ?></p><?php } ?>
-					  <?php if(get_user_meta($curauth->ID, 'phone', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'phone', true) ); ?></p><?php } ?>
-					<?php if( get_user_meta($curauth->ID, 'linked_in', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <a href="<?php echo esc_html( get_user_meta($curauth->ID, 'linked_in', true) ); ?>">Linked In Profile</a></p><?php } ?>
-					<?php if( get_user_meta($curauth->ID, 'twitter', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span> @<?php echo esc_html( get_user_meta($curauth->ID, 'twitter', true) ); ?></p><?php } ?>
+						<?php if(get_user_meta($curauth->ID, 'e-mail', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'e-mail', true) ); ?></p><?php } ?>
+						<?php if(get_user_meta($curauth->ID, 'phone', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'phone', true) ); ?></p><?php } ?>
+						<?php if( get_user_meta($curauth->ID, 'linked_in', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <a href="<?php echo esc_html( get_user_meta($curauth->ID, 'linked_in', true) ); ?>">Linked In Profile</a></p><?php } ?>
+						<?php if( get_user_meta($curauth->ID, 'twitter', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span> @<?php echo esc_html( get_user_meta($curauth->ID, 'twitter', true) ); ?></p><?php } ?>
 
 					</div>
 
@@ -46,7 +46,10 @@ get_header(); ?>
 						wp_reset_postdata();?>
 
 						<h1><a href="https://twitter.com/shift_org">@Shift_org</a></h1>
-						<div id="twitter"></div>
+						<div id="twitter"
+							<?php if( get_user_meta($curauth->ID, 'twitter_search_terms', true) ) { ?> data-hashtag="<?php echo get_user_meta($curauth->ID, 'twitter_search_terms', true); ?>"<?php } ?>
+							<?php if( get_user_meta($curauth->ID, 'twitter', true) ) { ?> data-username="<?php echo get_user_meta($curauth->ID, 'twitter', true); ?>"<?php } ?>
+						></div>
 					</div>
 
 					<div id="research" class="tabs-container">

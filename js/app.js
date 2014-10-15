@@ -60,13 +60,21 @@ jQuery(function($){
 
 	if ( $('body').hasClass('author') ) {
 
+		var hashtag = $('#twitter').attr('data-hashtag');
+		var username = $('#twitter').attr('data-username');
+
 		$('#twitter').twittie({
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
-			'username' : 'shift_org',
-			'count' : 3,
+			'username' : username,
+			'hashtag'	: hashtag,
+			'count' : 20,
 			'template' : '<span class="avatar">{{avatar}}</span><span class="tweet"><span>{{tweet}}</span></span><span class="date">{{date}}</span>',
 			'dateFormat' : '%d %B %Y',
 			'hideReplies' : true
+		}, function(){
+			if ( $('#twitter ul li').size() < 1 ) {
+				$('#twitter').hide().prev('h1').hide();
+			}
 		});
 	}
 
