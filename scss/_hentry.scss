@@ -61,6 +61,68 @@
 	.gallery-item { width: 20%; float: left; padding-right: 0.5em; }
 }
 
+.comments-area {
+
+	@include bp(desktop) {
+		padding: 0 span(1 of 12 wide);
+	}
+
+	p { padding-bottom: 1.5em; }
+	label { @extend %MSS7; display: block; }
+	code { display: block; }
+	input, textarea {
+		border: 2px solid #000; padding: 0.5em 0.8em;
+		outline: none;
+
+		&:active, &:focus {
+			border-color: $activeColor;
+		}
+	}
+
+
+
+	.comment-list {
+		border: solid 1px #000;
+		margin-bottom: 2em;
+		padding: 0 1em;
+
+		li { display: block; list-style: none outside; }
+
+		li.comment {
+			border-top: 1px solid #CCC;
+			padding: 1em 0;
+
+			&:first-child { border-top: 0; }
+		}
+
+		.comment-metadata {
+			font-size: 0.8em;
+		}
+
+		.comment-meta,
+		.comment-content {
+			position: relative;
+		}
+
+		.comment-meta {
+			padding-left: 45px;
+			padding-bottom: 0.5em;
+			.avatar { display: block; width: 36px; height: 36px; position: absolute; left: 0; top: 0; }
+		}
+
+		.comment-content {
+			padding-top: 0.5em;
+			border-top: solid 1px #CCC;
+		}
+	}
+
+	#submit { 
+		@extend .button;
+		background: #fff;
+
+		&:hover { cursor: pointer; }
+	}
+}
 
 
 /*TODO: FIX*/
@@ -69,5 +131,6 @@
 	p { clear: both; }
 }
 
-.alm-btn-wrap,
-#comments { display: none; }
+.alm-btn-wrap { display: none; }
+
+

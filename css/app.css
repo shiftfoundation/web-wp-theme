@@ -159,7 +159,7 @@ h4, h5, h6, .entry-content blockquote p:last-child, .wp-editor blockquote p:last
 }
 
 /* line 86, ../scss/typography.scss */
-h2, h3, .entry-content blockquote p, .wp-editor blockquote p, .getincontact .copy, .getincontact .person, .widget .users li strong, .hentry .byline, .post-8437 form label.mc_var_label, .post-8437 form #mc_signup_submit {
+h2, h3, .entry-content blockquote p, .wp-editor blockquote p, .getincontact .copy, .getincontact .person, .widget .users li strong, .hentry .byline, .comments-area label, .post-8437 form label.mc_var_label, .post-8437 form #mc_signup_submit {
   font-family: "Museo Sans W01 700", sans-serif;
 }
 
@@ -687,7 +687,7 @@ a {
   padding: 0 0 1em 1em;
 }
 /* line 178, ../scss/_layout.scss */
-.listing li .info .button {
+.listing li .info .button, .listing li .info .comments-area #submit, .comments-area .listing li .info #submit {
   position: absolute;
   bottom: 1.5em;
   right: 1.5em;
@@ -1372,22 +1372,106 @@ a {
   padding-right: 0.5em;
 }
 
+@media (min-width: 980px) {
+  /* line 64, ../scss/_hentry.scss */
+  .comments-area {
+    padding: 0 75px;
+  }
+}
+/* line 70, ../scss/_hentry.scss */
+.comments-area p {
+  padding-bottom: 1.5em;
+}
+/* line 71, ../scss/_hentry.scss */
+.comments-area label {
+  display: block;
+}
+/* line 72, ../scss/_hentry.scss */
+.comments-area code {
+  display: block;
+}
+/* line 73, ../scss/_hentry.scss */
+.comments-area input, .comments-area textarea {
+  border: 2px solid #000;
+  padding: 0.5em 0.8em;
+  outline: none;
+}
+/* line 77, ../scss/_hentry.scss */
+.comments-area input:active, .comments-area input:focus, .comments-area textarea:active, .comments-area textarea:focus {
+  border-color: #fcde00;
+}
+/* line 84, ../scss/_hentry.scss */
+.comments-area .comment-list {
+  border: solid 1px #000;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+/* line 89, ../scss/_hentry.scss */
+.comments-area .comment-list li {
+  display: block;
+  list-style: none outside;
+}
+/* line 91, ../scss/_hentry.scss */
+.comments-area .comment-list li.comment {
+  border-top: 1px solid #CCC;
+  padding: 1em 0;
+}
+/* line 95, ../scss/_hentry.scss */
+.comments-area .comment-list li.comment:first-child {
+  border-top: 0;
+}
+/* line 98, ../scss/_hentry.scss */
+.comments-area .comment-list .comment-metadata {
+  font-size: 0.8em;
+}
+/* line 102, ../scss/_hentry.scss */
+.comments-area .comment-list .comment-meta,
+.comments-area .comment-list .comment-content {
+  position: relative;
+}
+/* line 107, ../scss/_hentry.scss */
+.comments-area .comment-list .comment-meta {
+  padding-left: 45px;
+  padding-bottom: 0.5em;
+}
+/* line 110, ../scss/_hentry.scss */
+.comments-area .comment-list .comment-meta .avatar {
+  display: block;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 113, ../scss/_hentry.scss */
+.comments-area .comment-list .comment-content {
+  padding-top: 0.5em;
+  border-top: solid 1px #CCC;
+}
+/* line 119, ../scss/_hentry.scss */
+.comments-area #submit {
+  background: #fff;
+}
+/* line 123, ../scss/_hentry.scss */
+.comments-area #submit:hover {
+  cursor: pointer;
+}
+
 /*TODO: FIX*/
-/* line 68, ../scss/_hentry.scss */
+/* line 130, ../scss/_hentry.scss */
 #awards h2,
 #awards p, #partners h2,
 #partners p {
   clear: both;
 }
 
-/* line 72, ../scss/_hentry.scss */
-.alm-btn-wrap,
-#comments {
+/* line 134, ../scss/_hentry.scss */
+.alm-btn-wrap {
   display: none;
 }
 
 /* line 1, ../scss/_buttons.scss */
-.button {
+.button, .comments-area #submit {
   display: inline-block;
   color: #000;
   font-weight: bold;
@@ -1396,7 +1480,7 @@ a {
   border: 2px solid #222;
 }
 /* line 9, ../scss/_buttons.scss */
-.button:hover {
+.button:hover, .comments-area #submit:hover {
   background: #000;
   color: #fcde00;
 }

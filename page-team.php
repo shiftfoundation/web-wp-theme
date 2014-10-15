@@ -42,11 +42,11 @@ get_header(); ?>
 									echo wp_get_attachment_image( $avatar, 'thumbnail' ); 
 								?>
 
+								<span class="name">
+									<strong><?php echo esc_html( $user->display_name ); ?></strong>
+									<?php echo esc_html( $user->job_title ); ?>
+								</span>
 								<span class="info">
-									<span class="name">
-										<strong><?php echo esc_html( $user->display_name ); ?></strong>
-										<?php echo esc_html( $user->job_title ); ?>
-									</span>
 									<?php if( get_user_meta($user->ID, 'e-mail', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->ID, 'e-mail', true) ); ?></p><?php } ?>
 									<?php if( get_user_meta($user->ID, 'phone', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->ID, 'phone', true) ); ?></p><?php } ?>
 									<?php if( get_user_meta($user->ID, 'twitter', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span><?php echo esc_html( get_user_meta($user->ID, 'twitter', true) ); ?></p><?php } ?>
