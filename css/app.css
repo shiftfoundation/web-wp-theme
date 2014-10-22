@@ -1117,6 +1117,7 @@ a {
 }
 
 /* line 454, ../scss/_layout.scss */
+.comment-form-url,
 .form-allowed-tags {
   display: none;
 }
