@@ -46,7 +46,7 @@
 	} else if($hashtag) {
       $params = array(
 		  'count' => $number,
-		  'q' => ($username != '' ? '@' . $username .' OR ' : '') . '#' . $hashtag.' from:@wearewhatwedo'
+		  'q' => ($username != '' ? '@' . $username .' OR ' : '') . '#' . $hashtag.' from:@shift_org'
       );
 
       $url = '/search/tweets';
