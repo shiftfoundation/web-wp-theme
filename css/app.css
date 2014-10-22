@@ -1116,6 +1116,11 @@ a {
   color: #000;
 }
 
+/* line 454, ../scss/_layout.scss */
+.form-allowed-tags {
+  display: none;
+}
+
 /*
  * Navigation
  * */
