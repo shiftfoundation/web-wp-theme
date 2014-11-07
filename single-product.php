@@ -76,7 +76,7 @@ get_header(); ?>
 						<header class="entry-header">
 							<h1>Coverage</h1>
 						</header>
-						<?php echo wpautop( get_post_meta( get_the_ID(), 'coverage', true ) ); ?>
+						<?php echo apply_filters('the_content', wpautop( get_post_meta( get_the_ID(), 'coverage', true ) ) ); ?>
 					</div>
 					<?php } ?>
 
