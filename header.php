@@ -186,6 +186,7 @@
 				) );
 
 				$args = array(
+					'posts_per_page'=>  120,
 					'author'        =>  $curauth->ID,
 					'orderby'       =>  'post_date',
 					'order'         =>  'DESC' 

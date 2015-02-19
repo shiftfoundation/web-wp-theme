@@ -23,9 +23,10 @@ get_header(); ?>
 						</header>
 						<?php echo wpautop($curauth->description, false); ?>
 
-						<?php if(get_user_meta($curauth->ID, 'e-mail', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'e-mail', true) ); ?></p><?php } ?>
-						<?php if(get_user_meta($curauth->ID, 'phone', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'phone', true) ); ?></p><?php } ?>
+						<?php if( get_user_meta($curauth->ID, 'e-mail', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'e-mail', true) ); ?></p><?php } ?>
+						<?php if( get_user_meta($curauth->ID, 'phone', true)) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span> <?php echo esc_html( get_user_meta($curauth->ID, 'phone', true) ); ?></p><?php } ?>
 						<?php if( get_user_meta($curauth->ID, 'linked_in', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <a href="<?php echo esc_html( get_user_meta($curauth->ID, 'linked_in', true) ); ?>">Linked In Profile</a></p><?php } ?>
+						<?php if( get_user_meta($curauth->ID, 'googleplus', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></span> <a href="<?php echo esc_html( get_user_meta($curauth->ID, 'googleplus', true) ); ?>">Google+</a></p><?php } ?>
 						<?php if( get_user_meta($curauth->ID, 'twitter', true) ) { ?><p><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span> @<?php echo esc_html( get_user_meta($curauth->ID, 'twitter', true) ); ?></p><?php } ?>
 
 					</div>
