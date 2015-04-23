@@ -141,6 +141,7 @@
 				<?php if( get_post_meta( get_the_ID(), 'partners', true ) ) {	?><li><a <?php if($tab_image['partners']) { echo 'data-image="' . $tab_image['partners'] . '"'; } ?> href="#partners">Partners</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) {		?><li><a <?php if($tab_image['jobs'])	  { echo 'data-image="'	. $tab_image['jobs'] . '"'; } ?> href="#jobs">Jobs</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'awards', true ) ) {		?><li><a <?php if($tab_image['awards'])	  { echo 'data-image="'	. $tab_image['awards'] . '"'; } ?> href="#awards">Awards</a></li><?php } ?>
+				<?php if( get_post_meta( get_the_ID(), 'videos', true ) ) {		?><li><a <?php if($tab_image['videos'])	  { echo 'data-image="'	. $tab_image['videos'] . '"'; } ?> href="#videos">Videos</a></li><?php } ?>
 				<?php if( get_post_meta( get_the_ID(), 'link', true ) ) {		?><li><a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'link', true ); ?>">Website</a></li><?php } ?>
 			</ul>
 

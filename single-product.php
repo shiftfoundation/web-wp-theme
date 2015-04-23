@@ -98,6 +98,15 @@ get_header(); ?>
 					</div>
 					<?php } ?>
 
+					<?php if( get_post_meta( get_the_ID(), 'videos', true ) ) { ?>
+					<div id="videos" class="tabs-container">
+						<header class="entry-header">
+							<h1>Videos</h1>
+						</header>
+						<?php echo wpautop( get_post_meta( get_the_ID(), 'videos', true ) ); ?>
+					</div>
+					<?php } ?>
+
 					<?php if( get_post_meta( get_the_ID(), 'jobs', true ) ) { ?>
 					<div id="jobs" class="tabs-container">
 						<header class="entry-header">
