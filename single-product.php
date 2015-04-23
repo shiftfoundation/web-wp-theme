@@ -103,7 +103,7 @@ get_header(); ?>
 						<header class="entry-header">
 							<h1>Videos</h1>
 						</header>
-						<?php echo apply_filters('the_content', wpautop( get_post_meta( get_the_ID(), 'videos', true ) ) ); ?>
+						<?php echo apply_filters('the_content', get_post_meta( get_the_ID(), 'videos', true ) ); ?>
 					</div>
 					<?php } ?>
 
