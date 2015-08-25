@@ -14,7 +14,9 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<style type="text/css">
+.alm-listing li { list-style: none outside; padding-bottom: 2em; }
+</style>
 <?php wp_head(); ?>
 </head>
 
@@ -66,6 +68,7 @@
 			$images[] = wp_get_attachment_image_src( $image->ID, 'full' );
 		}
 		$bannerImage = $images[array_rand($images)];
+		$bannerImage = wp_get_attachment_image_src( '8445', 'full' );
 
 	}else if( is_author() ) {
 
