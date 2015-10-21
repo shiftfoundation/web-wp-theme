@@ -53,7 +53,6 @@ get_header(); ?>
 				</ul>
 			<?php endif; ?>
 
-
 			<article class="hentry">
 				<h1><a href="https://twitter.com/shift_org">@Shift_org</a></h1>
 				<div id="twitter"></div>
