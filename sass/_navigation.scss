@@ -1,0 +1,126 @@
+/*
+ * Navigation
+ * */
+
+.menu-toggle {
+	position: relative;
+	z-index: 1001;
+	font-size: 2.2em;
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1;
+	text-align: center;
+	border: none;
+	background: #231f20;
+	color: #FFF;
+	outline: none;
+	float: left;
+
+	&:hover {
+		cursor: pointer;
+		color: $activeColor;
+	}
+	
+	.fa-times,
+	span { display: none; }
+
+	.active & {
+		background: $activeColor;
+		color: #000;
+
+		.fa-times { display: block; }
+		.fa-bars { display: none; }
+	}
+}
+
+.main-navigation {
+	overflow: hidden; position: relative; 
+	width: 100%;
+	opacity: 0;
+	position: absolute; top: -100%; left: 0; 
+	z-index: 1000;
+	background: rgba(0,0,0,0.8);
+	transition: all 0.3s ease-in;
+	pointer-events: none;
+
+	.active & {
+		opacity: 1; top: 0;
+		pointer-events: auto;
+	}
+}
+
+.hrd_cnt {
+	@extend .wrapper;
+	padding-bottom: 3em;
+
+	@include bp(desktop){ 
+		padding-left: 60px;
+	}
+	
+	li { 
+		display: block; list-style: none outside;
+		padding-top: 1.5em;
+		margin: 0;
+
+		@include bp(desktop){ 
+			border-top: 1px solid #CCC;
+			width: 360px;
+			float: left;
+			margin-right: 15px;
+
+			&:nth-child(2) { padding-left: 1.2em; }
+		}
+   	}
+
+	&, a {
+		color: #FFF; 
+		.fa { color: #fddf00; }
+	}
+}
+
+.site-header .menu {
+	@extend .wrapper;
+
+	@include bp(desktop){ 
+		padding-left: 60px;
+		padding-top: 7em;
+		padding-bottom: 2em;
+	}
+
+	@include bp(mobile){ 
+		padding-top: 9em;
+		padding-bottom: 0em;
+	}
+
+	li {
+		display: block; 
+		a { font-size: 3em; color: #FFF; @extend %MSS9; padding: 0.1em; }
+
+		@include bp(desktop){ 
+			width: 360px;
+			float: left;
+			margin-right: 15px;
+		}
+
+		@include bp(phone){ 
+			a { font-size: 2em; }
+		}
+
+		&.current-menu-item a,
+		a:hover {
+			color: $activeColor;
+		}
+	}
+}
+
+
+.active.site-header {
+	.site-title {
+		position: relative;
+		z-index: 1001;
+
+		border-color: #fff;
+		a { color: #fff; }
+	}
+}
+

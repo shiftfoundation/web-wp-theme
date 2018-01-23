@@ -6,10 +6,23 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php the_post_thumbnail('large'); ?>
-
+	<?php if ( 'research' == get_post_type()) : ?>
+		<?php $fileurl = get_field('file_url'); ?>
+		<div class="entry-image">
+			<div class="entry-image"><a href="<?php echo $fileurl; ?>"><?php the_post_thumbnail('large'); ?></a></div>
+		</div>
+		<div class="entry-type"><strong>Research</strong></div>
+	<?php endif; ?>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+		<h3>
+    	<?php if( 'research' == get_post_type() ) { ?>
+    		<a target="_blank" href="<?php echo $fileurl; ?>" title="<?php the_title(); ?>">
+        <?php }else{ ?>
+        	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+        <?php } ?>
+        	<?php the_title(); ?>
+			</a>
+		</h3>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -17,7 +30,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php if ( 'post' == get_post_type() ) : ?>
+
+		<?php if ( 'post' == get_post_type() || 'research' == get_post_type()) : ?>
 		<span class="entry-meta">
 			<?php shiftwp_posted_on(); ?>
 		</span><!-- .entry-meta -->

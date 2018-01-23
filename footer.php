@@ -27,12 +27,7 @@
 				<div class="widget col c4">
 					<h4>About</h4>
 					<div class="cnt">
-						<ul>
-							<li><a href="/about">About</a></li>
-							<li><a href="/products">Products</a></li>
-							<li><a href="/people">People</a></li>
-							<li><a href="/vacancies">Vacancies</a></li>
-						</ul>
+						<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
 					</div>
 				</div>
 				<div class="widget col c3">

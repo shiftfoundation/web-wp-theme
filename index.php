@@ -14,11 +14,10 @@
 get_header(); ?>
 
 	<header class="page-title">
-	  <h1>Comment</h1>
+	  <h1>Open Tools</h1>
 	</header>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
 		<?php /* ?>
 		<?php if ( have_posts() ) : ?>
@@ -38,10 +37,9 @@ get_header(); ?>
 		<?php endif; ?>
 		<?php */ ?>
 
-		<?php echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="10" max_pages="10"]'); ?>
+		<?php echo do_shortcode('[ajax_load_more post_type="post, research" posts_per_page="10" max_pages="10"]'); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

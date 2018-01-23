@@ -5,14 +5,6 @@
  * @package Shiftwp
  */
 
-
-// For debugging - show template file
-//add_action('wp_head', 'show_template');
-//function show_template() {
-    //global $template;
-    //print_r($template);
-//}
-
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -21,50 +13,20 @@ if ( ! isset( $content_width ) ) {
 }
 
 if ( ! function_exists( 'shiftwp_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
+
 	function shiftwp_setup() {
 
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Shiftwp, use a find and replace
-		 * to change 'shiftwp' to the name of your theme in all the template files
-		 */
-		load_theme_textdomain( 'shiftwp', get_template_directory() . '/languages' );
-
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
-
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'shiftwp' ),
+			'footer' => __( 'Footer Menu', 'shiftwp' ),
 		) );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
 		add_theme_support( 'html5', array(
 			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 		) );
 
-		/*
-		 * Enable support for Post Formats.
-		 * See http://codex.wordpress.org/Post_Formats
-		 */
 		add_theme_support( 'post-formats', array(
 			'aside', 'image', 'video', 'quote', 'link'
 		) );
@@ -72,10 +34,10 @@ if ( ! function_exists( 'shiftwp_setup' ) ) :
 		include get_template_directory() . '/post-types/products.php';
 		include get_template_directory() . '/post-types/research.php';
 
-		//include get_template_directory() . '/taxonomies/themes.php';
 		include get_template_directory() . '/taxonomies/issues.php';
+		//include get_template_directory() . '/taxonomies/themes.php';
 	}
-endif; // shiftwp_setup
+endif;
 add_action( 'after_setup_theme', 'shiftwp_setup' );
 
 /**
@@ -101,7 +63,8 @@ add_action( 'widgets_init', 'shiftwp_widgets_init' );
  */
 function shiftwp_scripts() {
 	wp_enqueue_style( 'shiftwp-iconfont', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
-	wp_enqueue_style( 'shiftwp-style', get_template_directory_uri() . '/css/app.css' );
+	wp_enqueue_style( 'shiftwp-style', get_template_directory_uri() . '/css/site.css?time=' . date('now') );
+	//wp_enqueue_style( 'shiftwp-style', get_template_directory_uri() . '/css/app.css' );
 
 	wp_enqueue_script( 'shiftwp-twitter', get_template_directory_uri() . '/tweetie/tweetie.min.js', array('jquery'), '20120206' );
 	wp_enqueue_script( 'shiftwp-app', get_template_directory_uri() . '/js/app.js', array('jquery'), '20120206' );
@@ -169,3 +132,29 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_filter('xmlrpc_enabled', '__return_false');
+
+function wpse_81939_post_types_admin_order( $wp_query ) {
+  if (is_admin()) {
+
+    // Get the post type from the query
+    $post_type = $wp_query->query['post_type'];
+
+    if ( $post_type == 'product') {
+
+      $wp_query->set('orderby', 'order');
+    }
+  }
+}
+add_filter('pre_get_posts', 'wpse_81939_post_types_admin_order');
+
+function archive_category_include_research($query) {
+	if ( !is_admin() && $query->is_main_query() ) {
+		if ( is_category() ) {
+			$query->set('post_type', array( 'post', 'research' ) );
+		}
+	}
+}
+
+add_action('pre_get_posts','archive_category_include_research');

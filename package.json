@@ -1,15 +1,29 @@
 {
-  "name": "shiftwp",
-  "version": "0.1.0",
+  "name": "shiftdesign",
+  "version": "1.0.0",
   "description": "",
-  "author": "Konstantin Dankov",
-  "main": "Gruntfile.js",
+  "main": "index.js",
   "dependencies": {
-    "grunt": "^0.4.4"
+    "gulp": "",
+    "gulp-util": "",
+    "gulp-load-plugins": ""
   },
   "devDependencies": {
-    "grunt-contrib-compass": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1"
-  }
+    "browser-sync": "",
+    "gulp": "",
+    "gulp-autoprefixer": "",
+    "gulp-changed": "",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-notify": "",
+    "gulp-plumber": "",
+    "gulp-sass": "",
+    "gulp-size": "",
+    "gulp-sourcemaps": ""
+  },
+  "scripts": {
+    "setup": "npm install && bower install",
+    "start": "gulp"
+  },
+  "author": "Konstantin Dankov",
+  "license": "ISC"
 }
-

@@ -1,0 +1,25 @@
+$debug       : false;
+
+$activeColor : #FCDE00;
+$bgrdPage    : #EEE;
+$bgrdHeader  : $activeColor;
+$bgrdFooter  : $bgrdHeader;
+$bgrdMain    : #DDD;
+$bgrdSidebar : #EFF;
+$bgrdContent : #FFE;
+
+@import "mixins";
+
+@import "grids";
+@import "reset";
+@import "typography";
+
+@import "layout";
+@import "navigation";
+@import "hentry";
+@import "buttons";
+
+@import "home";
+
+@import "mediaqueries";
+

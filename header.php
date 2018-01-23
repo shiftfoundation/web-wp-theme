@@ -70,6 +70,10 @@
 		$bannerImage = $images[array_rand($images)];
 		$bannerImage = wp_get_attachment_image_src( '8445', 'full' );
 
+	}else if( $post->post_name == 'new-homepage' ) {
+
+		$bannerImage = wp_get_attachment_image_src( '8445', 'full' );
+
 	}else if( is_author() ) {
 
 		global $wp_query;
@@ -88,17 +92,19 @@
 
 		<?php if( is_front_page() ) { ?>
 			<div class="wrapper-wide">
+				<!--
 				<div class="formerly">
 					Formerly
 					<span>We Are What We Do</span>
 				</div>
+				-->
 			</div>
 		<?php } ?>
 		<?php if( get_post_type( $post ) == 'product' ) { ?>
 
 			<?php echo '<span class="info"><h1 class="name">' . get_the_title() . '</h1><span class="title">' . get_post_meta( get_the_ID(), 'what_does_it_do', true ) . '</span></span>'; ?>
 		
-			<a class="nav-btn all" href="/products"><i class="fa fa-th"></i> All Products</a>
+			<a class="nav-btn all" href="/portfolio"><i class="fa fa-th"></i> Portfolio</a>
 			<?php
 			$next_post = get_next_post();
 			if (!empty( $next_post )): ?>
@@ -215,4 +221,4 @@
 	<?php }	?>
 
 
-	<div id="content" class="site-content <?php if( ( is_post_type_archive( 'product' ) || is_front_page() || $post->post_name == 'people') && !is_author() ) { ?>wrapper-wide<?php } else { ?>wrapper<?php } ?>">
+	<div id="content" class="site-content <?php if( ( is_post_type_archive( 'product' ) || is_front_page() || $post->post_name == 'people-new' || $post->post_name == 'people') && !is_author() ) { ?>wrapper-wide<?php } elseif( $post->post_name == 'new-homepage' ) { ?><?php } else { ?> wrapper<?php } ?>">

@@ -1,17 +1,18 @@
 <?php
 
 function products_init() {
+
 	register_post_type( 'product', array(
 		'hierarchical'      => false,
 		'public'            => true,
 		'show_in_nav_menus' => true,
 		'show_ui'           => true,
 		'menu_position'		=> 5,
-		'supports'          => array( 'title', 'editor', 'thumbnail' ),
+		'supports'          => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 		'has_archive'       => true,
 		'query_var'         => true,
 		'rewrite'           => array(
-			'slug'				  => 'products',
+			'slug'				  => 'portfolio',
 		),
 		'labels'            => array(
 			'name'                => __( 'Products', 'shiftwp' ),

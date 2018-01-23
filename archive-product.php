@@ -11,9 +11,12 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<article class="page">
+
+				<?php /* ?>
 				<header class="page-title">
-					<h1>Products</h1>
+					<h1>Portfolio</h1>
 				</header>
+				<?php */ ?>
 
 				<ul class="listing products">
 				<?php while ( have_posts() ) : the_post(); ?>

@@ -2,6 +2,7 @@ bower_components/jquery/src
 bower_components/*/src
 bower_components/modernizr/media
 bower_components/modernizr/test
+package-lock.json
 .sass-cache
 node_modules
 .DS_Store

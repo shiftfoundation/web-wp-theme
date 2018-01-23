@@ -1,0 +1,181 @@
+.hentry {
+
+    .wp-post-image {
+        display: block;
+        width: 100%; height: auto;
+        margin-bottom: 2em;
+        border: 1px solid #CCC;
+
+		&.attachment-research {
+			width: 162px; height: auto; margin-bottom: 0;
+		}
+    }
+
+	.research-image {
+		display: block; float: left; margin-right: 1em; margin-bottom: 2em; padding-bottom: 0.5em;
+	}
+
+	.byline { 
+		@extend %MSS7; 
+
+		a:hover { background: $activeColor; text-decoration: underline; } 
+	}
+
+	.tags-links,
+	.comments-link,
+	.no-break {
+		display: none;
+	}
+
+	.entry-header,
+	.entry-content {
+		overflow: hidden;
+
+		&:after {
+			display: block; content: ''; clear: both;
+		}
+	}
+
+	.posted-on {
+		//&, a { color: #CCC; pointer-events: none; }
+	}
+
+	.entry-footer {
+		font-size: 0.9em;
+		padding-bottom: 3em;
+		overflow: hidden;
+		pointer-events: none;
+
+		&, a { text-decoration: none; }
+
+		.byline { padding-right: 0.5em; }
+		.posted-on { padding-left: 0.5em; }
+	}
+
+	.comments-link {
+		float: right;
+	}
+}
+
+body:not(.home):not(.page-template-page-home-new) .listing.products:first-child,
+body:not(.home):not(.page-template-page-home-new) .entry-content:first-child {
+	padding-top: 4rem;
+}
+
+.tabs-container { display: none; }
+.tabs-container:target { display: block; }
+
+.gallery { 
+	clear: both;
+
+	.gallery-item { width: 20%; float: left; padding-right: 0.5em; }
+}
+
+.comments-area {
+
+	@include bp(desktop) {
+		padding: 0 75px;
+	}
+
+	p { padding-bottom: 1.5em; }
+	label { @extend %MSS7; display: block; }
+	code { display: block; }
+	input, textarea {
+		border: 2px solid #000; padding: 0.5em 0.8em;
+		outline: none;
+
+		&:active, &:focus {
+			border-color: $activeColor;
+		}
+	}
+
+
+
+	.comment-list {
+		border: solid 1px #000;
+		margin-bottom: 2em;
+		padding: 0 1em;
+
+		li { display: block; list-style: none outside; }
+
+		li.comment {
+			border-top: 1px solid #CCC;
+			padding: 1em 0;
+
+			&:first-child { border-top: 0; }
+		}
+
+		.comment-metadata {
+			font-size: 0.8em;
+		}
+
+		.comment-meta,
+		.comment-content {
+			position: relative;
+		}
+
+		.comment-meta {
+			padding-left: 45px;
+			padding-bottom: 0.5em;
+			.avatar { display: block; width: 36px; height: 36px; position: absolute; left: 0; top: 0; }
+		}
+
+		.comment-content {
+			padding-top: 0.5em;
+			border-top: solid 1px #CCC;
+		}
+	}
+
+	#submit { 
+		@extend .button;
+		background: #fff;
+
+		&:hover { cursor: pointer; }
+	}
+}
+
+.archive.category, .blog {
+
+	.hentry,
+	.ajax-load-more-wrap .entry {
+		padding-bottom: 3rem;
+
+		&.post {
+		}
+
+		&.type-research,
+		&.research {
+			position: relative;
+			padding-left: 11rem;
+
+			.entry-type {
+				font-size: 0.9rem;
+				margin: 0 0 0.2rem 0;
+				text-align: right;
+				@extend %MSS7;
+			}
+
+			.entry-image {
+				width: 10rem;
+				position: absolute;
+				left: 0; top: 0;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+	}
+}
+
+/*TODO: FIX*/
+#awards, #partners {
+	h2,
+	p { clear: both; }
+}
+
+.alm-btn-wrap { display: none; }
+
+

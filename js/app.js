@@ -46,7 +46,7 @@ jQuery(function($){
 		$('#masthead').toggleClass('active');
 	});
 
-	if ( $('body').hasClass('home') ) {
+	if ( $('body').hasClass('home') || $('body').hasClass('page-template-page-home-new') ) {
 
 		$('#twitter').twittie({
 			'apiPath' : '/content/themes/shiftwp/tweetie/api/tweet.php',
